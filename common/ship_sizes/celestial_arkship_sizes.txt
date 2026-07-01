@@ -261,6 +261,7 @@ carks_quasark = {
 	size_multiplier = 1 #@arkship_size_80
 	fleet_slot_size = 1 #@arkship_slot_size_8
 	#nyehehe
+	#bullhjitery
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
