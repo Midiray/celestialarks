@@ -1,0 +1,7 @@
+
+
+
+country_modifier = {
+	potential = { quasark_unity_zone_trigger = yes }
+	empire_size_mult = -0.001
+}

@@ -1,0 +1,215 @@
+
+#planet_quasark_soldiers_job = {
+#	parent = planet_jobs_productive
+#	modifier_category = pop_job
+#	use_for_ai_budget = no
+#
+#	ai_use_parent_for_resources_upkeep = {
+#		alloys
+#		consumer_goods
+#		food
+#		energy
+#		minerals
+#	}
+#
+#	generate_mult_modifiers = {
+#		produces upkeep
+#	}
+#	generate_add_modifiers = {
+#		produces upkeep
+#	}
+#}
+
+#planet_quasark_technicians_job
+
+planet_quasark_soldiers_job = {
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_quasark_energy_job = {
+	icon = "job_technician"
+	parent = planet_jobs_worker
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+	}
+	modifier_category = colony
+}
+
+planet_quasark_minerals_job = {
+	icon = "job_miner"
+	parent = planet_jobs_worker
+	generate_mult_modifiers = {
+		produces
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_quasark_food_job = {
+	icon = "job_farmer"
+	parent = planet_jobs_worker
+	generate_mult_modifiers = {
+		produces
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_quasark_alloys_job = {
+	icon = "job_foundry"
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_quasark_goods_job = {
+	icon = "job_artisan"
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+
+planet_quasark_unity_job = {
+	icon = "job_bureaucrat"
+	parent = planet_jobs_specialist
+	modifier_category = colony
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_sacred_path_specialists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_sacred_path_specialists
+		modifier_types = {
+			add
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_quasark_physicists_job = {
+	modifier_category = colony
+	parent = planet_researchers
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_quasark_biologists_job = {
+	modifier_category = colony
+	parent = planet_researchers
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_quasark_engineers_job = {
+	modifier_category = colony
+	parent = planet_researchers
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_upkeep_modifier = {
+		key = planet_researchers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}

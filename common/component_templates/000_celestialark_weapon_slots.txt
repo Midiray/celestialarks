@@ -1,0 +1,615 @@
+# Min weapon damage is 7500x that of its vanilla counterparts maximum damage, max weapon damage is 10000x - not sure if this is true anymore, be sure to check
+# Max range is tripled, min is unchanged
+# Firing arc, windup, total fire time, cooldown and pen/damage buffs are identical
+
+
+weapon_component_template = {
+	key = "QSC_ENDSINGER"
+	size = planet_killer
+	type = planet_killer
+	can_destroy_stars = yes
+	windup = { min = 0 max = 0 }
+	total_fire_time = 10
+
+	range = 2000
+
+	icon = GFX_ship_part_planet_killer_blokkat_harvester
+	icon_frame = 1
+
+	potential = { ship_uses_quasarcraft_components = yes }
+	component_set = "QSC_ENDSINGER"
+
+	planet_destruction_gfx = "qsc_wkr_effect_gfx"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 5000
+		}
+	}
+}
+
+# Based off of SYSTEMCRAFT_RAY_OF_DOOM_1 - Power is balanced so that you can only field three without sacrificing more than the weapon is worth
+weapon_component_template = {
+	key = "QSC_PLANET_LANCE"
+	size = titanic
+	component_set = "QSC_PLANET_LANCE"
+	type = instant
+	icon = "GFX_qsc_eye"
+	icon_frame = 1
+	power = -20000000
+	projectile_gfx = "qsc_planet_lance"
+	ai_tag_weight = 0
+	tags = { weapon_type_energy weapon_type_anticompound super_heavy x_slot }
+	potential = { ship_uses_quasarcraft_components = yes }
+
+	min_range = 75
+	firing_arc = 10
+
+	damage = { min = 7500000000 max = 10000000000 }
+	total_fire_time = 150
+	windup = { min = 150 max = 150 }
+	range = 500
+	tracking = 0.1
+	accuracy = 1
+	resources = {
+		category = ship_components
+		cost = { alloys = 2500 }
+		upkeep = {
+			giga_sr_quasaric_energy = 5
+		}
+	}
+
+	ship_limit = 3
+
+	collateral_damage = 7500000
+	collateral_range = 50
+}
+
+# Based off of SYSTEMCRAFT_KATZENLAND_LANCE_1
+weapon_component_template = {
+	key = "QSC_TITANIC_GUN"
+	size = titanic
+	component_set = "QSC_TITANIC_GUN"
+	power = -500000
+	type = instant
+	icon = "GFX_qsc_obliterator"
+	icon_frame = 1
+	projectile_gfx = "giga_super_omega_laser_blokkat"
+	tags = { weapon_type_energy weapon_type_anticompound }
+	potential = { ship_uses_quasarcraft_components = yes }
+
+	damage = { min = 112500000 max = 150000000 }
+	total_fire_time = 100
+	firing_arc = 20
+	windup = { min = 25 max = 25 }
+	range = 250
+	min_range = 75
+	tracking = 0.1
+	accuracy = 1
+	armor_damage = 1.5
+	shield_penetration = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1000
+		}
+	}
+
+	collateral_damage = 1125000
+	collateral_range = 40
+}
+
+# Based off of MEDIUM_DISRUPTOR_3
+weapon_component_template = {
+	key = "QSC_DISRUPTOR"
+	size = small
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_qsc_sunsplitter"
+	icon_frame = 1
+	power = -20000
+	component_set = "QSC_DISRUPTOR"
+	projectile_gfx = "projectile_titan_lance_aeternum"
+	tags = { weapon_type_energy weapon_type_anticompound }
+	potential = { ship_uses_quasarcraft_components = yes }
+
+	damage = { min = 360000 max = 480000 }
+	range = 120
+	min_range = 0
+	firing_arc = 30
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
+	accuracy = 1
+	tracking = 0.35
+	armor_penetration = 1
+	shield_penetration = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 750
+		}
+	}
+}
+
+# Based off of ENERGY_LANCE_2
+weapon_component_template = {
+	key = "QSC_ENERGY_LANCE"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_qsc_skyripper"
+	icon_frame = 1
+	power = -100000
+	component_set = "QSC_ENERGY_LANCE"
+	projectile_gfx = "projectile_titan_lance_aeternum"
+	tags = { weapon_type_energy weapon_type_anticompound }
+	potential = { ship_uses_quasarcraft_components = yes }
+
+	damage = { min = 14625000 max = 19500000 }
+	windup = { min = 50 max = 50 }
+	total_fire_time = 50
+	range = 1000
+	accuracy = 0.9
+	tracking = 0.8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 500
+		}
+	}
+}
+
+# Based off of KINETIC_ARTILLERY_2
+weapon_component_template = {
+	key = "QSC_LASER_L"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_qsc_jupiter"
+	icon_frame = 1
+	power = -50000
+	component_set = "QSC_LASER_L"
+	projectile_gfx = "giga_omega_laser"
+	tags = { weapon_type_energy weapon_type_anticompound }
+	potential = { ship_uses_quasarcraft_components = yes }
+
+	damage = { min = 4387500 max = 5850000 }
+	range = 250
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	hull_damage = 1
+	shield_damage = 2
+	armor_damage = 0.5
+	accuracy = 0.75
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 750
+		}
+	}
+}
+
+# Based off of STRIKE_CRAFT_SKRAND
+strike_craft_component_template = {
+	key = "QSC_MOON_STRIKE"
+	size = LARGE
+	weapon_type = point_defence
+	entity = "qsc_strike_force_entity"
+	projectile_gfx = "strike_craft_laser_3"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_anticompound }
+
+	power = -100000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 250
+		}
+	}
+
+	count = 128
+	regeneration_per_day = 3
+	launch_time = 0.5
+
+	damage = { min = 13500 max = 18000 }
+	cooldown = 2
+	range = 20
+	engagement_range = 250
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 9750
+	armor = 3750
+	shield = 18750
+	evasion = 0.85
+
+	speed = 1000
+	rotation_speed = 0.8
+	acceleration = 1
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+	component_set = "QSC_MOON_STRIKE"
+	potential = { ship_uses_quasarcraft_components = yes }
+}
+strike_craft_component_template = {
+	key = "QSC_PLANET_STRIKE"
+	size = LARGE
+	weapon_type = point_defence
+	entity = "qsc_strike_force_entity"
+	projectile_gfx = "strike_craft_laser_3"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_anticompound }
+
+	power = -100000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 250
+		}
+	}
+
+	count = 32
+	regeneration_per_day = 0.75
+	launch_time = 0.5
+
+	damage = { min = 135000 max = 180000 }
+	cooldown = 2
+	range = 20
+	engagement_range = 250
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 97500
+	armor = 37500
+	shield = 187500
+	evasion = 0.85
+
+	speed = 1000
+	rotation_speed = 0.8
+	acceleration = 1
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+	component_set = "QSC_PLANET_STRIKE"
+	potential = { ship_uses_quasarcraft_components = yes }
+}
+strike_craft_component_template = {
+	key = "QSC_SYSTEM_STRIKE"
+	size = LARGE
+	weapon_type = point_defence
+	entity = "qsc_strike_force_entity"
+	projectile_gfx = "strike_craft_laser_3"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_anticompound }
+
+	power = -100000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 250
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.1875
+	launch_time = 0.5
+
+	damage = { min = 2160000 max = 2880000 }
+	cooldown = 2
+	range = 20
+	engagement_range = 250
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 1560000
+	armor = 600000
+	shield = 3000000
+	evasion = 0.8
+
+	speed = 1000
+	rotation_speed = 0.8
+	acceleration = 1
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+	component_set = "QSC_SYSTEM_STRIKE"
+	potential = { ship_uses_quasarcraft_components = yes }
+}
+
+####################################################
+
+
+weapon_component_template = {
+	key = "QUASARK_DEVASTATOR_WEAPON"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	hidden = yes
+
+	icon = "GFX_ship_part_arkship_devastator"
+	icon_frame = 1
+
+	potential = {
+		ship_uses_quasarcraft_components = yes
+	}
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	collateral_damage = @arkship_devastator_fleet_damage
+	collateral_range = @arkship_devastator_collateral_range
+
+	firing_arc = 360
+	min_range = 30.0
+
+	damage = { min = 7500 max = 15000 }
+	windup = { min = 1 max = 1 }
+	range = 300
+	tracking = 0.10
+	accuracy = 0.25
+	total_fire_time = 1
+	shield_damage = 1.5
+	armor_damage = 1.5
+	hull_damage = 1.5
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	component_set = "QUASARK_DEVASTATOR_WEAPON"
+	projectile_gfx = "arkship_01_devastator_laser"
+}
+weapon_component_template = {
+	key = "QUASARK_SYSTEM_BEAM"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_SYSTEM_BEAM_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 625000 max = 1250000 }
+	windup = { min = 145 max = 150 }
+	range = 250
+	tracking = 0
+	accuracy = 0.85
+	total_fire_time = 125
+	shield_damage = 0.75
+	armor_damage = 1.50
+	hull_damage = 1.25
+
+	collateral_damage = 62500
+	collateral_range = 20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}
+weapon_component_template = {
+	key = "QUASARK_PLANET_BEAM"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_PLANET_BEAM_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 625000 max = 1250000 }
+	windup = { min = 145 max = 150 }
+	range = 250
+	tracking = 0
+	accuracy = 0.85
+	total_fire_time = 125
+	shield_damage = 0.75
+	armor_damage = 1.50
+	hull_damage = 1.25
+
+	collateral_damage = 62500
+	collateral_range = 20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}
+weapon_component_template = {
+	key = "QUASARK_MOON_BEAM"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_MOON_BEAM_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 625000 max = 1250000 }
+	windup = { min = 145 max = 150 }
+	range = 250
+	tracking = 0
+	accuracy = 0.85
+	total_fire_time = 125
+	shield_damage = 0.75
+	armor_damage = 1.50
+	hull_damage = 1.25
+
+	collateral_damage = 62500
+	collateral_range = 20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}
+weapon_component_template = {
+	key = "QUASARK_SYSTEM_CANNON"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_SYSTEM_CANNON_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 455000 max = 1300000 }
+	windup = { min = 110 max = 120 }
+	range = 250
+	tracking = 0.0
+	accuracy = 0.75
+	total_fire_time = 60
+	shield_damage = 1.50
+	armor_damage = 0.75
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}
+weapon_component_template = {
+	key = "QUASARK_PLANET_CANNON"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_PLANET_CANNON_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 455000 max = 1300000 }
+	windup = { min = 110 max = 120 }
+	range = 250
+	tracking = 0.0
+	accuracy = 0.75
+	total_fire_time = 60
+	shield_damage = 1.50
+	armor_damage = 0.75
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}
+weapon_component_template = {
+	key = "QUASARK_MOON_CANNON"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+	power = -300000.00
+	component_set = "QUASARK_MOON_CANNON_SET"
+	projectile_gfx = "paluush_planetcraft_lance"
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+	ai_tags = { artillery weapon_role_artillery }
+	potential = { ship_uses_quasarcraft_components = yes }
+	ai_tag_weight = 0
+
+	firing_arc = 10
+	min_range = 75
+
+	damage = { min = 455000 max = 1300000 }
+	windup = { min = 110 max = 120 }
+	range = 250
+	tracking = 0.0
+	accuracy = 0.75
+	total_fire_time = 60
+	shield_damage = 1.50
+	armor_damage = 0.75
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+}

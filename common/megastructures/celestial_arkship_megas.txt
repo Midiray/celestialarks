@@ -1,0 +1,164 @@
+lunar_arkship_megastructure = {
+    entity = civilian_arkship_01_stage_1_ship_entity
+    construction_entity = civilian_arkship_01_stage_1_ship_entity
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    build_type = inside_gravity_well
+    show_in_outliner = no
+    use_planet_resource = no
+    construction_blocks_and_blocked_by = none
+    build_time = 10
+
+    resources = {
+        category = megastructures_arkships
+        cost = {
+            influence = 10
+        }
+    }
+
+    potential = {
+        #is_nomadic = yes
+        #has_technology = tech_arkship_construction
+        #has_technology = $TECHNOLOGY$
+        #from = {
+        #    is_arkship_fleet = yes
+        #}
+        always = no
+    }
+
+    possible = {
+        #fromfrom = {
+        #    is_arkship_fleet = yes
+        #}
+        always = no
+    }
+
+    on_build_complete = {
+        #create_arkship_effect = {
+        #    TYPE = civilian_arkship
+        #    OWNER = from
+        #    LOCATION = fromfrom
+        #}
+        #create_fleet = {
+        #    effect = {
+        #        set_owner = from
+        #        create_ship = {
+        #            name = random
+        #            #random_existing_design = civilian_arkship_tier_1
+        #            random_existing_design = lunar_arkship_tier_1
+        #            #random_existing_design = corvette
+        #            graphical_culture = civilian_arkship
+        #            #graphical_culture = civilian_arkship
+        #        }
+        #        set_location = fromfrom
+        #    }
+        #}
+        create_arkship_effect = {
+            TYPE = lunar_arkship
+            OWNER = from
+            LOCATION = fromfrom
+        }
+        #create_arkship_effect = {
+        #    TYPE = civilian_arkship
+        #    OWNER = from
+        #    LOCATION = fromfrom
+        #}
+        remove_megastructure = fromfrom
+    }
+}
+quasark_megastructure = {
+    entity = qsc_01_ship_entity
+    construction_entity = qsc_01_ship_entity
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    build_type = inside_gravity_well
+    show_in_outliner = no
+    use_planet_resource = no
+    construction_blocks_and_blocked_by = none
+    build_time = 10
+
+    resources = {
+        category = megastructures_arkships
+        cost = {
+            influence = 10
+        }
+    }
+
+    potential = {
+        always = no
+    }
+
+    possible = {
+        always = no
+    }
+
+    on_build_complete = {
+        create_quasark_effect = {
+            TYPE = quasark
+            OWNER = from
+            LOCATION = fromfrom
+        }
+        remove_megastructure = fromfrom
+    }
+}
+quasarcraft_4 = {
+	entity = "quasarcraft_4_entity"
+	construction_entity = "quasarcraft_4_construction_entity"
+	portrait = "GFX_mega_qsc_bg"
+	upgrade_from = { quasarcraft_3 }
+
+	build_time = 7200
+	resources = {
+		category = giga_gigastructures
+		inline_script = {
+			script = megastructures/generic_parts/giga_mega_alloy_cost
+			alloys = 2000000
+		}
+		cost = {
+			volatile_motes = 7500
+			exotic_gases = 7500
+			rare_crystals = 7500
+			unity = @giga_tera_unity_cost
+		}
+		# No upkeep since it automatically turns into the ship
+	}
+
+	potential = {
+		quasarmod_ap_taken = yes
+	}
+
+	prerequisites = {
+		tech_quasarmod_quasarcraft
+	}
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+
+	on_build_start = {
+		from = { remove_country_flag = quasarcraft_crew_acquired }
+	}
+
+	on_build_complete = {
+		star = { change_pc = pc_giga_empty_space }
+		set_star_class = sc_empty_space
+		from = {
+		    country_event = { id = quasarmod_megastage_dialogue.406 }
+		}
+        create_quasark_effect = {
+            TYPE = quasark
+            OWNER = from
+            LOCATION = fromfrom
+        }
+
+		fromfrom = {
+			planet = {
+				save_event_target_as = giga_planet
+			}
+		}
+
+		last_created_fleet = { set_location = fromfrom }
+		remove_megastructure = fromfrom
+	}
+}

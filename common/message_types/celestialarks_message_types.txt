@@ -1,0 +1,28 @@
+
+
+message_type = {
+	key = "TOAST_ENDSINGER_COMPLETE"
+	icon = "GFX_message_planet_destroyed"
+
+	name = "TOAST_ENDSINGER_COMPLETE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_notification = no
+	default_toast = yes
+
+	category = other
+}
+message_type = {
+	key = "TOAST_HARVEST_COMPLETE"
+	icon = "GFX_message_planet_destroyed"
+
+	name = "TOAST_HARVEST_COMPLETE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_notification = no
+	default_toast = yes
+
+	category = other
+}

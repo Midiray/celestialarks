@@ -1,0 +1,244 @@
+namespace = quasark
+fleet_event = {
+	id = quasark.001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+        #save_event_target_as = sang_the_end
+        solar_system = {
+            set_star_class = sc_black_hole
+            every_ship_in_system = {
+                limit = {
+                    #controller = {
+                    #    is_hostile = root.owner
+                    #}
+                    NOT = {
+                        is_owned_by = root.owner
+                    }
+                }
+                destroy_ship = this
+            }
+            every_starbase_in_system = {
+                limit = {
+                    #controller = {
+                    #    is_hostile = root.owner
+                    #}
+                    NOT = {
+                        is_owned_by = root.owner
+                    }
+                }
+                destroy_ship = this
+            }
+            every_system_planet = {
+                #if = {
+                #    limit = { 
+                #        is_star = no 
+                #        is_astral_scar = no
+                #        is_asteroid = no
+                #    }
+                #    change_pc = pc_shattered
+                #}
+                #else_if = {
+                #    limit = { 
+                #        is_star = yes
+                #    }
+                #    change_pc = pc_black_hole
+                #}
+                change_pc = pc_black_hole
+                dismantle_arc_furnace_effect = yes
+            }
+            every_system_megastructure = {
+                #limit = {
+                #    is_ndb_vulnerable_mega = yes
+                #}
+                remove_megastructure = this
+            }
+            every_system_megastructure = {
+                limit = {
+                    OR = {
+                        is_megastructure_type = hyper_relay
+                        is_megastructure_type = hyper_relay_restored
+                    }
+                }
+                solar_system = {
+                    spawn_megastructure = {
+                        type = "hyper_relay_ruined"
+                        coords_from = prev
+                    }
+                }
+                remove_megastructure = this
+            }
+            every_system_planet = {
+                #limit = { is_star = yes NOT = { is_planet_class = pc_black_hole } }
+                create_ambient_object = {
+                    type = "star_explosion"
+                    play_animation_once = yes
+                    location = this
+                }
+                last_created_ambient_object = {
+                    set_location = {
+                        target = prev
+                        distance = 0
+                        angle = random
+                    }
+                }
+            }
+            create_ambient_object = { type = "nebula_L8_entity" location = star }
+            create_ambient_object = { type = "nebula_L10_entity" location = star }
+            create_ambient_object = {
+                type = "destroyed_system"
+                location = star
+            }
+            last_created_ambient_object = {
+                set_ambient_object_flag = destroyed_system_effect
+                set_location = {
+                    target = star
+                    distance = 0
+                    angle = random
+                }
+            }
+        }
+	}
+}
+fleet_event = {
+	id = quasark.002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+        #save_event_target_as = sang_the_end
+        solar_system = {
+            #set_star_class = sc_empty_space
+            every_system_planet = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_giga_o_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 49000 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_b_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 19000 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_m_giant_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 14000 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_a_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 10000 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_f_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 7000 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_g_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 4500 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_k_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 2500 } }
+                    change_pc = pc_t_star
+                }
+                else_if = {
+                    limit = {
+                        is_planet_class = pc_m_star
+                    }
+                    root.owner = { add_resource = { sr_stellar_plasma = 1000 } }
+                    change_pc = pc_t_star
+                }
+                export_trigger_value_to_variable = {
+                    trigger = planet_size
+                    #parameters = { type = district_city }
+                    variable = quasark_current_harvest_size
+                }
+                root = {
+                    owner = {
+                        set_variable = { which = quasark_current_harvest_size value = prevprev.quasark_current_harvest_size }
+                        add_resource = {
+                            giga_sr_bulk_matter = 1
+                            mult = quasark_current_harvest_size
+                        }
+                    }
+                }
+                giga_remove_planet = yes
+            }
+            every_system_megastructure = {
+                #limit = {
+                #    is_ndb_vulnerable_mega = yes
+                #}
+                remove_megastructure = this
+            }
+            every_system_planet = {
+                #limit = { is_star = yes NOT = { is_planet_class = pc_black_hole } }
+                create_ambient_object = {
+                    type = "star_explosion"
+                    play_animation_once = yes
+                    location = this
+                }
+                last_created_ambient_object = {
+                    set_location = {
+                        target = prev
+                        distance = 0
+                        angle = random
+                    }
+                }
+            }
+            set_star_class = sc_empty_space
+            create_ambient_object = { type = "nebula_L8_entity" location = star }
+            create_ambient_object = { type = "nebula_L10_entity" location = star }
+            create_ambient_object = {
+                type = "destroyed_system"
+                location = star
+            }
+            last_created_ambient_object = {
+                set_ambient_object_flag = destroyed_system_effect
+                set_location = {
+                    target = star
+                    distance = 0
+                    angle = random
+                }
+            }
+        }
+	}
+}
+country_event = {
+    id = quasark.1000
+    hide_window = yes
+    is_triggered_only = yes
+	trigger = { has_origin = origin_quasark }
+    immediate = {
+        capital_scope = {
+            solar_system = {
+                star = {
+                    save_event_target_as = quasark_origin_star
+                }
+                create_quasark_effect_origin = {
+                    TYPE = quasark
+                    OWNER = from
+                }
+            }
+            change_pc = pc_shattered
+        }
+    }
+}

@@ -1,0 +1,6 @@
+
+
+triggered_planet_modifier = {
+	potential = { food_is_quasark_forge_support_trigger = yes }
+	planet_metallurgists_food_upkeep_mult = -0.002
+}

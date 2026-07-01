@@ -1,0 +1,311 @@
+lunar_arkship_tier_1 = {
+	# Arkship specific stuff
+	is_starting_arkship = no
+	graphical_culture = { "civilian_arkship" }
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_civilian"
+		custom_class_text_color = H
+	}
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_ark				# Enables Arkship custom UI.
+	display_attack_neutral_fleet_button = no
+	automation_icon = GFX_fleet_order_auto_explore_arkship
+	arkship_picture = "arkship_civilian"
+	auto_upgrade = yes					# Arkships automatically upgrade their components.
+	#can_disable = yes					# Arkships can be disabled.
+	#stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
+	#never_lost = yes
+	#collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
+	#	shipclass_starbase
+	#	shipclass_constructor
+	#}
+	#collects_stockpile_to_country = yes
+	accepts_all_modifiers = yes
+
+	use_shipnames_from = colonizer
+
+	potential_construction = {
+		always = yes #changed
+	}
+	possible_construction = {
+		always = yes #changed
+	}
+
+	# Audio
+	on_click_sound = "arkship_civilian_selection"
+
+	# 2D Art
+	icon = ship_size_civilian_arkship_tier_1
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+
+	# 3D Art
+	entity = civilian_arkship_01_stage_1_entity
+	section_slots = {
+		"mid"	=	{ locator = "part1" }
+		#"1"		=	{ locator = "module_01" }
+		#"2"		=	{ locator = "module_02" }
+	}
+	# Ship setup
+	formation_priority = @arkship_formation_priority_4
+	max_speed = @arkship_max_speed_100
+	acceleration = @arkship_acceleration_20_percent
+	rotation_speed = @arkship_rotation_speed_15_percent
+	construction_offset_mult = @arkship_construction_offset_2
+	collision_radius = @arkship_collision_radius_4
+	max_hitpoints = @arkship_hp_2500
+	modifier = {
+		ship_evasion_add = @arkship_evasion_5
+		ship_armor_add = @arkship_armor_1250
+		ship_shield_add = @arkship_shield_1250
+		ship_shield_regen_add_static = @arkship_shield_regen_4_375
+		starbase_module_capacity_add = @arkship_starbase_module_capacity_add_2
+		starbase_building_capacity_add = @arkship_starbase_building_capacity_add_4
+		planet_max_districts_add = @arkship_max_districts_add_0
+		ship_sensor_range_add = 1
+	}
+	ship_modifier = {
+		ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
+		arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
+	}
+	size_multiplier = 1 #@arkship_size_80
+	fleet_slot_size = 1 #@arkship_slot_size_8
+
+	is_designable = no
+	num_target_locators = 0
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+
+	available_to_everyone = yes
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+
+	prerequisites = { "tech_lasers_1" }
+
+	combat_disengage_chance = @arkship_disengage_chance_2
+
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = starbase_arkships
+		upkeep = {
+			alloys = @arkship_upkeep_alloys_1_5
+			energy = @arkship_upkeep_energy_1_5
+		}
+		logistics = {
+			trade = @arkship_upkeep_logistics_0
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 1
+	}
+
+	ai_ship_data = {
+	}
+    #additional code to attempt to make it buildable at starbase is below
+    #base_buildtime = 180
+}
+carks_quasark = {
+	# Arkship specific stuff
+	is_starting_arkship = no
+	#graphical_culture = { "civilian_arkship" }
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_civilian"
+		custom_class_text_color = H
+	}
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_quasark				# Enables Arkship custom UI.
+	display_attack_neutral_fleet_button = no
+	automation_icon = GFX_fleet_order_auto_explore_arkship
+	arkship_picture = "carks_quasark"
+	auto_upgrade = yes					# Arkships automatically upgrade their components.
+	#can_disable = yes					# Arkships can be disabled.
+	#stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
+	#never_lost = yes
+	#collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
+	#	shipclass_starbase
+	#	shipclass_constructor
+	#}
+	#collects_stockpile_to_country = yes
+	accepts_all_modifiers = yes
+
+	use_shipnames_from = colonizer
+
+	potential_construction = {
+		always = no
+	}
+	possible_construction = {
+		always = no
+	}
+
+	# Audio
+	on_click_sound = "arkship_civilian_selection"
+
+	# 2D Art
+	icon = ship_size_civilian_arkship_tier_3
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+
+	scripted_action = {
+		quasark_song_of_end
+		quasark_harvest
+	}
+	# 3D Art
+	entity = qsc_01_ship_entity
+	section_slots = {
+		"mid"				=	{ locator = "part1" }
+		"1"					=	{ locator = "module_01" }
+		"2"					=	{ locator = "module_02" }
+		"3"					=	{ locator = "module_03" }
+		"4"					=	{ locator = "module_04" }
+		"5"					=	{ locator = "module_05" }
+		"6"					=	{ locator = "module_06" }
+		"7"					=	{ locator = "module_06" }
+		"8"					=	{ locator = "module_06" }
+		"9"					=	{ locator = "module_06" }
+		"10"					=	{ locator = "module_06" }
+		"11"					=	{ locator = "module_06" }
+		"12"					=	{ locator = "module_06" }
+		"13"					=	{ locator = "module_06" }
+		"14"					=	{ locator = "module_06" }
+		"15"					=	{ locator = "module_06" }
+		"16"					=	{ locator = "module_06" }
+		"17"					=	{ locator = "module_06" }
+		"18"					=	{ locator = "module_06" }
+		"19"					=	{ locator = "module_06" }
+		"20"					=	{ locator = "module_06" }
+		"21"					=	{ locator = "module_06" }
+		"22"					=	{ locator = "module_06" }
+		"23"					=	{ locator = "module_06" }
+		"24"					=	{ locator = "module_06" }
+		"25"					=	{ locator = "module_06" }
+		"26"					=	{ locator = "module_06" }
+		"27"					=	{ locator = "module_06" }
+		"28"					=	{ locator = "module_06" }
+		"29"					=	{ locator = "module_06" }
+		"30"					=	{ locator = "module_06" }
+		"31"					=	{ locator = "module_06" }
+		"32"					=	{ locator = "module_06" }
+		"33"					=	{ locator = "module_06" }
+		"34"					=	{ locator = "module_06" }
+		"35"					=	{ locator = "module_06" }
+		"36"					=	{ locator = "module_06" }
+		"37"					=	{ locator = "module_06" }
+		"38"					=	{ locator = "module_06" }
+		"39"					=	{ locator = "module_06" }
+		"40"					=	{ locator = "module_06" }
+		"41"					=	{ locator = "module_06" }
+		"42"					=	{ locator = "module_06" }
+		"43"					=	{ locator = "module_06" }
+		"44"					=	{ locator = "module_06" }
+		"45"					=	{ locator = "module_06" }
+		"46"					=	{ locator = "module_06" }
+		"47"					=	{ locator = "module_06" }
+		"48"					=	{ locator = "module_06" }
+		"49"					=	{ locator = "module_06" }
+		"50"					=	{ locator = "module_06" }
+		"51"					=	{ locator = "module_06" }
+		"52"					=	{ locator = "module_06" }
+		"53"					=	{ locator = "module_06" }
+		"54"					=	{ locator = "module_06" }
+		"55"					=	{ locator = "module_06" }
+		"56"					=	{ locator = "module_06" }
+		"spinal_mount_1"	=	{ locator = "spinal_mount" }
+	}
+	# Ship setup
+	formation_priority = 256
+	max_speed = 30
+	acceleration = 0.01
+	rotation_speed = 0.1
+	combat_disengage_chance = 0
+	collision_radius = 256
+	max_hitpoints = 200000000
+	modifier = {
+		ship_hull_regen_add_static = 22500000
+		ship_armor_regen_add_static = 22500000
+		ship_shield_regen_add_static = 22500000
+		ship_evasion_mult = -999
+		ship_armor_add = 200000000
+		ship_shield_add = 200000000
+		ship_target_weight_mult = 1000
+		ship_starting_experience_add = 5000
+		ship_speed_mult = 2
+		starbase_module_capacity_add = 57
+		starbase_building_capacity_add = 24
+		ship_sensor_range_add = 1
+	}
+	#ship_modifier = {
+	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
+	#	arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
+	#}
+	size_multiplier = 1 #@arkship_size_80
+	fleet_slot_size = 1 #@arkship_slot_size_8
+
+	is_designable = no
+	num_target_locators = 0
+	is_space_station = no
+	can_have_federation_design = no
+	can_be_inspected = yes
+	is_civilian = no
+	components_add_to_cost = no
+
+	available_to_everyone = yes
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+
+	prerequisites = { "tech_lasers_1" }
+
+
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	#required_component_set = "ship_aura_components"
+
+	resources = {
+		category = starbase_arkships
+		#produces = {
+		#	trigger = {
+		#		stellar_manip_is_active = yes
+		#	}
+		#	sr_stellar_plasma = 25
+		#}
+		upkeep = {
+			alloys = 12500
+			energy = 25000
+		}
+		logistics = {
+			trade = 2500
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 1
+	}
+
+	ai_ship_data = {
+	}
+    #additional code to attempt to make it buildable at starbase is below
+    #base_buildtime = 180
+}

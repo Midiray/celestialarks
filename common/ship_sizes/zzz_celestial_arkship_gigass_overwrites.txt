@@ -1,0 +1,289 @@
+giga_war_moon = {
+    graphical_culture = no
+    max_speed = 50
+    acceleration = 0.15
+    rotation_speed = 0.05
+    collision_radius = 32
+    formation_priority = 32
+    base_buildtime = 1800
+    modifier = {
+        ship_evasion_mult = -1
+        ship_armor_add = 150000
+        ship_shield_add = 100000
+        ship_speed_mult = 2
+    }
+    cloaking_forbidden = yes
+    max_hitpoints = 250000
+    size_multiplier = 250
+    fleet_slot_size = 50
+    section_slots = {
+        "bow" =				{ locator = "part1" }
+        "mid" =				{ locator = "part1" }
+        "stern" =			{ locator = "part1" }
+        "sternthrusters" =			{ locator = "part1" }
+    }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_atk_moon
+    combat_disengage_chance = 0.5
+    construction_type = starbase_shipyard
+    class = shipclass_military
+    is_designable = yes
+    enable_default_design = yes
+
+    ship_roles = { screen brawler gunship artillery explosive energy_torpedoes }
+
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+
+    prerequisites = { "tech_lasers_1" }#"giga_tech_war_moon_1" }
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 10000
+        }
+        upkeep = {
+            energy = 250
+            alloys = 75
+        }
+        logistics = {
+            trade = 75
+        }
+    }
+
+    potential_construction = {
+        NOT = {
+            has_global_flag = warmoon_disabled
+        }
+        OR = {
+            starbase = {
+                solar_system = {
+                    any_system_megastructure = {
+                        is_megastructure_type = hyperquasaric_megashipyard_4
+                    }
+                }
+            }
+            quasark_celestial_construction = yes
+        }
+    }
+
+    possible_construction = {
+        OR = {
+            starbase = {
+                has_starbase_building = quasarshipyard_shipyard_uplink
+            }
+            quasark_celestial_construction = yes
+        }
+    }
+
+    available_to_everyone = yes
+}
+
+giga_planet_behemoth = {
+    entity = "war_planet_complete_entity"
+    max_speed = 40
+    acceleration = 0.15
+    rotation_speed = 0.05
+    collision_radius = 48
+    formation_priority = 48
+    base_buildtime = 2700
+    modifier = {
+        ship_evasion_mult = -1
+        ship_armor_add = 1250000
+        ship_shield_add = 1250000
+        ship_speed_mult = 2
+    }
+    cloaking_forbidden = yes
+    max_hitpoints = 2500000
+    size_multiplier = 750
+    fleet_slot_size = 250
+    section_slots = {
+        "bowgun" =			{ locator = "root" }
+        "bow" =				{ locator = "root" }
+        "mid" =				{ locator = "root" }
+        "stern" =			{ locator = "root" }
+        "sternthrusters" =	{ locator = "root" }
+    }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_atk_planet
+    enable_default_design = yes
+    is_designable = yes
+    combat_disengage_chance = 0
+    prerequisites = { "tech_lasers_1" }#"giga_tech_war_planet" }
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    ship_roles = { gunship artillery }
+
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    required_component_set = "ship_aura_components"
+
+    resources = {
+        category = ships
+        cost = {
+            alloys = 10000
+        }
+        upkeep = {
+            energy = 500
+            alloys = 125
+        }
+        logistics = {
+            trade = 125
+        }
+    }
+
+    potential_construction = {
+        NOT = {
+            has_global_flag = warplanet_disabled
+        }
+        OR = {
+            starbase = {
+                solar_system = {
+                    any_system_megastructure = {
+                        is_megastructure_type = hyperquasaric_megashipyard_4
+                    }
+                }
+            }
+            quasark_celestial_construction = yes
+        }
+    }
+
+    possible_construction = {
+        OR = {
+            quasark_celestial_construction = yes
+            starbase = {
+                has_starbase_building = quasarshipyard_shipyard_uplink
+            }
+        }
+    }
+
+    available_to_everyone = yes
+}
+
+giga_systemcraft = {
+	graphical_culture = no
+	entity = "war_system_complete_entity"
+	max_speed = 30
+	acceleration = 0.10
+	rotation_speed = 0.05
+	collision_radius = 512
+	formation_priority = 512
+	base_buildtime = 3600
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 4800000
+		ship_shield_add = 1900000
+		ship_speed_mult = 2
+	}
+	cloaking_forbidden = yes
+	max_hitpoints = 12500000
+	size_multiplier = 1250
+	fleet_slot_size = 512
+	section_slots = {
+		"bowgun" =			{ locator = "root" }
+		"bow" =				{ locator = "root" }
+		"mid" =				{ locator = "root" }
+		"stern" =			{ locator = "root" }
+		"sternthrusters" =	{ locator = "root" }
+		"kugel" =			{ locator = "root" }
+	}
+	num_target_locators = 0
+	icon = ship_size_atk_system
+	ship_class_icon_frame = 28
+	combat_disengage_chance = 0
+	prerequisites = { "tech_lasers_1" }#"giga_tech_war_system_6" }
+	enable_default_design = yes
+	class = shipclass_military
+	can_disable = no
+	can_have_federation_design = no
+	possible_construction = { quasark_celestial_construction = yes }
+	potential_construction = { quasark_celestial_construction = yes }
+	construction_type = starbase_shipyard
+
+	ship_roles = { artillery }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+
+	resources = {
+		category = ships
+		upkeep = {
+			alloys = 1500
+			influence = 0.5
+		}
+		logistics = {
+			trade = 250
+		}
+	}
+
+	available_to_everyone = yes
+}
+giga_o_systemcraft = {
+	graphical_culture = no
+	entity = "war_system_o_complete_entity"
+	max_speed = 30
+	acceleration = 0.10
+	rotation_speed = 0.05
+	collision_radius = 512
+	formation_priority = 512
+    base_buildtime = 3600
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 6250000
+		ship_shield_add = 2500000
+		ship_speed_mult = 2
+	}
+	max_hitpoints = 16250000
+	size_multiplier = 1250
+	fleet_slot_size = 512
+	section_slots = {
+		"o_bowgun" =			{ locator = "root" }
+		"o_bow" =				{ locator = "root" }
+		"o_mid" =				{ locator = "root" }
+		"o_stern" =				{ locator = "root" }
+		"o_sternthrusters" =	{ locator = "root" }
+		"o_kugel" =				{ locator = "root" }
+	}
+    cloaking_forbidden = yes
+	num_target_locators = 0
+	icon = ship_size_atk_system
+	ship_class_icon_frame = 28
+	combat_disengage_chance = 0
+	prerequisites = { "tech_lasers_1" }#"tech_o_class_war_system" }
+	enable_default_design = yes
+	class = shipclass_military
+	can_disable = no
+	can_have_federation_design = no
+	possible_construction = { quasark_celestial_construction = yes }
+	potential_construction = { quasark_celestial_construction = yes }
+
+	construction_type = starbase_shipyard
+
+	ship_roles = { artillery }
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+
+	resources = {
+		category = ships
+		upkeep = {
+			alloys = 2000
+			influence = 0.5
+		}
+		logistics = {
+			trade = 250
+		}
+	}
+	available_to_everyone = yes
+}

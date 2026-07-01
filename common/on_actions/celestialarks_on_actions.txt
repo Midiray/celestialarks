@@ -1,0 +1,17 @@
+
+
+on_quasark_fire_endsinger = {
+	events = {
+		quasark.001
+	}
+}
+on_quasark_harvest = {
+	events = {
+		quasark.002
+	}
+}
+on_game_start_country = {
+	events = {
+		quasark.1000
+	}
+}

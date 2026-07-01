@@ -1,0 +1,2109 @@
+soldier = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SOLDIER_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+		swap_type = {
+			trigger = {
+				soldier_is_necromancer = yes
+			}
+			name = necromancer
+			desc = necromancer
+			icon = necromancer
+			building_icon = building_dread_encampment
+			weight = 50
+		}
+	}
+
+	tags = { soldier }
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+
+	resources = {
+		category = planet_soldiers
+		produces = {
+			trigger = {
+				soldier_is_necromancer = yes
+			}
+			society_research = 0.5
+			engineering_research = 0.5
+		}
+		upkeep = {
+			trigger = {
+				soldier_is_necromancer = yes
+			}
+			consumer_goods = 0.5
+		}
+		upkeep = {
+			alloys = 1.0
+		}
+	}
+
+	inline_script = "output/soldier_triggered_modifiers"
+	inline_script = "output/quasark_soldier_triggered_modifiers"
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		soldier_job_check_trigger = yes
+		owner = { is_gestalt = no }
+	}
+
+	weight = {
+		weight = @soldier_job_weight
+		modifier = {
+			factor = 10
+			colony? = {
+				exists = leader
+				leader = {
+					leader_class = commander
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_weak
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_military }
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_cybernetic
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_presapient_earthbound
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_limited_regeneration
+		}
+		modifier = {
+			factor = 0
+			species = { can_be_soldier = no }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_war
+		}
+	}
+
+}
+warrior_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = tamersymbiont
+			desc = tamersymbiont
+			building_icon = planetary_carapace_1
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 10
+		}
+	}
+
+	tags = { soldier }
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	resources = {
+		category = planet_soldiers
+
+		upkeep = { alloys = 1.0 }
+	}
+
+	inline_script = "output/soldier_triggered_modifiers"
+	inline_script = "output/quasark_soldier_triggered_modifiers"
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { can_think = yes }
+
+	weight = {
+		weight = 5
+		modifier = {
+			weight = 100
+			owner? = { is_at_war = yes }
+		}
+		modifier = {
+			factor = 10
+			colony = {
+				leader? = {
+					leader_class = commander
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 4
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_weak
+		}
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+		modifier = {
+			factor = 0
+			colony = { pop_amount < 1200 }
+			owner? = { is_ai = yes }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_cybernetic
+		}
+	}
+
+}
+foundry = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_foundry_1
+		}
+		# Catalytic Swap
+		swap_type = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			name = catalytic_technician
+			desc = job_catalytic_technician_desc
+			weight = 5
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	inline_script = "jobs/inf_navalcap_jobs"
+	inline_script = "output/foundry_nomad_triggered_modifiers"
+	inline_script = "output/quasark_alloys_triggered_modifiers"
+
+	resources = {
+		category = planet_metallurgists
+		inline_script = "output/foundry_output"
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_alloys
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_material_requisitorium
+				}
+			}
+			alloys = @requisitorium_alloys_overlord
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight # Fairly important job
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_construction
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_alloys"
+
+}
+fabricator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_foundry_1
+		}
+		#Alloy Drone - auth_hive
+		swap_type = {
+			trigger = {
+				owner? = {
+					is_hive_empire = yes
+					is_catalytic_empire = no
+					is_wilderness_empire = no
+				}
+			}
+			name = alloy_drone
+			desc = alloy_drone
+			icon = alloy_drone
+			building_icon = building_foundry_1
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 2
+		}
+		#Catalytic Drone - auth_hive
+		swap_type = {
+			trigger = {
+				owner? = { is_catalytic_empire = yes }
+			}
+			name = catalytic_drone
+			desc = catalytic_drone
+			icon = catalytic_drone
+			building_icon = building_foundry_1
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 3
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = forgesymbiont
+			desc = forgesymbiont
+			icon = forgesymbiont
+			building_icon = natural_furnace_3
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 10
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	inline_script = "output/foundry_nomad_triggered_modifiers"
+	inline_script = "output/quasark_alloys_triggered_modifiers"
+
+	resources = {
+		category = planet_metallurgists
+		inline_script = "output/foundry_output"
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_alloys
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_material_requisitorium
+				}
+			}
+			alloys = @requisitorium_alloys_overlord
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:scripted_job_weight_shroud_forged_mult
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+}
+technician = {
+	category = worker
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_energy_grid
+		}
+		swap_type = {
+			trigger = {
+				technician_is_mote_harvester_trigger = yes
+			}
+			icon = mote_harvester
+			name = mote_harvester
+			desc = mote_harvester
+			building_icon = building_mote_harvesting_traps
+			weight = 20
+		}
+	}
+
+	tags = { energy }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+	inline_script = "output/quasark_energy_triggered_modifiers"
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 6
+		}
+		produces = {
+			trigger = {
+				owner? = { is_robot_empire = yes }
+			}
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_energy_requisitorium
+			}
+			energy = @requisitorium_energy_reduction
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			technician_is_fuel_chemist_trigger = yes
+		}
+		ship_speed_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			technician_is_shield_tuner_trigger = yes
+		}
+		ship_shield_mult = 0.02 #move ship bonuses on technician jobs, add a custom tooltip here
+		ship_shield_regen_mult = 0.02
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_energy
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_overlord
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 100
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			can_fill_specialist_job_trigger = no
+		}
+		modifier = {
+			factor = 8
+			is_enslaved = yes
+			can_take_servant_job = no
+			OR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_robot_superconductive
+				has_trait = trait_ingenious
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_labor
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+}
+technician_drone = {
+	category = simple_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_energy_grid
+		}
+		swap_type = {
+			trigger = {
+				technician_is_mote_harvester_trigger = yes
+			}
+			icon = mote_harvesting_drone
+			name = mote_harvesting_drone
+			desc = mote_harvesting_drone
+			building_icon = building_mote_harvesting_traps
+			weight = 5
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = photosymbiont
+			desc = photosymbiont
+			icon = photosymbiont
+			building_icon = bio_electric_stimulator_3
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 10
+		}
+	}
+
+	tags = { energy }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { simple_drone_trigger = yes }
+	inline_script = "output/quasark_energy_triggered_modifiers"
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 6
+		}
+		produces = {
+			trigger = {
+				owner? = { is_robot_empire = yes }
+			}
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				owner? = { is_nomadic = yes }
+			}
+			energy = 4
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_energy_requisitorium
+			}
+			energy = @requisitorium_energy_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_energy
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_overlord
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			technician_is_fuel_chemist_trigger = yes
+		}
+		ship_speed_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			technician_is_shield_tuner_trigger = yes
+		}
+		ship_shield_mult = 0.02 #move ship bonuses on technician jobs, add a custom tooltip here
+		ship_shield_regen_mult = 0.02
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+}
+miner = {
+	category = worker
+	swappable_data = {
+		default = {
+			icon = miner
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_mineral_purification_plant
+		}
+		swap_type = {
+			trigger = {
+				miner_is_scrap_miner_trigger = yes
+			}
+			name = scrap_miner
+			desc = scrap_miner
+			weight = 5
+		}
+		swap_type = {
+			trigger = {
+				miner_is_cave_cleaner_trigger = yes
+			}
+			name = cave_cleaner
+			desc = cave_cleaner
+			weight = 10
+		}
+		swap_type = {
+			trigger = {
+				miner_is_turtle_miner_trigger = yes
+			}
+			name = turtle_miner
+			desc = turtle_miner
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
+				miner_is_crystal_miner_trigger = yes
+			}
+			icon = crystal_miner
+			name = crystal_miner
+			desc = crystal_miner
+			building_icon = building_crystal_mines
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
+				miner_is_thermoforger_trigger = yes
+			}
+			icon = miner
+			name = melt_extractor
+			desc = melt_extractor
+			weight = 35
+		}
+	}
+
+	tags = { minerals strategic_resource }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+	inline_script = "output/quasark_minerals_triggered_modifiers"
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+		}
+		# Job Swap - Scrap Miners
+		produces = {
+			trigger = {
+				colony? = {
+					miner_is_scrap_miner_trigger = yes
+				}
+			}
+			minerals = -2
+			alloys = 1
+		}
+		# Job Swap - Cave Cleaners
+		produces = {
+			trigger = {
+				colony? = {
+					miner_is_cave_cleaner_trigger = yes
+				}
+			}
+			minerals = 2
+		}
+		# Job Swap - Turtle
+		produces = {
+			trigger = {
+				colony? = {
+					miner_is_turtle_miner_trigger = yes
+				}
+			}
+			minerals = -1
+			food = 3
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_material_requisitorium
+			}
+			minerals = @requisitorium_minerals_reduction
+		}
+		# Job Swap - Thermoforger
+		produces = {
+			trigger = {
+				colony? = {
+					miner_is_thermoforger_trigger = yes
+				}
+			}
+			minerals = 1
+			alloys = 0.5
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					miner_is_thermoforger_trigger = yes
+				}
+			}
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		# Gives some Stability per "Mining Guild" Councilor level.
+		potential = {
+			has_councilor = { COUNCILOR = "councilor_mining_guilds" }
+		}
+		planet_stability_add = @councilor_mining_guilds_miner_stability
+		mult = value:councilor_level|TYPE|councilor_mining_guilds|
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_minerals
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_overlord
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_labor
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_minerals"
+
+}
+mining_drone = {
+	category = simple_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_mineral_purification_plant
+		}
+		#Scrapper Drones - d_space_ship_graveyard + shattered_ring_world
+		swap_type = {
+			trigger = {
+				OR = {
+					has_deposit = d_space_ship_graveyard
+					is_planet_class = pc_shattered_ring_habitable
+				}
+			}
+			name = scrap_miner_drone
+			desc = scrap_miner_drone
+			building_icon = building_mineral_purification_plant
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 2
+		}
+		swap_type = {
+			trigger = {
+				miner_is_crystal_miner_trigger = yes
+			}
+			icon = crystal_mining_drone
+			name = crystal_mining_drone
+			desc = crystal_mining_drone
+			building_icon = building_crystal_mines
+			weight = 5
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = grubsymbiont
+			desc = grubsymbiont
+			icon = grubsymbiont
+			building_icon = churning_tunnels_3
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 10
+		}
+		swap_type = {
+			trigger = {
+				miner_is_thermoforger_trigger = yes
+			}
+			icon = mining_drone
+			name = melt_extractor_drone
+			desc = melt_extractor_drone
+			weight = 15
+		}
+	}
+
+	tags = { minerals strategic_resource }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { simple_drone_trigger = yes }
+	inline_script = "output/quasark_minerals_triggered_modifiers"
+
+	resources = {
+		category = planet_miners
+		produces = {
+			trigger = {
+				colony? = {
+					NOR = {
+						has_deposit = d_space_ship_graveyard
+						is_planet_class = pc_shattered_ring_habitable
+					}
+				}
+			}
+			minerals = 4
+		}
+		produces = {
+			trigger = {
+				colony? = {
+					OR = {
+						has_deposit = d_space_ship_graveyard
+						is_planet_class = pc_shattered_ring_habitable
+					}
+				}
+			}
+			minerals = 2
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_material_requisitorium
+			}
+			minerals = @requisitorium_minerals_reduction
+		}
+		# Job Swap - Thermoforger
+		produces = {
+			trigger = {
+				colony? = {
+					miner_is_thermoforger_trigger = yes
+				}
+			}
+			minerals = 1
+			alloys = 0.5
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					miner_is_thermoforger_trigger = yes
+				}
+			}
+			energy = 1
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_minerals
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_overlord
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_minerals"
+
+}
+bureaucrat = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_bureaucratic_1
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_manager = yes
+			}
+			name = manager
+			desc = manager
+			icon = manager
+			building_icon = building_bureaucratic_1
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 2
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_priest = yes
+			}
+			name = priest
+			desc = priest
+			icon = priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 5
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_steward = yes
+			}
+			name = steward
+			desc = steward
+			icon = manager
+			building_icon = building_bureaucratic_1
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 10
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_preacher = yes
+			}
+			name = preacher
+			desc = preacher
+			icon = numistic_priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 15
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_numistic_priest = yes
+			}
+			name = numistic_priest
+			desc = numistic_priest
+			icon = numistic_priest
+			building_icon = building_nuumismatic_shrine
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_unifier = yes
+			}
+			name = unifier
+			desc = unifier
+			icon = overlord_propagandist
+			building_icon = building_capital
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 25
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_culture_worker = yes
+			}
+			name = culture_worker
+			desc = culture_worker
+			icon = culture_worker
+			building_icon = building_artist_patron
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 30
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_death_priest = yes
+			}
+			name = death_priest
+			desc = death_priest
+			icon = death_priest
+			building_icon = building_sacrificial_temple_1
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 35
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_fire_dancer = yes
+			}
+			name = fire_dancer
+			desc = fire_dancer
+			icon = fire_dancer
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 40
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_fire_seer = yes
+			}
+			name = fire_seer
+			desc = fire_seer
+			icon = fire_seer
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 450
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_pyromancer = yes
+			}
+			name = pyromancer
+			desc = pyromancer
+			icon = fire_dancer
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 450
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_cremator = yes
+			}
+			name = cremator
+			desc = cremator
+			icon = cremator
+			building_icon = building_sacrificial_temple_1
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 450
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_low_tech = yes
+			}
+			name = low_tech_bureaucrat
+			desc = low_tech_bureaucrat
+			icon = low_tech_bureaucrat
+			building_icon = building_low_tech_admin_hub
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 40
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_low_tech_manager = yes
+			}
+			name = low_tech_manager
+			desc = low_tech_manager
+			icon = manager
+			building_icon = building_low_tech_admin_hub
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 45
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_low_tech_priest = yes
+			}
+			name = low_tech_priest
+			desc = low_tech_priest
+			icon = low_tech_priest
+			building_icon = building_low_tech_admin_hub
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 50
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_memorialist = yes
+			}
+			name = memorialist
+			desc = memorialist
+			icon = death_chronicler
+			building_icon = building_galactic_memorial_1
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 200
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_death_priest = yes
+				bureaucrat_is_manager = yes
+			}
+			name = death_manager
+			desc = death_manager
+			icon = manager
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 300
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_haruspex = yes
+			}
+			name = haruspex
+			desc = haruspex
+			icon = haruspex
+			building_icon = building_the_sanctum_of_augmentation
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 500
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_superstitious_beliefs_priest = yes
+			}
+			name = superstitious_beliefs_priest
+			desc = superstitious_beliefs_priest
+			icon = superstitious_beliefs_priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 400
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_superstitious_beliefs_priest_corporate = yes
+			}
+			name = superstitious_beliefs_priest_corporate
+			desc = superstitious_beliefs_priest_corporate
+			icon = superstitious_beliefs_priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 400
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_corpse_reader = yes
+			}
+			name = corpse_reader
+			desc = corpse_reader
+			icon = death_priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 500
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_corpse_broker = yes
+			}
+			name = corpse_broker
+			desc = corpse_broker
+			icon = death_priest
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 500
+		}
+		swap_type = {
+			trigger = {
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+			name = sacred_path_specialist
+			desc = job_sacred_path_specialist_desc
+			icon = sacred_path_specialist
+			building_icon = building_temple
+			condition_string = SPECIALIST_JOB_TRIGGER
+			weight = 500
+		}
+	}
+	tags = { unity }
+	triggered_tags = {
+		trigger = {
+			OR = {
+				bureaucrat_is_priest = yes
+				bureaucrat_is_death_priest = yes
+				bureaucrat_is_numistic_priest = yes
+				bureaucrat_is_preacher = yes
+				bureaucrat_is_haruspex = yes
+				bureaucrat_is_superstitious_beliefs_priest = yes
+				bureaucrat_is_superstitious_beliefs_priest_corporate = yes
+				bureaucrat_is_corpse_broker = yes
+				bureaucrat_is_corpse_reader = yes
+				bureaucrat_is_fire_dancer = yes
+				bureaucrat_is_pyromancer = yes
+				bureaucrat_is_fire_seer = yes
+				bureaucrat_is_cremator = yes
+				bureaucrat_is_sacred_path_specialist = yes
+			}
+		}
+		tags = { psionic_aura }
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_bureaucrats
+		# PRODUCES
+		produces = {
+			unity = 3
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+		##Government Swaps
+		produces = {
+			trigger = {
+				bureaucrat_is_manager = yes
+			}
+			trade = 2
+		}
+		produces = {
+			trigger = {
+				bureaucrat_is_steward = yes
+			}
+			trade = 1
+		}
+		produces = {
+			trigger = {
+				OR = {
+					bureaucrat_is_death_priest = yes
+					bureaucrat_is_cremator = yes
+				}
+			}
+			unity = -1
+			society_research = 0.5
+		}
+		produces = {
+			trigger = {
+				bureaucrat_is_haruspex = yes
+			}
+			unity = -1
+			engineering_research = 1
+		}
+		##Broken Shackles
+		produces = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech = yes
+				}
+			}
+			unity = -1
+		}
+		produces = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_sacred_path_specialist = yes
+				}
+			}
+			unity = -2
+			trade = 2
+			society_research = 1
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech = yes
+				}
+			}
+			consumer_goods = -1
+		}
+		produces = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech_manager = yes
+				}
+			}
+			unity = -1
+			trade = 2
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech_manager = yes
+				}
+			}
+			consumer_goods = -1
+		}
+		produces = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech_priest = yes
+				}
+			}
+			unity = -1
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_low_tech_priest = yes
+				}
+			}
+			consumer_goods = -1
+		}
+		##Event Swaps
+		upkeep = {
+			trigger = {
+				bureaucrat_is_unifier = yes
+			}
+			consumer_goods = -1
+		}
+		# Job Swap - Numistic Priests
+		produces = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_numistic_priest = yes
+				}
+			}
+			unity = -1
+			trade = 6
+		}
+		upkeep = {
+			trigger = {
+				colony? = {
+					bureaucrat_is_numistic_priest = yes
+				}
+			}
+			consumer_goods = -1
+			trade = 2
+		}
+		# Job Swap - Superstitions Beliefs and Death Cult
+		produces = {
+			trigger = {
+				OR = {
+					bureaucrat_is_corpse_reader = yes
+					bureaucrat_is_corpse_broker = yes
+				}
+			}
+			society_research = 0.5
+		}
+		inline_script = "jobs/ethic_job_resources_memorialist"
+	}
+
+	# Caregiver Paragon Effect
+	triggered_planet_modifier = {
+		potential = {
+			leader? = {
+				has_trait = leader_trait_nomadic_caregiver
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 150
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	## Amenities
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_priest = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_steward = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_preacher = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_death_priest = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_fire_dancer = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				bureaucrat_is_pyromancer = yes
+				bureaucrat_is_fire_seer = yes
+				bureaucrat_is_cremator = yes
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_unifier = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_low_tech_priest = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_numistic_priest = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_haruspex = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_culture_worker = yes
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 300
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	inline_script = "jobs/ethic_job_modifiers_memorialist"
+
+	##Stability
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_memorialist = yes
+		}
+		planet_stability_add = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_fire_dancer = yes
+		}
+		planet_stability_add = 0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			colony? = {
+				check_modifier_value = {
+					modifier = planet_bureaucrats_stability_produces_add
+					value > 0
+				}
+			}
+		}
+		planet_stability_add = 1
+		mult = colony.modifier:planet_bureaucrats_stability_produces_add
+	}
+
+	## Ethics Attraction
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_culture_worker = yes
+		}
+		pop_government_ethic_attraction = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				bureaucrat_is_superstitious_beliefs_priest = yes
+				bureaucrat_is_superstitious_beliefs_priest_corporate = yes
+			}
+		}
+		planet_stability_add = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				# Getting these costs 2 Civic points and deserve better rewards.
+				bureaucrat_is_pyromancer = yes
+				bureaucrat_is_fire_seer = yes
+				bureaucrat_is_cremator = yes
+			}
+		}
+		planet_stability_add = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				bureaucrat_is_corpse_reader = yes
+				bureaucrat_is_corpse_broker = yes
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				bureaucrat_is_corpse_reader = yes
+				bureaucrat_is_corpse_broker = yes
+			}
+		}
+		planet_stability_add = 1
+		mult = colony.modifier:planet_bureaucrats_stability_produces_add
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			colony? = {
+				has_active_building = building_league_offices
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner? = { has_valid_civic = civic_efficient_bureaucracy }
+		}
+		country_edict_fund_add = 2
+		mult = value:job_total_output_modifier|JOB|bureaucrat|RESOURCE|unity|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { has_tradition = tr_modularity_4 }
+		}
+		planet_jobs_worker_produces_mult = 0.02
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_sacred_path_specialist = yes
+			owner? = {
+				OR = {
+					has_modifier = deeply_devoted
+					has_modifier = spiritual_equality_devoted
+				}
+			}
+		}
+		ship_speed_mult = 0.01
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			bureaucrat_is_sacred_path_specialist = yes
+			owner? = { has_modifier = deeply_devoted_2 }
+		}
+		ship_speed_mult = 0.025
+	}
+	inline_script = "output/quasark_unity_triggered_modifiers"
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			owner? = { has_civic = civic_exalted_priesthood }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+}
+coordinator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_machine_capital
+		}
+		# Synpase Drone - auth_hive_mind
+		swap_type = {
+			trigger = {
+				owner? = {
+					is_hive_empire = yes
+					is_wilderness_empire = no
+				}
+			}
+			name = synapse_drone
+			desc = synapse_drone
+			icon = synapse_drone
+			building_icon = building_hive_capital
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 2
+		}
+		# Chronicle Drone
+		swap_type = {
+			trigger = {
+				owner? = { is_memorialist_empire = yes }
+			}
+			name = chronicle_drone
+			desc = chronicle_drone
+			icon = chronicle_drone
+			building_icon = building_galactic_memorial_1
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 3
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = choirsymbiont
+			desc = choirsymbiont
+			icon = choirsymbiont
+			building_icon = building_commensal_clearing_3
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 10
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 3
+		}
+		produces = {
+			trigger = {
+				owner? = { is_memorialist_empire = yes }
+			}
+			unity = 0.5
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					is_hive_empire = yes
+					is_lithoid_or_infernal_empire = no
+				}
+			}
+			food = 2
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					is_hive_empire = yes
+					is_lithoid_or_infernal_empire = yes
+				}
+			}
+			minerals = 2
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				owner? = { is_hive_empire = no }
+			}
+			energy = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_memorialist_empire = yes }
+		}
+		modifier = {
+			planet_stability_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			colony = {
+				has_active_building = building_league_offices
+			}
+		}
+		planet_amenities_no_happiness_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_modifier = planet_artifact_relays_machine
+				has_modifier = planet_artifact_relays_hivemind
+			}
+		}
+		modifier = {
+			planet_stability_add = 2
+			planet_jobs_simple_drone_produces_mult = 0.01
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { has_tradition = tr_modularity_4 }
+		}
+		planet_jobs_simple_drone_produces_mult = 0.02
+	}
+	inline_script = "output/quasark_unity_triggered_modifiers"
+
+	weight = {
+		weight = @synapse_drone_job_weight
+		mult = value:scripted_job_weight_shroud_forged_mult
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+	inline_script = "output/colony_support_contract_modifiers"
+
+}
+farmer = {
+	category = worker
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_food_processing_facility
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_titan_hunter_trigger = yes
+			}
+			name = titan_hunter
+			desc = titan_hunter
+			icon = hunter_gatherer
+			weight = 10
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_puddle_technician_trigger = yes
+			}
+			name = puddle_technician
+			desc = puddle_technician
+			icon = puddle_technician
+			weight = 15
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_gas_extractor_trigger = yes
+			}
+			name = gas_extractor
+			desc = gas_extractor
+			icon = gas_extractor
+			building_icon = building_gas_extractors
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_angler_trigger = yes
+			}
+			name = angler
+			desc = angler
+			icon = angler
+			weight = 50
+		}
+	}
+
+	tags = { food }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+	inline_script = "jobs/quasark_food_triggered_modifiers"
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 6
+		}
+		produces = {
+			trigger = {
+				owner? = { is_robot_empire = yes }
+			}
+			food = -1
+		}
+		# Job Swap - Anglers
+		produces = {
+			trigger = {
+				colony? = {
+					farmer_is_angler_trigger = yes
+				}
+			}
+			trade = 2
+		}
+		# Job Swap - Titan Hunters
+		produces = {
+			trigger = {
+				farmer_is_titan_hunter_trigger = yes
+			}
+			food = 2
+			trade = 8
+		}
+		# Job Swap - Puddle Technician
+		produces = {
+			trigger = {
+				farmer_is_puddle_technician_trigger = yes
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_produce_requisitorium
+			}
+			food = @requisitorium_food_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_food
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_produce_requisitorium
+				}
+			}
+			food = @requisitorium_food_overlord
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_valid_civic = civic_agrarian_idyll
+				NOT = {
+					has_valid_civic = civic_dystopian_society
+				}
+			}
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 1.1
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_labor
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_food"
+
+}
+agri_drone = {
+	category = simple_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_food_processing_facility
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_puddle_technician_trigger = yes
+			}
+			name = puddle_technician_drone
+			desc = puddle_technician_drone
+			icon = puddle_technician_drone
+			weight = 10
+		}
+		swap_type = {
+			trigger = {
+				farmer_is_gas_extractor_trigger = yes
+			}
+			name = gas_extraction_drone
+			desc = gas_extraction_drone
+			icon = gas_extraction_drone
+			building_icon = building_gas_extractors
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
+				owner? = { is_wilderness_empire = yes }
+			}
+			name = pollinosymbiont
+			desc = pollinosymbiont
+			icon = pollinosymbiont
+			building_icon = massive_growth_3
+			condition_string = DRONE_JOB_TRIGGER
+			weight = 100
+		}
+	}
+
+	tags = { food }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { simple_drone_trigger = yes }
+	inline_script = "jobs/quasark_food_triggered_modifiers"
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 6
+		}
+		produces = {
+			trigger = {
+				owner? = {
+					is_robot_empire = yes
+					is_catalytic_empire = no
+				}
+			}
+			food = -1
+		}
+		# Job Swap - Puddle Technician
+		produces = {
+			trigger = {
+				farmer_is_puddle_technician_trigger = yes
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				has_carrier_flag = has_produce_requisitorium
+			}
+			food = @requisitorium_food_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_food
+		produces = {
+			trigger = {
+				colony = {
+					has_carrier_flag = has_produce_requisitorium
+				}
+			}
+			food = @requisitorium_food_overlord
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		modifier = {
+			factor = 0.9
+			owner = {
+				is_robot_empire = yes
+			}
+		}
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_food"
+
+}

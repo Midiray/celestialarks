@@ -1,0 +1,46 @@
+
+create_quasark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "The Gargantuan Quasarcraft"
+		settings = {
+			is_ultra_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "The Gargantuan Quasarcraft"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_quasark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "The Gargantuan Quasarcraft"
+		settings = {
+			is_ultra_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "The Gargantuan Quasarcraft"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}

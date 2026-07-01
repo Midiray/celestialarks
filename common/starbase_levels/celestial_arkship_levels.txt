@@ -1,0 +1,17 @@
+starbase_level_carks_quasark = {
+	ship_size = carks_quasark
+	starbase_capacity_used = 1
+	picture = "GFX_arkship_blueprint_carks_quasark"
+	show_in_outliner = yes
+	display_shipyard_button = no
+	ai_weight = { weight = 1 }
+	potential_home_base = yes
+	downgrade_potential = {
+		always = no
+	}
+	module_slots = {
+		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56
+		spinal_mount_1
+	}
+	building_slots = { 1 2 3 4 5 6 7 8 9 10 11 12 lower_1 lower_2 lower_3 lower_4 lower_5 lower_6 lower_7 lower_8 lower_9 lower_10 lower_11 lower_12 }
+}

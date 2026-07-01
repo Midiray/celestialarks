@@ -1,0 +1,127 @@
+component_set = {
+	key = "QSC_DISRUPTOR"
+	icon = "GFX_qsc_sunsplitter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_ENERGY_LANCE"
+	icon = "GFX_qsc_skyripper"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_LASER_L"
+	icon = "GFX_qsc_jupiter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_TITANIC_GUN"
+
+	icon = "GFX_qsc_obliterator"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_PLANET_LANCE"
+	icon = "GFX_qsc_eye"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_ENDSINGER"
+	icon = "GFX_ship_part_planet_lance_blokkat"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_AURA_GRAVSNARE_SET"
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_AURA_EYE_SET"
+	icon = "GFX_ship_part_aura_inspiring_presence"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_AURA_GRAVSPEED_SET"
+	icon = "GFX_ship_part_aura_hyperlane"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_AURA_DEATHFIELD_SET"
+	icon = "GFX_ship_part_aura_shield_dampener"
+	icon_frame = 1
+}
+##################
+
+component_set = {
+	key = "QUASARK_DEVASTATOR_WEAPON"
+	icon = "GFX_ship_part_planet_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_MOON_STRIKE"
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_PLANET_STRIKE"
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_SYSTEM_STRIKE"
+	icon = "GFX_qsc_strike_force"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_SYSTEM_BEAM_SET"
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_PLANET_BEAM_SET"
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_MOON_BEAM_SET"
+	icon = "GFX_ship_part_planet_lance_white"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_SYSTEM_CANNON_SET"
+	icon = "GFX_ship_part_stellar_hypercannon"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_PLANET_CANNON_SET"
+	icon = "GFX_ship_part_stellar_hypercannon"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QUASARK_MOON_CANNON_SET"
+	icon = "GFX_ship_part_stellar_hypercannon"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "QSC_DEFENSE_SET"
+	icon = "GFX_ship_part_shield_blokkat"
+	icon_frame = 1
+}

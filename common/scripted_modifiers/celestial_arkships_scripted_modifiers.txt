@@ -1,0 +1,62 @@
+
+
+weapon_heavy_from_soldiers = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+weapon_super_heavy_from_soldiers = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+weapon_light_from_soldiers = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+weapon_hangar_from_soldiers = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+weapon_energy_from_technicians = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+job_upkeep_from_technicians = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+weapon_debuff_from_miners = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = no
+	category = ship
+}
+forge_upkeep_from_miners = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+forge_upkeep_from_farmers = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
+empire_size_from_unity = {
+	icon = mod_weapon_type_energy_weapon_damage_mult
+	percentage = yes
+	good = yes
+	category = ship
+}
