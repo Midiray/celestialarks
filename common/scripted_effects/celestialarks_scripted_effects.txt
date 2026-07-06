@@ -44,3 +44,97 @@ create_quasark_effect_origin = {
 		}
 	}
 }
+create_sysark_o_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Class O Stellar Systemcraft"
+		settings = {
+			#is_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Class O Stellar Systemcraft"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}
+create_sysark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Stellar Systemcraft"
+		settings = {
+			#is_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Stellar Systemcraft"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}
+create_planark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Behemoth Planetcraft"
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Behemoth Planetcraft"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}
+create_lunark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Attack Moon"
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Attack Moon"
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+
+sysark_eraser_beam_mount = {
+	icon = "GFX_sysark_eraser_beam_mount"
+	section = "SYSARK_ERASER_BEAM"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 0_quasark_super_heavy_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_500
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = SYSTEMCRAFT_RAY_OF_DOOM_1
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_planet_missile_mount = {
+	icon = "GFX_sysark_planet_missile_mount"
+	section = "SYSARK_PLANET_MISSILES"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_quasark_heavy_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_500
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = GIGA_MOON_MISSILE_1
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

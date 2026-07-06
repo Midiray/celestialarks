@@ -237,6 +237,22 @@ country_event = {
                     TYPE = quasark
                     OWNER = from
                 }
+                create_sysark_o_effect_origin = {
+                    TYPE = sysark_o
+                    OWNER = from
+                }
+                create_sysark_effect_origin = {
+                    TYPE = sysark
+                    OWNER = from
+                }
+                create_planark_effect_origin = {
+                    TYPE = planark
+                    OWNER = from
+                }
+                create_lunark_effect_origin = {
+                    TYPE = lunark
+                    OWNER = from
+                }
             }
             change_pc = pc_shattered
         }

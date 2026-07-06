@@ -1084,6 +1084,8 @@ zone_quasark_forge_armor_focus = {
 
 	planet_modifier = {
 		zone_building_slots_add = 3
+		ship_armor_from_metallurgists = 0.02
+		ship_hardening_from_metallurgists = 0.01
 	}
 
 	zone_sets = {

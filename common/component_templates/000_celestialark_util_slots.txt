@@ -1,3 +1,130 @@
+###Lunark
+utility_component_template = {
+    key = "REACTOR_MOON"
+    size = small
+    icon = "GFX_ship_part_reactor_planet"
+    icon_frame = 1
+    power = 30000
+    component_set = "power_core"
+    potential = { giga_ship_uses_war_moon_components = yes }
+}
+utility_component_template = {
+    key = "GIGA_MOON_COMPUTER"
+    size = small
+    icon = "GFX_ship_part_moon_computer_regular"
+    icon_frame = 1
+    power = -50
+    ai_weight = { weight = 2 }
+    potential = { giga_ship_uses_war_moon_components = yes }
+    component_set = "combat_computers"
+    ship_behavior = "giga_moon"
+}
+###Planark
+utility_component_template = {
+	key = "REACTOR_PLANET"
+	size = small
+	icon = "GFX_ship_part_reactor_planet"
+	icon_frame = 1
+	power = 100000
+	component_set = "power_core"
+	potential = { giga_ship_uses_war_planet_components = yes }
+}
+utility_component_template = {
+	key = "GIGA_PLANET_COMPUTER"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_basic"
+	icon_frame = 1
+	power = -50
+	ai_weight = { weight = 2 }
+	potential = { giga_ship_uses_war_planet_components = yes }
+	ai_tags = { artillery }
+	component_set = "combat_computers"
+	ship_behavior = "giga_planet"
+}
+utility_component_template = {
+	key = "CARKS_SENSOR"
+	size = medium
+	icon = "GFX_ship_part_sensor_1"
+	icon_frame = 1
+	power = -5
+	sensor_range = 5
+	hyperlane_range = 5
+
+	component_set = "sensor_components"
+	potential = { is_carks_ship = yes }
+
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "CARKS_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	power = -5
+
+	potential = { is_carks_ship = yes }
+
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+		ship_windup_mult = -0.7
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+	component_set = "ftl_components"
+}
+
+###Sysark
+utility_component_template = {
+	key = "REACTOR_SYSTEM"
+	size = small
+	icon = "GFX_ship_part_reactor_system"
+	icon_frame = 1
+	power = 1000000
+	component_set = "power_core"
+	potential = { giga_ship_uses_war_system_components = yes carks_is_g_system = yes }
+	ai_weight = { weight = 10000 } # fix 'normal' reactors being potentially autopicked if they are somehow valid for the systemcraft
+}
+utility_component_template = {
+	key = "REACTOR_SYSTEM_O"
+	size = small
+	icon = "GFX_ship_part_reactor_system_o"
+	icon_frame = 1
+	power = 5000000 #5 times more powerful than regular one
+	component_set = "power_core"
+	potential = { giga_ship_uses_war_system_components = yes carks_is_g_system = no }
+	ai_weight = { weight = 10000 } # fix 'normal' reactors being potentially autopicked if they are somehow valid for the o class systemcraft
+}
+utility_component_template = {
+	key = "GIGA_SYSTEM_COMPUTER"
+	size = small
+	icon = "GFX_ship_part_aura_hyperlane"
+	icon_frame = 1
+	power = -50
+	ai_weight = { weight = 2 }
+	potential = { giga_ship_uses_war_system_components = yes }
+	ai_tags = { artillery }
+	component_set = "combat_computers"
+	ship_behavior = "giga_system"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_tracking_add = 25
+		ship_accuracy_add = 25
+		ship_weapon_range_mult = 1
+	}
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 28 }
+	}
+}
+###Quasark
 utility_component_template = {
 	key = "QSC_REACTOR"
 	size = small
