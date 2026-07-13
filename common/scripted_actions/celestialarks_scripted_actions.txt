@@ -74,7 +74,7 @@ quasark_harvest = {
 	}
 
 	button_clickable = {
-		always = yes
+		#always = yes
 	}
 
 	activity_key = quasark_harvest_activity_key

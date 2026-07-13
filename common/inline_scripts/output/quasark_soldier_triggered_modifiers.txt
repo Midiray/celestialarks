@@ -1,24 +1,15 @@
 
 
 triggered_planet_modifier = {
-	potential = { soldier_is_quasark_heavy_gunner_trigger = yes }
-	quasark_heavy_weapon_damage_mult = 0.02
-	quasark_heavy_weapon_fire_rate_mult = 0.02
+	potential = { carks_soldier_fire_rate_trigger = yes }
+	ship_fire_rate_mult = 0.05
 }
 triggered_planet_modifier = {
-	potential = { soldier_is_quasark_super_heavy_gunner_trigger = yes }
-	quasark_super_heavy_weapon_damage_mult = 0.02
-	quasark_super_heavy_weapon_fire_rate_mult = 0.02
+	potential = { carks_soldier_damage_trigger = yes }
+	ship_weapon_damage = 0.05
 }
 triggered_planet_modifier = {
-	potential = { soldier_is_quasark_light_gunner_trigger = yes }
-	quasark_light_weapon_damage_mult = 0.02
-	quasark_light_weapon_fire_rate_mult = 0.02
-}
-triggered_planet_modifier = {
-	potential = { soldier_is_quasark_hangar_gunner_trigger = yes }
-	#quasark_hangar_weapon_damage_mult = 0.02
-	#quasark_hangar_weapon_fire_rate_mult = 0.02
-	weapon_type_strike_craft_weapon_damage_mult = 0.02
-	weapon_type_strike_craft_weapon_fire_rate_mult = 0.02
+	potential = { carks_soldier_rounded_trigger = yes }
+	ship_weapon_damage = 0.015
+	ship_fire_rate_mult = 0.015
 }

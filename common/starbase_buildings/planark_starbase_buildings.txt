@@ -1,0 +1,371 @@
+
+planark_aura_gravity_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 3_celestial_aura_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			sr_dark_matter = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			sr_dark_matter = @planark_upkeep_strategic_module
+		}
+	}
+	equipped_component = SHIP_AURA_PLANET
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_support_energy_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		technician_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_minerals_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			rare_crystals = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			rare_crystals = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		miner_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_food_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			exotic_gases = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			exotic_gases = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		farmer_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_unity_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			rare_crystals = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			rare_crystals = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		bureaucrat_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_goods_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		artisan_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_alloys_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		foundry_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_soldier_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		soldier_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_support_research_mount = {
+	icon = "GFX_planark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			exotic_gases = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			exotic_gases = @planark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		researcher_jobs_bonus_workforce_mult = 0.15
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_shield_mount = {
+	icon = "GFX_lunark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_defense_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			exotic_gases = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			exotic_gases = @planark_upkeep_strategic_module
+		}
+	}
+	equipped_component = CARKS_SHIELD_MACRO
+	equipped_component = CARKS_SHIELD_MACRO
+	equipped_component = CARKS_SHIELD_MACRO
+	show_component_tooltips = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+planark_armor_mount = {
+	icon = "GFX_lunark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_defense_cat
+
+	potential = {
+		giga_ship_uses_war_planet_components = yes
+	}
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+	equipped_component = CARKS_ARMOR_MACRO
+	equipped_component = CARKS_ARMOR_MACRO
+	equipped_component = CARKS_ARMOR_MACRO
+	show_component_tooltips = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}

@@ -1,0 +1,340 @@
+
+sysark_annihilation_lance_mount = {
+	icon = "GFX_sysark_annihilation_lance_mount"
+	section = "sysark_ANNIHILATION_LANCE"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_spinal
+			rare_crystals = @sysark_cost_strategic_spinal
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_spinal
+			rare_crystals = @sysark_upkeep_strategic_spinal
+		}
+	}
+
+	component_set = SYSTEMCRAFT_RAY_OF_DOOM_1
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_mega_artillery_mount = {
+	icon = "GFX_sysark_mega_artillery_mount"
+	section = "sysark_MEGA_ARTILLERY"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_spinal
+			volatile_motes = @sysark_cost_strategic_spinal
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_spinal
+			volatile_motes = @sysark_upkeep_strategic_spinal
+		}
+	}
+
+	component_set = GIGA_STELLAR_HYPERCANNON
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_planet_missile_mount = {
+	icon = "GFX_sysark_planet_missile_mount"
+	section = "sysark_X_9"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module_expensive
+			volatile_motes = @sysark_cost_strategic_module_expensive
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module_expensive
+			volatile_motes = @sysark_upkeep_strategic_module_expensive
+		}
+	}
+
+	component_set = CARKS_PLANET_GUN_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_devastator_cannon_mount = {
+	icon = "GFX_sysark_devastator_cannon_mount"
+	section = "sysark_T_28"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			rare_crystals = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			rare_crystals = @sysark_upkeep_strategic_module
+		}
+	}
+
+	component_set = ARKSHIP_DEVASTATOR_WEAPON
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_particle_launcher_mount = {
+	icon = "GFX_sysark_particle_launcher_mount"
+	section = "sysark_G_14"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			exotic_gases = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			exotic_gases = @sysark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_LAUNCHER_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_strike_craft_mount = {
+	icon = "GFX_sysark_strike_craft_mount"
+	section = "sysark_H_14"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			exotic_gases = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			exotic_gases = @sysark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_HANGAR_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_kinetic_battery_mount = {
+	icon = "GFX_sysark_kinetic_battery_mount"
+	section = "sysark_X_14"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			volatile_motes = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			volatile_motes = @sysark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_ARTILLERY_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+sysark_build_cap_mount = {
+	icon = "GFX_arkship_engineering_bay"
+	section = "sysark_SUPPORT_PD"
+	construction_days = 180
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			volatile_motes = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			volatile_motes = @sysark_upkeep_strategic_module
+		}
+	}
+	planet_modifier = {
+		planet_building_capacity_add = 1
+		planet_building_build_speed_mult = 0.2
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 4
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	on_finished = {
+		set_ship_construction_type = starbase_shipyard
+	}
+	on_destroyed = {
+	}
+}
+
+sysark_habitation_mount = {
+	icon = "GFX_arkship_habitation_module"
+	section = "sysark_SUPPORT_PD"
+	construction_days = 180
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_war_system_components = yes
+		carks_is_g_system = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @sysark_cost_alloys_module
+			rare_crystals = @sysark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @sysark_upkeep_energy_module
+			rare_crystals = @sysark_upkeep_strategic_module
+		}
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	planet_modifier = {
+		planet_max_districts_add = 4
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
