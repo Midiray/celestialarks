@@ -31,7 +31,7 @@ district_sysark_housing = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
@@ -39,7 +39,7 @@ district_sysark_housing = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 
 	triggered_planet_modifier = {
@@ -93,9 +93,8 @@ district_sysark_soldier = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_fortress
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_soldier_zones
@@ -120,24 +119,28 @@ district_sysark_soldier = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 1000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = @carks_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }
 district_sysark_energy = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_energy
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_energy_zones
@@ -162,24 +165,28 @@ district_sysark_energy = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 1000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = @carks_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }
 district_sysark_minerals = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_minerals
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_minerals_zones
@@ -204,24 +211,28 @@ district_sysark_minerals = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 1000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @carks_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }
 district_sysark_food = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_food
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_food_zones
@@ -246,24 +257,28 @@ district_sysark_food = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 1000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/farmers_add
+		AMOUNT = @carks_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }
 district_sysark_forge = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_alloys
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_forge_zones
@@ -288,24 +303,28 @@ district_sysark_forge = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @carks_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }
 district_sysark_research = {
 	base_buildtime = 600
 
 	exempt_from_ai_planet_specialization = yes
-	overlay_icon = GFX_district_government
-    is_uncapped = { always = no }
-	base_cap_amount = 200
+	overlay_icon = GFX_district_research
+    is_uncapped = { always = yes }
 
 	zone_slots = {
 		slot_sysark_research_zones
@@ -330,14 +349,34 @@ district_sysark_research = {
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = 1000
+			alloys = @carks_construction_cost
 		}
 		upkeep = {
 			energy = 5
 		}
 	}
 
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @carks_small_job_amount
+	}
+
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = @carks_small_job_amount
+	}
+
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = @carks_small_job_amount
+	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @carks_small_job_amount
+	}
+
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = @carks_district_housing
 	}
 }

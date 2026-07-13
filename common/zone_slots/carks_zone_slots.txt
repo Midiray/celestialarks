@@ -1,0 +1,341 @@
+#Quasark
+slot_quasark_city_government = {
+	start = zone_quasark_default
+
+	included_zone_sets = {
+		quasark_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_quasark_city_01 = {
+	included_zone_sets = {
+		quasark_urban
+	}
+}
+
+slot_quasark_city_02 = {
+	included_zone_sets = {
+		quasark_urban
+	}
+}
+
+slot_quasark_soldier_zones = {
+	included_zone_sets = {
+		quasark_soldier_zones
+	}
+}
+
+slot_quasark_energy_zones = {
+	included_zone_sets = {
+		quasark_energy_zones
+	}
+}
+
+slot_quasark_minerals_zones = {
+	included_zone_sets = {
+		quasark_minerals_zones
+	}
+}
+
+slot_quasark_food_zones = {
+	included_zone_sets = {
+		quasark_food_zones
+	}
+}
+
+slot_quasark_forge_zones = {
+	included_zone_sets = {
+		quasark_forge_zones
+	}
+}
+
+slot_quasark_research_zones = {
+	included_zone_sets = {
+		quasark_research_zones
+	}
+}
+
+slot_quasark_bulk_matter_zones = {
+	included_zone_sets = {
+		quasark_bulk_matter_zones
+	}
+}
+#Sysark-O
+slot_sysark_o_city_government = {
+	start = zone_sysark_o_default
+
+	included_zone_sets = {
+		sysark_o_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_sysark_o_city_01 = {
+	included_zone_sets = {
+		sysark_o_urban
+	}
+}
+
+slot_sysark_o_city_02 = {
+	included_zone_sets = {
+		sysark_o_urban
+	}
+}
+
+slot_sysark_o_soldier_zones = {
+	included_zone_sets = {
+		sysark_o_soldier_zones
+	}
+}
+
+slot_sysark_o_energy_zones = {
+	included_zone_sets = {
+		sysark_o_energy_zones
+	}
+}
+
+slot_sysark_o_minerals_zones = {
+	included_zone_sets = {
+		sysark_o_minerals_zones
+	}
+}
+
+slot_sysark_o_food_zones = {
+	included_zone_sets = {
+		sysark_o_food_zones
+	}
+}
+
+slot_sysark_o_forge_zones = {
+	included_zone_sets = {
+		sysark_o_forge_zones
+	}
+}
+
+slot_sysark_o_research_zones = {
+	included_zone_sets = {
+		sysark_o_research_zones
+	}
+}
+#Sysark
+slot_sysark_city_government = {
+	start = zone_sysark_default
+
+	included_zone_sets = {
+		sysark_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_sysark_city_01 = {
+	included_zone_sets = {
+		sysark_urban
+	}
+}
+
+slot_sysark_city_02 = {
+	included_zone_sets = {
+		sysark_urban
+	}
+}
+
+slot_sysark_soldier_zones = {
+	included_zone_sets = {
+		sysark_soldier_zones
+	}
+}
+
+slot_sysark_energy_zones = {
+	included_zone_sets = {
+		sysark_energy_zones
+	}
+}
+
+slot_sysark_minerals_zones = {
+	included_zone_sets = {
+		sysark_minerals_zones
+	}
+}
+
+slot_sysark_food_zones = {
+	included_zone_sets = {
+		sysark_food_zones
+	}
+}
+
+slot_sysark_forge_zones = {
+	included_zone_sets = {
+		sysark_forge_zones
+	}
+}
+
+slot_sysark_research_zones = {
+	included_zone_sets = {
+		sysark_research_zones
+	}
+}
+#Planark
+slot_planark_city_government = {
+	start = zone_planark_default
+
+	included_zone_sets = {
+		planark_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_planark_city_01 = {
+	included_zone_sets = {
+		planark_urban
+	}
+}
+
+slot_planark_city_02 = {
+	included_zone_sets = {
+		planark_urban
+	}
+}
+
+slot_planark_soldier_zones = {
+	included_zone_sets = {
+		planark_soldier_zones
+	}
+}
+
+slot_planark_energy_zones = {
+	included_zone_sets = {
+		planark_energy_zones
+	}
+}
+
+slot_planark_minerals_zones = {
+	included_zone_sets = {
+		planark_minerals_zones
+	}
+}
+
+slot_planark_food_zones = {
+	included_zone_sets = {
+		planark_food_zones
+	}
+}
+
+slot_planark_forge_zones = {
+	included_zone_sets = {
+		planark_forge_zones
+	}
+}
+
+slot_planark_research_zones = {
+	included_zone_sets = {
+		planark_research_zones
+	}
+}
+#Lunark
+slot_lunark_city_government = {
+	start = zone_lunark_default
+
+	included_zone_sets = {
+		lunark_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_lunark_city_01 = {
+	included_zone_sets = {
+		lunark_urban
+	}
+}
+
+slot_lunark_city_02 = {
+	included_zone_sets = {
+		lunark_urban
+	}
+}
+
+slot_lunark_soldier_zones = {
+	included_zone_sets = {
+		lunark_soldier_zones
+	}
+}
+
+slot_lunark_energy_zones = {
+	included_zone_sets = {
+		lunark_energy_zones
+	}
+}
+
+slot_lunark_minerals_zones = {
+	included_zone_sets = {
+		lunark_minerals_zones
+	}
+}
+
+slot_lunark_food_zones = {
+	included_zone_sets = {
+		lunark_food_zones
+	}
+}
+
+slot_lunark_forge_zones = {
+	included_zone_sets = {
+		lunark_forge_zones
+	}
+}
+
+slot_lunark_research_zones = {
+	included_zone_sets = {
+		lunark_research_zones
+	}
+}

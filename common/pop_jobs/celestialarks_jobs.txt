@@ -1,4 +1,4 @@
-quasark_indiv_spawning_drone = {
+carks_indiv_spawning_drone = {
 	category = specialist
 	#swappable_data = {
 	#	default = {
@@ -164,4 +164,60 @@ quasark_indiv_spawning_drone = {
 		}
 	}
 
+}
+carks_bulk_matter_miner = {
+	category = specialist
+	#swappable_data = {
+	#	default = {
+	#		condition_string = SOLDIER_JOB_TRIGGER
+	#		building_icon = building_stronghold
+	#	}
+	#	swap_type = {
+	#		trigger = {
+	#			soldier_is_necromancer = yes
+	#		}
+	#		name = necromancer
+	#		desc = necromancer
+	#		icon = necromancer
+	#		building_icon = building_dread_encampment
+	#		weight = 50
+	#	}
+	#}
+
+	tags = { strategic_resource }
+
+	#country_modifier = {
+	#	country_naval_cap_add = 5
+	#}
+	resources = {
+		category = planet_bm_miners
+		upkeep = {
+			alloys = 20
+			minerals = 50
+		}
+		produces = {
+			giga_sr_bulk_matter = 0.005
+		}
+	}
+
+
+
+	#inline_script = "output/quasark_soldier_triggered_modifiers"
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		#soldier_job_check_trigger = yes
+		owner = { is_gestalt = no }
+	}
+
+	weight = {
+		weight = 10
+	}
 }

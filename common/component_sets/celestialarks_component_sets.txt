@@ -125,3 +125,56 @@ component_set = {
 	icon = "GFX_ship_part_shield_blokkat"
 	icon_frame = 1
 }
+###
+component_set = {
+	key = "CARKS_GIGA_MOON_ARTILLERY"
+	icon = "GFX_ship_part_shield_blokkat"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "CARKS_GIGA_OMEGA_LANCE"
+	icon = "GFX_ship_part_moon_artillery_1"
+	icon_frame = 1
+}
+
+component_set = { 
+	key = "GIGA_FLUSION_GUN_2"				
+	icon = "GFX_ship_part_mass_accelerator_2"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_PLANET_BEAM_SET"			
+	icon = "GFX_ship_part_planet_lance"				
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_PLANET_GUN_SET"				
+	icon = "GFX_ship_part_planetary_railgun"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_LAUNCHER_MACRO_SET"				
+	icon = "GFX_ship_part_energy_torpedo_2"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_ARTILLERY_MACRO_SET"				
+	icon = "GFX_ship_part_mass_accelerator_2"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_HANGAR_MACRO_SET"				
+	icon = "GFX_ship_part_strike_craft_fighter_3"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_SHIELD_MACRO_SET"				
+	icon = "GFX_ship_part_shield_5"		
+	icon_frame = 1
+}
+component_set = { 
+	key = "CARKS_ARMOR_MACRO_SET"				
+	icon = "GFX_ship_part_armor_5"		
+	icon_frame = 1
+}

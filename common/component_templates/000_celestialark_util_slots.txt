@@ -41,43 +41,6 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = "giga_planet"
 }
-utility_component_template = {
-	key = "CARKS_SENSOR"
-	size = medium
-	icon = "GFX_ship_part_sensor_1"
-	icon_frame = 1
-	power = -5
-	sensor_range = 5
-	hyperlane_range = 5
-
-	component_set = "sensor_components"
-	potential = { is_carks_ship = yes }
-
-	ai_weight = {
-		weight = 1
-	}
-}
-utility_component_template = {
-	key = "CARKS_JUMP_DRIVE_1"
-	size = small
-	icon = "GFX_ship_part_jump_drive_1"
-	icon_frame = 1
-	power = -5
-
-	potential = { is_carks_ship = yes }
-
-	ftl = yes
-	jumpdrive = yes
-	ship_modifier = {
-		ship_disengage_opportunities_add = 1
-		ship_windup_mult = -0.7
-	}
-
-	ai_weight = {
-		weight = 4
-	}
-	component_set = "ftl_components"
-}
 
 ###Sysark
 utility_component_template = {
@@ -422,4 +385,78 @@ utility_component_template = {
 
 	potential = { ship_uses_quasarcraft_components = yes }
 	class_restriction = { shipclass_starbase }
+}
+utility_component_template = {
+	key = "SHIP_AURA_MOON"
+	size = medium
+	icon = "GFX_ship_part_aura_shield_dampener"
+	power = 0
+	icon_frame = 1
+	potential = { giga_ship_uses_war_moon_components = yes }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "aura_ship_gravity_well"
+		radius = 125
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = planetary_presence_aura
+			priority = 0
+		}
+
+		modifier = {
+			ship_evasion_mult = -0.075
+			ship_speed_mult = -0.1
+			ship_disengage_opportunities_add = -1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+utility_component_template = {
+	key = "SHIP_AURA_SYSTEM"
+	size = medium
+	icon = "GFX_ship_part_aura_shield_dampener"
+	power = 0
+	icon_frame = 1
+	potential = { giga_ship_uses_war_system_components = yes }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "aura_ship_gravity_well"
+		radius = 125
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = planetary_presence_aura
+			priority = 2
+		}
+
+		modifier = {
+			ship_evasion_mult = -0.3
+			ship_speed_mult = -0.4
+			ship_disengage_opportunities_add = -4
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
 }

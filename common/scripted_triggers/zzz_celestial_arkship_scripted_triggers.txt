@@ -81,8 +81,22 @@ energy_is_quasark_energy_damage_trigger = {
 }
 energy_is_quasark_upkeep_trigger = {
 	planet = {
-		has_zone = {
-			zone = zone_quasark_energy_generation_focus
+		OR = {
+			has_zone = {
+				zone = zone_quasark_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_sysark_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_planark_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_lunark_energy_generation_focus
+			}
 		}
 	}
 }

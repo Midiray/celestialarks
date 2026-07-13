@@ -17,7 +17,7 @@ origin_quasark = {
 	modifier = {
 		country_base_alloys_produces_add = 17500
 		country_base_energy_produces_add = 40000
-		country_base_trade_produces_add = 2500
+		country_base_trade_produces_add = 3000
 	}
 	ai_playable = { always = no }
 }

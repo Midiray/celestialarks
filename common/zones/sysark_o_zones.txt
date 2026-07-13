@@ -1,4 +1,4 @@
-zone_quasark_default = {
+zone_sysark_o_default = {
 	icon = GFX_diplomatic_weight_large
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
@@ -13,14 +13,14 @@ zone_quasark_default = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	max_buildings = 6
 
 	zone_sets = {
-		quasark_default
+		sysark_o_default
 	}
 
 	include = {
@@ -45,7 +45,7 @@ zone_quasark_default = {
 
 	ai_priority = 0
 }
-zone_quasark_robot_assembly = {
+zone_sysark_o_robot_assembly = {
 	icon = GFX_district_specialization_urban
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
@@ -76,31 +76,18 @@ zone_quasark_robot_assembly = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	max_buildings = 3
 
 	zone_sets = {
-		quasark_urban
+		sysark_o_urban
 	}
 
-	include = {
-		all
-	}
-
-	excluded_building_sets = {
-		generator
-		mining
-		farming
-		knights
-		betharian
-		generator_automation
-		mining_automation
-		farming_automation
-		urban_automation_arcology
-		urban_automation
+	included_building_sets = {
+		urban
 	}
 
 	planet_modifier = {
@@ -133,7 +120,7 @@ zone_quasark_robot_assembly = {
 	ai_priority = 2
 	ai_weight_coefficient = 0.5
 }
-zone_quasark_bio_assembly = {
+zone_sysark_o_bio_assembly = {
 	icon = GFX_district_specialization_urban
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
@@ -159,31 +146,18 @@ zone_quasark_bio_assembly = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	max_buildings = 3
 
 	zone_sets = {
-		quasark_urban
+		sysark_o_urban
 	}
 
-	include = {
-		all
-	}
-
-	excluded_building_sets = {
-		generator
-		mining
-		farming
-		knights
-		betharian
-		generator_automation
-		mining_automation
-		farming_automation
-		urban_automation_arcology
-		urban_automation
+	included_building_sets = {
+		urban
 	}
 
 	planet_modifier = {
@@ -203,7 +177,7 @@ zone_quasark_bio_assembly = {
 				is_gestalt = no
 			}
 		}
-		job_quasark_indiv_spawning_drone_per_pop = 0.025
+		job_carks_indiv_spawning_drone_per_pop = 0.025
 	}
 
 	triggered_desc = {
@@ -216,7 +190,7 @@ zone_quasark_bio_assembly = {
 	ai_priority = 2
 	ai_weight_coefficient = 0.5
 }
-zone_quasark_entertainment = {
+zone_sysark_o_entertainment = {
 	icon = GFX_district_specialization_urban
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
@@ -240,31 +214,18 @@ zone_quasark_entertainment = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	max_buildings = 3
 
 	zone_sets = {
-		quasark_urban
+		sysark_o_urban
 	}
 
-	include = {
-		all
-	}
-
-	excluded_building_sets = {
-		generator
-		mining
-		farming
-		knights
-		betharian
-		generator_automation
-		mining_automation
-		farming_automation
-		urban_automation_arcology
-		urban_automation
+	included_building_sets = {
+		urban
 	}
 
 	planet_modifier = {
@@ -282,7 +243,7 @@ zone_quasark_entertainment = {
 	ai_priority = 2
 	ai_weight_coefficient = 0.5
 }
-zone_quasark_crime = {
+zone_sysark_o_crime = {
 	icon = GFX_district_specialization_urban
 	base_buildtime = @zone_buildtime
 	potential = { # planet scope
@@ -306,31 +267,18 @@ zone_quasark_crime = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	max_buildings = 3
 
 	zone_sets = {
-		quasark_urban
+		sysark_o_urban
 	}
 
-	include = {
-		all
-	}
-
-	excluded_building_sets = {
-		generator
-		mining
-		farming
-		knights
-		betharian
-		generator_automation
-		mining_automation
-		farming_automation
-		urban_automation_arcology
-		urban_automation
+	included_building_sets = {
+		urban
 	}
 
 	planet_modifier = {
@@ -349,7 +297,7 @@ zone_quasark_crime = {
 	ai_weight_coefficient = 0.5
 }
 
-zone_quasark_heavy_focus = {
+zone_sysark_o_heavy_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -357,34 +305,22 @@ zone_quasark_heavy_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_soldier_add = 1000
 		planet_soldiers_alloys_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_warrior_drone_add = 1000
-		planet_soldiers_alloys_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
 		fortress
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -393,13 +329,13 @@ zone_quasark_heavy_focus = {
 	}
 
 	zone_sets = {
-		quasark_soldier_zones
+		sysark_o_soldier_zones
 	}
 
 	ai_priority = 5
 }
 
-zone_quasark_super_heavy_focus = {
+zone_sysark_o_super_heavy_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -407,34 +343,22 @@ zone_quasark_super_heavy_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_soldier_add = 1000
 		planet_soldiers_alloys_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_warrior_drone_add = 1000
-		planet_soldiers_alloys_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
 		fortress
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -443,13 +367,13 @@ zone_quasark_super_heavy_focus = {
 	}
 
 	zone_sets = {
-		quasark_soldier_zones
+		sysark_o_soldier_zones
 	}
 
 	ai_priority = 5
 }
 
-zone_quasark_light_focus = {
+zone_sysark_o_light_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -457,34 +381,22 @@ zone_quasark_light_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_soldier_add = 1000
 		planet_soldiers_alloys_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_warrior_drone_add = 1000
-		planet_soldiers_alloys_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
 		fortress
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -493,13 +405,13 @@ zone_quasark_light_focus = {
 	}
 
 	zone_sets = {
-		quasark_soldier_zones
+		sysark_o_soldier_zones
 	}
 
 	ai_priority = 5
 }
 
-zone_quasark_hangar_focus = {
+zone_sysark_o_hangar_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -507,34 +419,22 @@ zone_quasark_hangar_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_soldier_add = 1000
 		planet_soldiers_alloys_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_warrior_drone_add = 1000
-		planet_soldiers_alloys_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
 		fortress
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -543,14 +443,14 @@ zone_quasark_hangar_focus = {
 	}
 
 	zone_sets = {
-		quasark_soldier_zones
+		sysark_o_soldier_zones
 	}
 
 	ai_priority = 5
 }
 
 
-zone_quasark_energy_generation_focus = {
+zone_sysark_o_energy_generation_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -558,32 +458,18 @@ zone_quasark_energy_generation_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_technician_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_technician_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		generator
+		generator_automation
+		fallen_empire_generator
 	}
 
 	planet_modifier = {
@@ -592,12 +478,12 @@ zone_quasark_energy_generation_focus = {
 	}
 
 	zone_sets = {
-		quasark_energy_zones
+		sysark_o_energy_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_energy_speed_focus = {
+zone_sysark_o_energy_speed_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -605,34 +491,22 @@ zone_quasark_energy_speed_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_technician_add = 1000
 		planet_technician_exotic_gases_upkeep_add = 0.015
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_technician_drone_add = 1000
-		planet_technician_exotic_gases_upkeep_add = 0.015
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		generator
+		generator_automation
+		fallen_empire_generator
 	}
 
 	planet_modifier = {
@@ -641,12 +515,12 @@ zone_quasark_energy_speed_focus = {
 	}
 
 	zone_sets = {
-		quasark_energy_zones
+		sysark_o_energy_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_energy_damage_focus = {
+zone_sysark_o_energy_damage_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -654,34 +528,22 @@ zone_quasark_energy_damage_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_quasark_energy_add = 1000
-		planet_quasark_energy_job_alloys_upkeep_add = 0.1
+		planet_technician_alloys_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_quasark_energy_drone_add = 1000
-		planet_quasark_energy_job_alloys_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		generator
+		generator_automation
+		fallen_empire_generator
 	}
 
 	planet_modifier = {
@@ -690,13 +552,13 @@ zone_quasark_energy_damage_focus = {
 	}
 
 	zone_sets = {
-		quasark_energy_zones
+		sysark_o_energy_zones
 	}
 
 	ai_priority = 5
 }
 
-zone_quasark_mineral_generation_focus = {
+zone_sysark_o_mineral_generation_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -704,49 +566,34 @@ zone_quasark_mineral_generation_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_miner_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_mining_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		mining
+		fallen_empire_mining
+		mining_automation
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		planet_miners_minerals_produces_add = 5
-		planet_miners_energy_produces_add = 3
-		planet_miners_physics_research_produces_add = 1
-		weapon_debuff_from_miners = -0.0025
+		planet_miners_minerals_produces_add = 4
+		planet_miners_physics_research_produces_add = 0.5
+		planet_miners_energy_produces_add = 2
 	}
 
 	zone_sets = {
-		quasark_minerals_zones
+		sysark_o_minerals_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_mineral_forge_support_focus = {
+zone_sysark_o_mineral_forge_support_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 	potential = {
@@ -760,47 +607,33 @@ zone_quasark_mineral_forge_support_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_miner_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_mining_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		mining
+		fallen_empire_mining
+		mining_automation
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		forge_upkeep_from_miners = -0.001
+		forge_upkeep_from_miners = -0.002
 		planet_miners_minerals_produces_add = -3
 	}
 
 	zone_sets = {
-		quasark_minerals_zones
+		sysark_o_minerals_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_mineral_radiation_focus = {
+zone_sysark_o_food_generation_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -808,81 +641,19 @@ zone_quasark_mineral_radiation_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_miner_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_mining_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
-	}
-
-	planet_modifier = {
-		zone_building_slots_add = 3
-		planet_miners_minerals_produces_add = -1
-		planet_miners_energy_produces_add = 0.5
-		planet_miners_physics_research_produces_add = 0.5
-	}
-
-	zone_sets = {
-		quasark_minerals_zones
-	}
-
-	ai_priority = 5
-}
-zone_quasark_food_generation_focus = {
-	icon = GFX_district_specialization_fighter
-	base_buildtime = @zone_buildtime
-
-
-	resources = {
-		category = planet_zones
-		cost = {
-			alloys = 5000
-		}
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_farmer_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_agri_drone_add = 1000
-	}
-
-	included_building_sets = {
-		fortress
+		farming
+		hydroponics
+		farming_automation
+		fallen_empire_farming
 	}
 
 	planet_modifier = {
@@ -890,12 +661,12 @@ zone_quasark_food_generation_focus = {
 	}
 
 	zone_sets = {
-		quasark_food_zones
+		sysark_o_food_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_food_forge_support_focus = {
+zone_sysark_o_food_forge_support_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 	potential = {
@@ -909,47 +680,34 @@ zone_quasark_food_forge_support_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_farmer_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_agri_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		farming
+		hydroponics
+		farming_automation
+		fallen_empire_farming
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		forge_upkeep_from_farmers = -0.001
+		forge_upkeep_from_farmers = -0.002
 		planet_farmers_food_produces_add = -3
 	}
 
 	zone_sets = {
-		quasark_food_zones
+		sysark_o_food_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_forge_alloy_focus = {
+zone_sysark_o_forge_alloy_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -957,32 +715,18 @@ zone_quasark_forge_alloy_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_foundry_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_fabricator_add = 1000
+	inline_script = {
+		script = jobs/zone_foundry_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		industrial
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -990,12 +734,12 @@ zone_quasark_forge_alloy_focus = {
 	}
 
 	zone_sets = {
-		quasark_forge_zones
+		sysark_o_forge_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_forge_goods_focus = {
+zone_sysark_o_forge_goods_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1003,48 +747,37 @@ zone_quasark_forge_goods_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = 500
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_artisan_add = 1000
+		planet_pops_consumer_goods_upkeep_mult = -0.001
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_artisan_drone_add = 1000
+	inline_script = {
+		script = jobs/zone_factory_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		industrial
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		planet_pops_consumer_goods_upkeep_mult = -0.01
-		planet_artisans_alloys_produces_add = 1.5
-		planet_artisans_consumer_goods_produces_add = -1
+		planet_artisans_alloys_produces_add = 0.5
+		planet_metallurgists_consumer_goods_produces_add = 0.5
 	}
 
 	zone_sets = {
-		quasark_forge_zones
+		sysark_o_forge_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_forge_armor_focus = {
+zone_sysark_o_forge_armor_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1052,34 +785,22 @@ zone_quasark_forge_armor_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
 
 	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_foundry_add = 1000
-		planet_metallurgist_minerals_upkeep_add = 0.1
+		planet_metallurgists_minerals_upkeep_add = 0.1
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_fabricator_add = 1000
-		planet_metallurgist_minerals_upkeep_add = 0.1
+	inline_script = {
+		script = jobs/zone_foundry_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		industrial
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -1089,12 +810,12 @@ zone_quasark_forge_armor_focus = {
 	}
 
 	zone_sets = {
-		quasark_forge_zones
+		sysark_o_forge_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_research_general_focus = {
+zone_sysark_o_research_general_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1102,38 +823,31 @@ zone_quasark_research_general_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_physicist_add = 250
-		job_biologist_add = 250
-		job_engineer_add = 250
-		job_bureaucrat_add = 250
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @carks_small_job_amount
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_calculator_physicist_add = 250
-		job_calculator_biologist_add = 250
-		job_calculator_engineer_add = 250
-		job_coordinator_add = 250
+	inline_script = {
+		script = jobs/zone_engineers_add
+		LARGE_AMOUNT = @carks_small_job_amount
+	}
+	inline_script = {
+		script = jobs/zone_biologists_add
+		LARGE_AMOUNT = @carks_small_job_amount
+	}
+	inline_script = {
+		script = jobs/zone_physicists_add
+		LARGE_AMOUNT = @carks_small_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		research
+		urban_automation
+		origin
+		unity
 	}
 
 	planet_modifier = {
@@ -1141,12 +855,12 @@ zone_quasark_research_general_focus = {
 	}
 
 	zone_sets = {
-		quasark_research_zones
+		sysark_o_research_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_research_engineering_focus = {
+zone_sysark_o_research_engineering_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1154,32 +868,18 @@ zone_quasark_research_engineering_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_engineer_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_calculator_engineer_add = 1000
+	inline_script = {
+		script = jobs/zone_engineers_add
+		LARGE_AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		research
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -1187,12 +887,12 @@ zone_quasark_research_engineering_focus = {
 	}
 
 	zone_sets = {
-		quasark_research_zones
+		sysark_o_research_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_research_physics_focus = {
+zone_sysark_o_research_physics_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1200,32 +900,18 @@ zone_quasark_research_physics_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_physicist_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_calculator_physicist_add = 1000
+	inline_script = {
+		script = jobs/zone_physicists_add
+		LARGE_AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		research
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -1233,12 +919,12 @@ zone_quasark_research_physics_focus = {
 	}
 
 	zone_sets = {
-		quasark_research_zones
+		sysark_o_research_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_research_society_focus = {
+zone_sysark_o_research_society_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1246,32 +932,18 @@ zone_quasark_research_society_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_biologist_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_calculator_biologist_add = 1000
+	inline_script = {
+		script = jobs/zone_biologists_add
+		LARGE_AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		research
+		urban_automation
+		origin
 	}
 
 	planet_modifier = {
@@ -1279,12 +951,12 @@ zone_quasark_research_society_focus = {
 	}
 
 	zone_sets = {
-		quasark_research_zones
+		sysark_o_research_zones
 	}
 
 	ai_priority = 5
 }
-zone_quasark_research_unity_focus = {
+zone_sysark_o_research_unity_focus = {
 	icon = GFX_district_specialization_fighter
 	base_buildtime = @zone_buildtime
 
@@ -1292,41 +964,24 @@ zone_quasark_research_unity_focus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			alloys = 5000
+			alloys = @carks_construction_cost
 		}
 	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		job_bureaucrat_add = 1000
-	}
-
-	triggered_district_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		job_coordinator_add = 1000
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @carks_job_amount
 	}
 
 	included_building_sets = {
-		fortress
+		unity
 	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		empire_size_from_unity = -0.001
 	}
 
 	zone_sets = {
-		quasark_research_zones
+		sysark_o_research_zones
 	}
 
 	ai_priority = 5

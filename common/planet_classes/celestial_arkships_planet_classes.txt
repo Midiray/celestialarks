@@ -21,7 +21,7 @@ pc_lunark = {
 
 	starting_planet = no
 
-	starting_district = district_ark_city
+	starting_district = district_lunark_housing
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -70,7 +70,7 @@ pc_planark = {
 
 	starting_planet = no
 
-	starting_district = district_ark_city
+	starting_district = district_planark_housing
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -119,7 +119,7 @@ pc_sysark = {
 
 	starting_planet = no
 
-	starting_district = district_ark_city
+	starting_district = district_sysark_housing
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -168,7 +168,7 @@ pc_sysark_o = {
 
 	starting_planet = no
 
-	starting_district = district_ark_city
+	starting_district = district_sysark_o_housing
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -217,7 +217,7 @@ pc_quasark = {
 
 	starting_planet = no
 
-	starting_district = district_ark_city
+	starting_district = district_quasark_housing
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0

@@ -1,0 +1,413 @@
+
+quasark_aura_gravsnare_mount = {
+	icon = "GFX_quasark_aura_gravsnare_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 3_quasark_aura_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		#custom_tooltip = {
+		#	fail_text = quasark_multi_aura_no_trigger
+        #    NOT = {
+        #        OR = {
+        #            has_starbase_building = quasark_aura_deathfield_mount
+        #            has_starbase_building = quasark_aura_gravspeed_mount
+        #            has_starbase_building = quasark_aura_eye_mount
+        #        }
+        #    }
+		#}
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module_expensive
+			rare_crystals = @quasark_cost_strategic_module_expensive
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module_expensive
+			rare_crystals = @quasark_upkeep_strategic_module_expensive
+		}
+	}
+	equipped_component = QSC_AURA_GRAVSNARE
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+quasark_aura_eye_mount = {
+	icon = "GFX_quasark_aura_eye_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 3_quasark_aura_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		#custom_tooltip = {
+		#	fail_text = quasark_multi_aura_no_trigger
+        #    NOT = {
+        #        OR = {
+        #            has_starbase_building = quasark_aura_gravsnare_mount
+        #            has_starbase_building = quasark_aura_gravspeed_mount
+        #            has_starbase_building = quasark_aura_deathfield_mount
+        #        }
+        #    }
+		#}
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module_expensive
+			rare_crystals = @quasark_cost_strategic_module_expensive
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module_expensive
+			rare_crystals = @quasark_upkeep_strategic_module_expensive
+		}
+	}
+	equipped_component = QSC_AURA_EYE
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+quasark_aura_gravspeed_mount = {
+	icon = "GFX_quasark_aura_gravspeed_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 3_quasark_aura_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		#custom_tooltip = {
+		#	fail_text = quasark_multi_aura_no_trigger
+        #    NOT = {
+        #        OR = {
+        #            has_starbase_building = quasark_aura_gravsnare_mount
+        #            has_starbase_building = quasark_aura_deathfield_mount
+        #            has_starbase_building = quasark_aura_eye_mount
+        #        }
+        #    }
+		#}
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module_expensive
+			rare_crystals = @quasark_cost_strategic_module_expensive
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module_expensive
+			rare_crystals = @quasark_upkeep_strategic_module_expensive
+		}
+	}
+	equipped_component = QSC_AURA_GRAVSPEED
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+quasark_aura_deathfield_mount = {
+	icon = "GFX_quasark_aura_deathfield_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 3_quasark_aura_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		#custom_tooltip = {
+		#	fail_text = quasark_multi_aura_no_trigger
+        #    NOT = {
+        #        OR = {
+        #            has_starbase_building = quasark_aura_gravsnare_mount
+        #            has_starbase_building = quasark_aura_gravspeed_mount
+        #            has_starbase_building = quasark_aura_eye_mount
+        #        }
+        #    }
+		#}
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module_expensive
+			rare_crystals = @quasark_cost_strategic_module_expensive
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module_expensive
+			rare_crystals = @quasark_upkeep_strategic_module_expensive
+		}
+	}
+	equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+quasark_hyperforge_mount = {
+	icon = "GFX_quasark_hyperforge_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		foundry_jobs_bonus_workforce_mult = 0.15
+		district_quasark_forge_max_add = 200
+	}
+	#equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+quasark_matrioshka_mount = {
+	icon = "GFX_quasark_matrioshka_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		researcher_jobs_bonus_workforce_mult = 0.15
+		district_quasark_research_max_add = 200
+	}
+	#equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+quasark_hraemc_penrose_mount = {
+	icon = "GFX_quasark_hraemc_penrose_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		technician_jobs_bonus_workforce_mult = 0.15
+		district_quasark_energy_max_add = 200
+	}
+	#equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+quasark_decompressor_mount = {
+	icon = "GFX_quasark_decompressor_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		miner_jobs_bonus_workforce_mult = 0.15
+		district_quasark_minerals_max_add = 200
+	}
+	#equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+quasark_maginot_mount = {
+	icon = "GFX_quasark_maginot_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 1_quasark_defense_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		#planet_soldiers_alloys_upkeep_add = 1
+		soldier_jobs_bonus_workforce_mult = 0.15
+		district_quasark_soldier_max_add = 200
+	}
+	equipped_component = QSC_DEFENSE
+	equipped_component = QSC_DEFENSE
+	equipped_component = QSC_DEFENSE
+	equipped_component = QSC_DEFENSE
+	equipped_component = QSC_DEFENSE
+	show_component_tooltips = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}
+quasark_speculorefractor_mount = {
+	icon = "GFX_quasark_speculorefractor_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.5
+		pop_amenities_usage_mult = -0.1
+	}
+	#equipped_component = QSC_AURA_DEATHFIELD
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
+}

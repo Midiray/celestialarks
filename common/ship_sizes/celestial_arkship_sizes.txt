@@ -36,6 +36,7 @@ carks_lunark = {
 	on_click_sound = "arkship_civilian_selection"
 
 	# 2D Art
+	#icon = ship_size_atk_moon
 	icon = ship_size_civilian_arkship_tier_3
 	icon_frame = 16
 	ship_class_icon_frame = 64
@@ -50,7 +51,7 @@ carks_lunark = {
 		
 	}
 	# 3D Art
-	entity = giga_moon_thrusters_frozen
+	#entity = giga_moon_thrusters_frozen
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
 		"1"					=	{ locator = "module_01" }
@@ -70,34 +71,25 @@ carks_lunark = {
 		"spinal_mount_1"	=	{ locator = "spinal_mount" }
 	}
 	# Ship setup
-	formation_priority = 256
-	max_speed = 30
-	acceleration = 0.01
-	rotation_speed = 0.1
-	combat_disengage_chance = 0
-	collision_radius = 256
-	max_hitpoints = 200000000
+	max_speed = 50
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 32
+	formation_priority = 32
+	base_buildtime = 1800
+	max_hitpoints = 250000
 	modifier = {
-		ship_hull_regen_add_static = 22500000
-		ship_armor_regen_add_static = 22500000
-		ship_shield_regen_add_static = 22500000
-		ship_evasion_mult = -999
-		ship_armor_add = 200000000
-		ship_shield_add = 200000000
-		ship_target_weight_mult = 1000
-		ship_starting_experience_add = 5000
-		ship_speed_mult = 2
+		ship_evasion_mult = -1
+		ship_armor_add = 150000
+		ship_shield_add = 100000
 		starbase_module_capacity_add = 15
 		starbase_building_capacity_add = 6
-		ship_sensor_range_add = 1
+		ship_speed_mult = 2
 	}
-	#ship_modifier = {
-	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
-	#	arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
-	#}
-	size_multiplier = 1 #@arkship_size_80
-	fleet_slot_size = 1 #@arkship_slot_size_8
+	size_multiplier = 250
+	fleet_slot_size = 50
 	
+
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
@@ -163,10 +155,6 @@ carks_planark = {
 	#can_disable = yes					# Arkships can be disabled.
 	#stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
 	#never_lost = yes
-	#collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
-	#	shipclass_starbase
-	#	shipclass_constructor
-	#}
 	#collects_stockpile_to_country = yes
 	accepts_all_modifiers = yes
 
@@ -231,33 +219,23 @@ carks_planark = {
 		"spinal_mount_1"	=	{ locator = "spinal_mount" }
 	}
 	# Ship setup
-	formation_priority = 256
-	max_speed = 30
-	acceleration = 0.01
-	rotation_speed = 0.1
-	combat_disengage_chance = 0
-	collision_radius = 256
-	max_hitpoints = 200000000
+	max_speed = 40
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	base_buildtime = 2700
+	max_hitpoints = 2500000
 	modifier = {
-		ship_hull_regen_add_static = 22500000
-		ship_armor_regen_add_static = 22500000
-		ship_shield_regen_add_static = 22500000
-		ship_evasion_mult = -999
-		ship_armor_add = 200000000
-		ship_shield_add = 200000000
-		ship_target_weight_mult = 1000
-		ship_starting_experience_add = 5000
+		ship_evasion_mult = -1
+		ship_armor_add = 1250000
+		ship_shield_add = 1250000
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 29
 		starbase_building_capacity_add = 12
-		ship_sensor_range_add = 1
 	}
-	#ship_modifier = {
-	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
-	#	arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
-	#}
-	size_multiplier = 1 #@arkship_size_80
-	fleet_slot_size = 1 #@arkship_slot_size_8
+	size_multiplier = 750 #@arkship_size_80
+	fleet_slot_size = 250 #@arkship_slot_size_8
 	
 	is_designable = no
 	num_target_locators = 0
@@ -405,33 +383,23 @@ carks_sysark = {
 		"spinal_mount_1"	=	{ locator = "spinal_mount" }
 	}
 	# Ship setup
-	formation_priority = 256
 	max_speed = 30
-	acceleration = 0.01
-	rotation_speed = 0.1
-	combat_disengage_chance = 0
-	collision_radius = 256
-	max_hitpoints = 200000000
+	acceleration = 0.10
+	rotation_speed = 0.05
+	collision_radius = 512
+	formation_priority = 512
+	base_buildtime = 3600
+	max_hitpoints = 12500000
 	modifier = {
-		ship_hull_regen_add_static = 22500000
-		ship_armor_regen_add_static = 22500000
-		ship_shield_regen_add_static = 22500000
-		ship_evasion_mult = -999
-		ship_armor_add = 200000000
-		ship_shield_add = 200000000
-		ship_target_weight_mult = 1000
-		ship_starting_experience_add = 5000
+		ship_evasion_mult = -1
+		ship_armor_add = 4800000
+		ship_shield_add = 1900000
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 43
 		starbase_building_capacity_add = 18
-		ship_sensor_range_add = 1
 	}
-	#ship_modifier = {
-	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
-	#	arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
-	#}
-	size_multiplier = 1 #@arkship_size_80
-	fleet_slot_size = 1 #@arkship_slot_size_8
+	size_multiplier = 1250 #@arkship_size_80
+	fleet_slot_size = 512 #@arkship_slot_size_8
 	
 	is_designable = no
 	num_target_locators = 0
@@ -579,33 +547,23 @@ carks_sysark_o = {
 		"spinal_mount_1"	=	{ locator = "spinal_mount" }
 	}
 	# Ship setup
-	formation_priority = 256
 	max_speed = 30
-	acceleration = 0.01
-	rotation_speed = 0.1
-	combat_disengage_chance = 0
-	collision_radius = 256
-	max_hitpoints = 200000000
+	acceleration = 0.10
+	rotation_speed = 0.05
+	collision_radius = 512
+	formation_priority = 512
+    base_buildtime = 3600
+	max_hitpoints = 16250000
 	modifier = {
-		ship_hull_regen_add_static = 22500000
-		ship_armor_regen_add_static = 22500000
-		ship_shield_regen_add_static = 22500000
-		ship_evasion_mult = -999
-		ship_armor_add = 200000000
-		ship_shield_add = 200000000
-		ship_target_weight_mult = 1000
-		ship_starting_experience_add = 5000
+		ship_evasion_mult = -1
+		ship_armor_add = 6250000
+		ship_shield_add = 2500000
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 43
 		starbase_building_capacity_add = 18
-		ship_sensor_range_add = 1
 	}
-	#ship_modifier = {
-	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125
-	#	arkship_harvest_resources_produces_mult = @arkship_innate_mult_5_percent
-	#}
-	size_multiplier = 1 #@arkship_size_80
-	fleet_slot_size = 1 #@arkship_slot_size_8
+	size_multiplier = 1250 #@arkship_size_80
+	fleet_slot_size = 512 #@arkship_slot_size_8
 	
 	is_designable = no
 	num_target_locators = 0

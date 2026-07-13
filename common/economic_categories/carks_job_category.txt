@@ -1,0 +1,15 @@
+
+
+planet_bm_miners = {
+	icon = "job_foundry"
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
