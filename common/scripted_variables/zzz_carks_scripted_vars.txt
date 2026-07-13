@@ -1,3 +1,6 @@
+@has_stellar_manip = 0
+@has_quasarmod = 0
+
 @carks_job_amount = 300
 @carks_job_amount_quasark = 500
 @carks_district_housing = 1500

@@ -28,7 +28,7 @@ giga_war_moon = {
     combat_disengage_chance = 0.5
     construction_type = starbase_shipyard
     class = shipclass_military
-    is_designable = yes
+	is_designable = no
     enable_default_design = yes
 
     ship_roles = { screen brawler gunship artillery explosive energy_torpedoes }
@@ -42,9 +42,6 @@ giga_war_moon = {
 
     resources = {
         category = ships
-        cost = {
-            alloys = 10000
-        }
         upkeep = {
             energy = 250
             alloys = 75
@@ -55,28 +52,11 @@ giga_war_moon = {
     }
 
     potential_construction = {
-        NOT = {
-            has_global_flag = warmoon_disabled
-        }
-        OR = {
-            starbase = {
-                solar_system = {
-                    any_system_megastructure = {
-                        is_megastructure_type = hyperquasaric_megashipyard_4
-                    }
-                }
-            }
-            quasark_celestial_construction = yes
-        }
+        always = no
     }
 
     possible_construction = {
-        OR = {
-            starbase = {
-                has_starbase_building = quasarshipyard_shipyard_uplink
-            }
-            quasark_celestial_construction = yes
-        }
+        always = no
     }
 
     available_to_everyone = yes
@@ -111,7 +91,7 @@ giga_planet_behemoth = {
     is_space_station = no
     icon = ship_size_atk_planet
     enable_default_design = yes
-    is_designable = yes
+	is_designable = no
     combat_disengage_chance = 0
     prerequisites = { "tech_lasers_1" }#"giga_tech_war_planet" }
     class = shipclass_military
@@ -139,28 +119,11 @@ giga_planet_behemoth = {
     }
 
     potential_construction = {
-        NOT = {
-            has_global_flag = warplanet_disabled
-        }
-        OR = {
-            starbase = {
-                solar_system = {
-                    any_system_megastructure = {
-                        is_megastructure_type = hyperquasaric_megashipyard_4
-                    }
-                }
-            }
-            quasark_celestial_construction = yes
-        }
+        always = no
     }
 
     possible_construction = {
-        OR = {
-            quasark_celestial_construction = yes
-            starbase = {
-                has_starbase_building = quasarshipyard_shipyard_uplink
-            }
-        }
+        always = no
     }
 
     available_to_everyone = yes
@@ -199,11 +162,10 @@ giga_systemcraft = {
 	combat_disengage_chance = 0
 	prerequisites = { "tech_lasers_1" }#"giga_tech_war_system_6" }
 	enable_default_design = yes
+	is_designable = no
 	class = shipclass_military
 	can_disable = no
 	can_have_federation_design = no
-	possible_construction = { quasark_celestial_construction = yes }
-	potential_construction = { quasark_celestial_construction = yes }
 	construction_type = starbase_shipyard
 
 	ship_roles = { artillery }
@@ -224,6 +186,14 @@ giga_systemcraft = {
 			trade = 250
 		}
 	}
+
+    potential_construction = {
+        always = no
+    }
+
+    possible_construction = {
+        always = no
+    }
 
 	available_to_everyone = yes
 }
@@ -260,11 +230,10 @@ giga_o_systemcraft = {
 	combat_disengage_chance = 0
 	prerequisites = { "tech_lasers_1" }#"tech_o_class_war_system" }
 	enable_default_design = yes
+	is_designable = no
 	class = shipclass_military
 	can_disable = no
 	can_have_federation_design = no
-	possible_construction = { quasark_celestial_construction = yes }
-	potential_construction = { quasark_celestial_construction = yes }
 
 	construction_type = starbase_shipyard
 
@@ -285,5 +254,93 @@ giga_o_systemcraft = {
 			trade = 250
 		}
 	}
+	available_to_everyone = yes
+
+    potential_construction = {
+        always = no
+    }
+
+    possible_construction = {
+        always = no
+    }
+}
+quasarmod_quasarcraft = {
+	graphical_culture = no
+	entity = "qsc_01_ship_entity"
+	max_speed = 30
+	acceleration = 0.01
+	rotation_speed = 0.1
+	collision_radius = 256
+	formation_priority = 256
+	combat_disengage_chance = 0
+	default_behavior = quasarcraft
+    base_buildtime = 3600
+	modifier = {
+		ship_hull_regen_add_static = 22500000
+		ship_armor_regen_add_static = 22500000
+		ship_shield_regen_add_static = 22500000
+		ship_evasion_mult = -999
+		ship_armor_add = 200000000
+		ship_shield_add = 200000000
+		ship_target_weight_mult = 1000
+		ship_starting_experience_add = 5000
+		ship_speed_mult = 2
+	}
+	max_hitpoints = 200000000
+	size_multiplier = 1750
+	fleet_slot_size = 512
+	section_slots = {
+		"main1" =			    { locator = "root" }
+		"main2" =				{ locator = "root" }
+		"halo1" =				{ locator = "root" }
+		"halo2" =			    { locator = "root" }
+		"jupiters" =				{ locator = "root" }
+		"celfab" =	            { locator = "root" }
+	}
+    cloaking_forbidden = yes
+	num_target_locators = 0
+	icon = ship_size_atk_system
+	map_counter_icon = ship_counter_500
+	ship_class_icon_frame = 28
+	prerequisites = { "tech_quasarmod_quasarcraft" }
+	enable_default_design = yes
+	class = shipclass_military
+	can_disable = yes
+	can_have_federation_design = no
+	potential_construction = { always = no }
+	possible_construction = { always = no }
+	is_civilian = no
+	is_designable = no
+	can_be_inspected = yes
+	# components_add_to_cost = no
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+
+
+	resources = {
+		category = ships
+		produces = {
+			giga_sr_quasaric_energy = 50
+			energy = 12500
+		}
+		produces = {
+			trigger = {
+				stellar_manip_is_active = yes
+			}
+			sr_stellar_plasma = 25
+		}
+		upkeep = {
+			alloys = 12000
+		}
+		logistics = {
+			trade = 750
+		}
+	}
+
 	available_to_everyone = yes
 }

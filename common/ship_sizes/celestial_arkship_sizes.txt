@@ -24,13 +24,30 @@ carks_lunark = {
 	accepts_all_modifiers = yes
 
 	use_shipnames_from = colonizer
+    potential_construction = {
+        NOT = {
+            has_global_flag = warmoon_disabled
+        }
+        OR = {
+            starbase = {
+                solar_system = {
+                    any_system_megastructure = {
+                        is_megastructure_type = hyperquasaric_megashipyard_4
+                    }
+                }
+            }
+            quasark_celestial_construction = yes
+        }
+    }
 
-	potential_construction = {
-		always = no
-	}
-	possible_construction = {
-		always = no
-	}
+    possible_construction = {
+        OR = {
+            starbase = {
+                has_starbase_building = quasarshipyard_shipyard_uplink
+            }
+            quasark_celestial_construction = yes
+        }
+    }
 
 	# Audio
 	on_click_sound = "arkship_civilian_selection"
@@ -85,6 +102,8 @@ carks_lunark = {
 		starbase_module_capacity_add = 15
 		starbase_building_capacity_add = 6
 		ship_speed_mult = 2
+		ship_armor_hardening_add = -1
+		ship_shield_hardening_add = -1
 	}
 	size_multiplier = 250
 	fleet_slot_size = 50
@@ -120,8 +139,13 @@ carks_lunark = {
 		#	}
 		#	sr_stellar_plasma = 25
 		#}
+		cost = {
+			energy = 20000
+			giga_sr_bulk_matter = 7
+			alloys = 24500
+		}
 		upkeep = {
-			alloys = 75
+			alloys = 100
 			energy = 250
 		}
 		logistics = {
@@ -160,12 +184,30 @@ carks_planark = {
 
 	use_shipnames_from = colonizer
 
-	potential_construction = {
-		always = no
-	}
-	possible_construction = {
-		always = no
-	}
+    potential_construction = {
+        NOT = {
+            has_global_flag = warplanet_disabled
+        }
+        OR = {
+            starbase = {
+                solar_system = {
+                    any_system_megastructure = {
+                        is_megastructure_type = hyperquasaric_megashipyard_4
+                    }
+                }
+            }
+            quasark_celestial_construction = yes
+        }
+    }
+
+    possible_construction = {
+        OR = {
+            quasark_celestial_construction = yes
+            starbase = {
+                has_starbase_building = quasarshipyard_shipyard_uplink
+            }
+        }
+    }
 
 	# Audio
 	on_click_sound = "arkship_civilian_selection"
@@ -233,6 +275,8 @@ carks_planark = {
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 29
 		starbase_building_capacity_add = 12
+		ship_armor_hardening_add = -3
+		ship_shield_hardening_add = -3
 	}
 	size_multiplier = 750 #@arkship_size_80
 	fleet_slot_size = 250 #@arkship_slot_size_8
@@ -267,6 +311,11 @@ carks_planark = {
 		#	}
 		#	sr_stellar_plasma = 25
 		#}
+		cost = {
+			energy = 200000
+			giga_sr_bulk_matter = 26
+			alloys = 285000
+		}
 		upkeep = {
 			energy = 500
 			alloys = 125
@@ -311,12 +360,16 @@ carks_sysark = {
 
 	use_shipnames_from = colonizer
 
-	potential_construction = {
-		always = no
-	}
-	possible_construction = {
-		always = no
-	}
+    potential_construction = {
+        NOT = {
+            has_global_flag = systemcraft_disabled
+        }
+        quasark_celestial_construction = yes
+    }
+
+    possible_construction = {
+        quasark_celestial_construction = yes
+    }
 
 	# Audio
 	on_click_sound = "arkship_civilian_selection"
@@ -397,6 +450,8 @@ carks_sysark = {
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 43
 		starbase_building_capacity_add = 18
+		ship_armor_hardening_add = -14
+		ship_shield_hardening_add = -14
 	}
 	size_multiplier = 1250 #@arkship_size_80
 	fleet_slot_size = 512 #@arkship_slot_size_8
@@ -431,6 +486,12 @@ carks_sysark = {
 		#	}
 		#	sr_stellar_plasma = 25
 		#}
+		cost = {
+			energy = 4100000
+			giga_sr_bulk_matter = 139
+			sr_stellar_plasma = 2500
+			alloys = 2380000
+		}
 		upkeep = {
 			alloys = 1500
 			energy = 6000
@@ -475,12 +536,16 @@ carks_sysark_o = {
 
 	use_shipnames_from = colonizer
 
-	potential_construction = {
-		always = no
-	}
-	possible_construction = {
-		always = no
-	}
+    potential_construction = {
+        NOT = {
+            has_global_flag = systemcraft_disabled
+        }
+        quasark_celestial_construction = yes
+    }
+
+    possible_construction = {
+        quasark_celestial_construction = yes
+    }
 
 	# Audio
 	on_click_sound = "arkship_civilian_selection"
@@ -561,6 +626,8 @@ carks_sysark_o = {
 		ship_speed_mult = 2
 		starbase_module_capacity_add = 43
 		starbase_building_capacity_add = 18
+		ship_armor_hardening_add = -20
+		ship_shield_hardening_add = -20
 	}
 	size_multiplier = 1250 #@arkship_size_80
 	fleet_slot_size = 512 #@arkship_slot_size_8
@@ -595,6 +662,12 @@ carks_sysark_o = {
 		#	}
 		#	sr_stellar_plasma = 25
 		#}
+		cost = {
+			energy = 4100000
+			giga_sr_bulk_matter = 139
+			sr_stellar_plasma = 25000
+			alloys = 3730000
+		}
 		upkeep = {
 			alloys = 1500
 			energy = 6000
@@ -747,6 +820,8 @@ carks_quasark = {
 		starbase_module_capacity_add = 57
 		starbase_building_capacity_add = 24
 		ship_sensor_range_add = 1
+		ship_armor_hardening_add = -500
+		ship_shield_hardening_add = -500
 	}
 	#ship_modifier = {
 	#	ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_125

@@ -30,11 +30,15 @@ quasark_aura_gravsnare_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module_expensive
 			rare_crystals = @quasark_cost_strategic_module_expensive
+			exotic_gases = @quasark_cost_strategic_module_expensive
+			volatile_motes = @quasark_cost_strategic_module_expensive
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module_expensive
 			rare_crystals = @quasark_upkeep_strategic_module_expensive
+			exotic_gases = @quasark_upkeep_strategic_module_expensive
+			volatile_motes = @quasark_upkeep_strategic_module_expensive
 		}
 	}
 	equipped_component = QSC_AURA_GRAVSNARE
@@ -73,11 +77,15 @@ quasark_aura_eye_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module_expensive
 			rare_crystals = @quasark_cost_strategic_module_expensive
+			exotic_gases = @quasark_cost_strategic_module_expensive
+			volatile_motes = @quasark_cost_strategic_module_expensive
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module_expensive
 			rare_crystals = @quasark_upkeep_strategic_module_expensive
+			exotic_gases = @quasark_upkeep_strategic_module_expensive
+			volatile_motes = @quasark_upkeep_strategic_module_expensive
 		}
 	}
 	equipped_component = QSC_AURA_EYE
@@ -116,11 +124,15 @@ quasark_aura_gravspeed_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module_expensive
 			rare_crystals = @quasark_cost_strategic_module_expensive
+			exotic_gases = @quasark_cost_strategic_module_expensive
+			volatile_motes = @quasark_cost_strategic_module_expensive
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module_expensive
 			rare_crystals = @quasark_upkeep_strategic_module_expensive
+			exotic_gases = @quasark_upkeep_strategic_module_expensive
+			volatile_motes = @quasark_upkeep_strategic_module_expensive
 		}
 	}
 	equipped_component = QSC_AURA_GRAVSPEED
@@ -159,17 +171,63 @@ quasark_aura_deathfield_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module_expensive
 			rare_crystals = @quasark_cost_strategic_module_expensive
+			exotic_gases = @quasark_cost_strategic_module_expensive
+			volatile_motes = @quasark_cost_strategic_module_expensive
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module_expensive
 			rare_crystals = @quasark_upkeep_strategic_module_expensive
+			exotic_gases = @quasark_upkeep_strategic_module_expensive
+			volatile_motes = @quasark_upkeep_strategic_module_expensive
 		}
 	}
 	equipped_component = QSC_AURA_DEATHFIELD
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
+}
+quasark_food_mount = {
+	icon = "GFX_sysark_aura_gravity_mount"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = 2_quasark_support_cat
+
+	potential = {
+		is_quasark = yes
+	}
+    possible = {
+		is_quasark = yes
+    }
+
+
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @quasark_cost_alloys_module
+			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @quasark_upkeep_energy_module
+			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
+		}
+	}
+
+	planet_modifier = {
+		farmer_jobs_bonus_workforce_mult = 0.15
+		district_quasark_food_max_add = 200
+	}
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+	starbase_limit = { base = -1 }
 }
 quasark_hyperforge_mount = {
 	icon = "GFX_quasark_hyperforge_mount"
@@ -192,16 +250,21 @@ quasark_hyperforge_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
 	planet_modifier = {
 		foundry_jobs_bonus_workforce_mult = 0.15
+		artisan_jobs_bonus_workforce_mult = 0.15
 		district_quasark_forge_max_add = 200
 	}
 	#equipped_component = QSC_AURA_DEATHFIELD
@@ -231,16 +294,21 @@ quasark_matrioshka_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
 	planet_modifier = {
 		researcher_jobs_bonus_workforce_mult = 0.15
+		bureaucrat_jobs_bonus_workforce_mult = 0.15
 		district_quasark_research_max_add = 200
 	}
 	#equipped_component = QSC_AURA_DEATHFIELD
@@ -270,11 +338,15 @@ quasark_hraemc_penrose_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -309,11 +381,15 @@ quasark_decompressor_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -348,11 +424,15 @@ quasark_maginot_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -361,10 +441,6 @@ quasark_maginot_mount = {
 		soldier_jobs_bonus_workforce_mult = 0.15
 		district_quasark_soldier_max_add = 200
 	}
-	equipped_component = QSC_DEFENSE
-	equipped_component = QSC_DEFENSE
-	equipped_component = QSC_DEFENSE
-	equipped_component = QSC_DEFENSE
 	equipped_component = QSC_DEFENSE
 	show_component_tooltips = yes
 	ai_weight = {
@@ -393,11 +469,15 @@ quasark_speculorefractor_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
