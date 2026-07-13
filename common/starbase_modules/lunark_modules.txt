@@ -54,12 +54,12 @@ lunark_mega_artillery_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_spinal
-			rare_crystals = @lunark_cost_strategic_spinal
+			volatile_motes = @lunark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_spinal
-			rare_crystals = @lunark_upkeep_strategic_spinal
+			volatile_motes = @lunark_upkeep_strategic_spinal
 		}
 	}
 
@@ -126,12 +126,12 @@ lunark_mega_artillery_missile_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_spinal
-			rare_crystals = @lunark_cost_strategic_spinal
+			volatile_motes = @lunark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_spinal
-			rare_crystals = @lunark_upkeep_strategic_spinal
+			volatile_motes = @lunark_upkeep_strategic_spinal
 		}
 	}
 
@@ -169,12 +169,12 @@ lunark_kaiser_moon_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_spinal_expensive
-			rare_crystals = @lunark_cost_strategic_spinal_expensive
+			volatile_motes = @lunark_cost_strategic_spinal_expensive
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_spinal_expensive
-			rare_crystals = @lunark_upkeep_strategic_spinal_expensive
+			volatile_motes = @lunark_upkeep_strategic_spinal_expensive
 		}
 	}
 	station_modifier = {
@@ -222,12 +222,12 @@ lunark_stellarite_kaiser_moon_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_spinal_expensive
-			rare_crystals = @planark_cost_strategic_spinal_expensive
+			volatile_motes = @planark_cost_strategic_spinal_expensive
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_spinal_expensive
-			rare_crystals = @planark_upkeep_strategic_spinal_expensive
+			volatile_motes = @planark_upkeep_strategic_spinal_expensive
 		}
 	}
 	station_modifier = {
@@ -268,12 +268,12 @@ lunark_moon_missile_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_module_expensive
-			rare_crystals = @lunark_cost_strategic_module_expensive
+			volatile_motes = @lunark_cost_strategic_module_expensive
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_module_expensive
-			rare_crystals = @lunark_upkeep_strategic_module_expensive
+			volatile_motes = @lunark_upkeep_strategic_module_expensive
 		}
 	}
 
@@ -340,12 +340,12 @@ lunark_particle_launcher_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_module
-			rare_crystals = @lunark_cost_strategic_module
+			exotic_gases = @lunark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_module
-			rare_crystals = @lunark_upkeep_strategic_module
+			exotic_gases = @lunark_upkeep_strategic_module
 		}
 	}
 
@@ -376,12 +376,12 @@ lunark_strike_craft_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_module
-			rare_crystals = @lunark_cost_strategic_module
+			exotic_gases = @lunark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_module
-			rare_crystals = @lunark_upkeep_strategic_module
+			exotic_gases = @lunark_upkeep_strategic_module
 		}
 	}
 
@@ -412,12 +412,12 @@ lunark_kinetic_battery_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_module
-			rare_crystals = @lunark_cost_strategic_module
+			volatile_motes = @lunark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_module
-			rare_crystals = @lunark_upkeep_strategic_module
+			volatile_motes = @lunark_upkeep_strategic_module
 		}
 	}
 
@@ -446,12 +446,12 @@ lunark_build_cap_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @lunark_cost_alloys_module
-			rare_crystals = @lunark_cost_strategic_module
+			volatile_motes = @lunark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @lunark_upkeep_energy_module
-			rare_crystals = @lunark_upkeep_strategic_module
+			volatile_motes = @lunark_upkeep_strategic_module
 		}
 	}
 	planet_modifier = {

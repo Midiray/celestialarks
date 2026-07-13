@@ -12,7 +12,81 @@ create_quasark_effect = {
 			set_owner = $OWNER$
 			create_ship = {
 				name = "The Gargantuan Quasarcraft"
-				random_existing_design = carks_$TYPE$
+				random_existing_design = carks_quasark
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_sysark_o_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Class O Stellar Systemcraft"
+		settings = {
+			#is_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Class O Stellar Systemcraft"
+				random_existing_design = carks_sysark_o
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_sysark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Stellar Systemcraft"
+		settings = {
+			#is_boss = yes
+		}
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Stellar Systemcraft"
+				random_existing_design = carks_sysark
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_planark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Behemoth Planetcraft"
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Behemoth Planetcraft"
+				random_existing_design = carks_planark
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_lunark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Attack Moon"
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Attack Moon"
+				random_existing_design = carks_lunark
 				graphical_culture = none
 			}
 			set_location = $LOCATION$

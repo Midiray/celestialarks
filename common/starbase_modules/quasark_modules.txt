@@ -19,11 +19,15 @@ quasark_endsinger_1_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal_expensive
 			rare_crystals = @quasark_cost_strategic_spinal_expensive
+			exotic_gases = @quasark_cost_strategic_spinal_expensive
+			volatile_motes = @quasark_cost_strategic_spinal_expensive
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal_expensive
 			rare_crystals = @quasark_upkeep_strategic_spinal_expensive
+			exotic_gases = @quasark_upkeep_strategic_spinal_expensive
+			volatile_motes = @quasark_upkeep_strategic_spinal_expensive
 		}
 	}
 
@@ -55,11 +59,15 @@ quasark_endsinger_2_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal
 			rare_crystals = @quasark_cost_strategic_spinal
+			exotic_gases = @quasark_cost_strategic_spinal
+			volatile_motes = @quasark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal
 			rare_crystals = @quasark_upkeep_strategic_spinal
+			exotic_gases = @quasark_upkeep_strategic_spinal
+			volatile_motes = @quasark_upkeep_strategic_spinal
 		}
 	}
 
@@ -92,11 +100,15 @@ quasark_endsinger_3_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal
 			rare_crystals = @quasark_cost_strategic_spinal
+			exotic_gases = @quasark_cost_strategic_spinal
+			volatile_motes = @quasark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal
 			rare_crystals = @quasark_upkeep_strategic_spinal
+			exotic_gases = @quasark_upkeep_strategic_spinal
+			volatile_motes = @quasark_upkeep_strategic_spinal
 		}
 	}
 
@@ -128,11 +140,15 @@ quasark_shipyard_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal
 			rare_crystals = @quasark_cost_strategic_spinal
+			exotic_gases = @quasark_cost_strategic_spinal
+			volatile_motes = @quasark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal
 			rare_crystals = @quasark_upkeep_strategic_spinal
+			exotic_gases = @quasark_upkeep_strategic_spinal
+			volatile_motes = @quasark_upkeep_strategic_spinal
 		}
 	}
 
@@ -158,43 +174,6 @@ quasark_shipyard_mount = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-quasark_titanic_1_mount = {
-	icon = "GFX_quasark_titanic_1_mount"
-	section = "quasark_T_20"
-	construction_days = @arkship_spinal_mount_build_time
-	starbase_type = arkship
-	category = 1_quasark_gun_cat
-
-	potential = {
-		#is_quasark = yes
-		always = no
-	}
-
-
-
-	cannot_fit_on_slots = { spinal_mount_1 }
-
-	resources = {
-		category = starbase_arkship_upgrades
-		cost = {
-			alloys = @quasark_cost_alloys_module
-			rare_crystals = @quasark_cost_strategic_module
-		}
-
-		upkeep = {
-			energy = @quasark_upkeep_energy_module
-			rare_crystals = @quasark_upkeep_strategic_module
-		}
-	}
-
-	component_set = QUASARK_DEVASTATOR_WEAPON
-	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
 quasark_additional_eye_mount = {
 	icon = "GFX_quasark_additional_eye_mount"
 	section = "quasark_T_1"
@@ -216,11 +195,15 @@ quasark_additional_eye_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal
 			rare_crystals = @quasark_cost_strategic_spinal
+			exotic_gases = @quasark_cost_strategic_spinal
+			volatile_motes = @quasark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal
 			rare_crystals = @quasark_upkeep_strategic_spinal
+			exotic_gases = @quasark_upkeep_strategic_spinal
+			volatile_motes = @quasark_upkeep_strategic_spinal
 		}
 	}
 
@@ -252,11 +235,15 @@ quasark_obliterator_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_spinal
 			rare_crystals = @quasark_cost_strategic_spinal
+			exotic_gases = @quasark_cost_strategic_spinal
+			volatile_motes = @quasark_cost_strategic_spinal
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_spinal
 			rare_crystals = @quasark_upkeep_strategic_spinal
+			exotic_gases = @quasark_upkeep_strategic_spinal
+			volatile_motes = @quasark_upkeep_strategic_spinal
 		}
 	}
 
@@ -288,11 +275,15 @@ quasark_disruptor_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -324,11 +315,15 @@ quasark_lance_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -360,11 +355,15 @@ quasark_laser_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -397,11 +396,15 @@ quasark_pseudo_erasure_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -434,11 +437,15 @@ quasark_hypercannon_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -470,11 +477,15 @@ quasark_hangar_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -499,6 +510,7 @@ quasark_mini_shipyard_mount = {
 	on_finished = {
 		set_ship_construction_type = starbase_shipyard
 	}
+	cannot_fit_on_slots = { spinal_mount_1 }
 
 
 
@@ -508,11 +520,15 @@ quasark_mini_shipyard_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 
@@ -553,11 +569,15 @@ quasark_habitation_mount = {
 		cost = {
 			alloys = @quasark_cost_alloys_module
 			rare_crystals = @quasark_cost_strategic_module
+			exotic_gases = @quasark_cost_strategic_module
+			volatile_motes = @quasark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @quasark_upkeep_energy_module
 			rare_crystals = @quasark_upkeep_strategic_module
+			exotic_gases = @quasark_upkeep_strategic_module
+			volatile_motes = @quasark_upkeep_strategic_module
 		}
 	}
 

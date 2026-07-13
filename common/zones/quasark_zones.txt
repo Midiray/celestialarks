@@ -297,7 +297,7 @@ zone_quasark_crime = {
 	ai_weight_coefficient = 0.5
 }
 
-zone_quasark_heavy_focus = {
+zone_quasark_damage_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -310,7 +310,7 @@ zone_quasark_heavy_focus = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_soldiers_alloys_upkeep_add = 0.1
+		planet_soldiers_upkeep_mult = 0.02
 	}
 	inline_script = {
 		script = jobs/zone_soldiers_add
@@ -325,7 +325,7 @@ zone_quasark_heavy_focus = {
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		weapon_heavy_from_soldiers = 0.02
+		weapon_damage_from_soldiers = 0.05
 	}
 
 	zone_sets = {
@@ -335,7 +335,7 @@ zone_quasark_heavy_focus = {
 	ai_priority = 5
 }
 
-zone_quasark_super_heavy_focus = {
+zone_quasark_fire_rate_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -348,7 +348,7 @@ zone_quasark_super_heavy_focus = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_soldiers_alloys_upkeep_add = 0.1
+		planet_soldiers_upkeep_mult = 0.02
 	}
 	inline_script = {
 		script = jobs/zone_soldiers_add
@@ -363,7 +363,7 @@ zone_quasark_super_heavy_focus = {
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		weapon_super_heavy_from_soldiers = 0.02
+		weapon_fire_rate_from_soldiers = 0.05
 	}
 
 	zone_sets = {
@@ -373,7 +373,7 @@ zone_quasark_super_heavy_focus = {
 	ai_priority = 5
 }
 
-zone_quasark_light_focus = {
+zone_quasark_rounded_focus = {
 	icon = GFX_district_specialization_laser
 	base_buildtime = @zone_buildtime
 
@@ -386,7 +386,7 @@ zone_quasark_light_focus = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_soldiers_alloys_upkeep_add = 0.1
+		planet_soldiers_upkeep_mult = 0.02
 	}
 	inline_script = {
 		script = jobs/zone_soldiers_add
@@ -401,7 +401,8 @@ zone_quasark_light_focus = {
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-		weapon_light_from_soldiers = 0.02
+		weapon_damage_from_soldiers = 0.015
+		weapon_fire_rate_from_soldiers = 0.015
 	}
 
 	zone_sets = {
@@ -410,45 +411,6 @@ zone_quasark_light_focus = {
 
 	ai_priority = 5
 }
-
-zone_quasark_hangar_focus = {
-	icon = GFX_district_specialization_fighter
-	base_buildtime = @zone_buildtime
-
-
-	resources = {
-		category = planet_zones
-		cost = {
-			alloys = @carks_construction_cost_quasark
-		}
-	}
-
-	triggered_district_planet_modifier = {
-		planet_soldiers_alloys_upkeep_add = 0.1
-	}
-	inline_script = {
-		script = jobs/zone_soldiers_add
-		AMOUNT = @carks_job_amount_quasark
-	}
-
-	included_building_sets = {
-		fortress
-		urban_automation
-		origin
-	}
-
-	planet_modifier = {
-		zone_building_slots_add = 3
-		weapon_hangar_from_soldiers = 0.02
-	}
-
-	zone_sets = {
-		quasark_soldier_zones
-	}
-
-	ai_priority = 5
-}
-
 
 zone_quasark_energy_generation_focus = {
 	icon = GFX_district_specialization_fighter

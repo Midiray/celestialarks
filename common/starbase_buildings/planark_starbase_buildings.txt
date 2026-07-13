@@ -16,12 +16,12 @@ planark_aura_gravity_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			sr_dark_matter = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			sr_dark_matter = @planark_upkeep_strategic_module
 		}
 	}
 	equipped_component = SHIP_AURA_PLANET
@@ -46,12 +46,12 @@ planark_support_energy_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			volatile_motes = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			volatile_motes = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -114,12 +114,12 @@ planark_support_food_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			exotic_gases = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			exotic_gases = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -182,12 +182,12 @@ planark_support_goods_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			volatile_motes = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			volatile_motes = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -216,12 +216,12 @@ planark_support_alloys_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			volatile_motes = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			volatile_motes = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -250,12 +250,12 @@ planark_support_soldier_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			volatile_motes = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			volatile_motes = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -284,12 +284,12 @@ planark_support_research_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			exotic_gases = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			exotic_gases = @planark_upkeep_strategic_module
 		}
 	}
 
@@ -318,12 +318,12 @@ planark_shield_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			exotic_gases = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			exotic_gases = @planark_upkeep_strategic_module
 		}
 	}
 	equipped_component = CARKS_SHIELD_MACRO
@@ -352,12 +352,12 @@ planark_armor_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @planark_cost_alloys_module
-			rare_crystals = @planark_cost_strategic_module
+			volatile_motes = @planark_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @planark_upkeep_energy_module
-			rare_crystals = @planark_upkeep_strategic_module
+			volatile_motes = @planark_upkeep_strategic_module
 		}
 	}
 	equipped_component = CARKS_ARMOR_MACRO

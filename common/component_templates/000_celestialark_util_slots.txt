@@ -364,19 +364,11 @@ utility_component_template = {
 	icon = "GFX_ship_part_shield_blokkat"
 	icon_frame = 1
 	power = -100000
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @shield_s_t1_cost
-		}
-		upkeep = {
-			energy = @shield_s_t1_upkeep_energy
-			alloys = @shield_s_t1_upkeep_alloys
-		}
-	}
 	modifier = {
-		ship_shield_add = 20000000
-		ship_armor_add = 20000000
+		ship_shield_add = 100000000
+		ship_armor_add = 100000000
+		ship_shield_hardening_add = 1
+		ship_armor_hardening_add = 1
 		ship_shield_regen_add_perc = 1
 		ship_armor_regen_add_perc = 1
 		ship_hull_regen_add_perc = 1

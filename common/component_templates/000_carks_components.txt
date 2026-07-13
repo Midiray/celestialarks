@@ -163,7 +163,7 @@ utility_component_template = {
 		ship_shield_regen_add_static = 120
 	}
 	ship_modifier = {
-		ship_shield_hardening_add = 0.1
+		ship_shield_hardening_add = 0.4
 	}
 	component_set = "CARKS_SHIELD_MACRO_SET"
 
@@ -182,7 +182,7 @@ utility_component_template = {
 		ship_armor_add = 25000
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.1
+		ship_armor_hardening_add = 0.4
 	}
 
 	potential = {

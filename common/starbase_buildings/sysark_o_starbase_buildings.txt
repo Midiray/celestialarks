@@ -17,12 +17,12 @@ sysark_o_aura_gravity_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			sr_dark_matter = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			sr_dark_matter = @sysark_o_upkeep_strategic_module
 		}
 	}
 	equipped_component = SHIP_AURA_SYSTEM
@@ -48,12 +48,12 @@ sysark_o_aura_shipyard_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 	equipped_component = SHIP_MOBILE_SYSTEM
@@ -79,12 +79,12 @@ sysark_o_support_energy_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -149,12 +149,12 @@ sysark_o_support_food_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			exotic_gases = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			exotic_gases = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -219,12 +219,12 @@ sysark_o_support_goods_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -254,12 +254,12 @@ sysark_o_support_alloys_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -289,12 +289,12 @@ sysark_o_support_soldier_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -324,12 +324,12 @@ sysark_o_support_research_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			exotic_gases = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			exotic_gases = @sysark_o_upkeep_strategic_module
 		}
 	}
 
@@ -359,12 +359,12 @@ sysark_o_shield_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			exotic_gases = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			exotic_gases = @sysark_o_upkeep_strategic_module
 		}
 	}
 	equipped_component = CARKS_SHIELD_MACRO
@@ -411,12 +411,12 @@ sysark_o_armor_mount = {
 		category = starbase_arkship_upgrades
 		cost = {
 			alloys = @sysark_o_cost_alloys_module
-			rare_crystals = @sysark_o_cost_strategic_module
+			volatile_motes = @sysark_o_cost_strategic_module
 		}
 
 		upkeep = {
 			energy = @sysark_o_upkeep_energy_module
-			rare_crystals = @sysark_o_upkeep_strategic_module
+			volatile_motes = @sysark_o_upkeep_strategic_module
 		}
 	}
 	equipped_component = CARKS_ARMOR_MACRO

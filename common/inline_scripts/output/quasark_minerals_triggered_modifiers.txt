@@ -2,8 +2,8 @@
 
 triggered_planet_modifier = {
 	potential = { minerals_is_quasark_damage_debuff_trigger = yes }
-	weapon_damage_mult = -0.01
-	weapon_fire_rate_mult = -0.01
+	ship_weapon_damage = -0.01
+	ship_fire_rate_mult = -0.01
 }
 triggered_planet_modifier = {
 	potential = { minerals_is_quasark_forge_support_trigger = yes }

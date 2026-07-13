@@ -44,34 +44,6 @@ is_carks_ship = {
 }
 
 
-soldier_is_quasark_super_heavy_gunner_trigger = {
-	planet = {
-		has_zone = {
-			zone = zone_quasark_super_heavy_focus
-		}
-	}
-}
-soldier_is_quasark_heavy_gunner_trigger = {
-	planet = {
-		has_zone = {
-			zone = zone_quasark_heavy_focus
-		}
-	}
-}
-soldier_is_quasark_light_gunner_trigger = {
-	planet = {
-		has_zone = {
-			zone = zone_quasark_light_focus
-		}
-	}
-}
-soldier_is_quasark_hangar_gunner_trigger = {
-	planet = {
-		has_zone = {
-			zone = zone_quasark_hangar_focus
-		}
-	}
-}
 energy_is_quasark_energy_damage_trigger = {
 	planet = {
 		has_zone = {
@@ -139,5 +111,68 @@ quasark_celestial_construction = {
 	custom_tooltip = {
 		fail_text = quasark_shipyard_trigger
 		has_starbase_module = quasark_shipyard_mount
+	}
+}
+carks_soldier_fire_rate_trigger = {
+	colony = {
+		OR = {
+			has_zone = {
+				zone = zone_quasark_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_sysark_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_planark_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_lunark_fire_rate_focus
+			}
+		}
+	}
+}
+carks_soldier_damage_trigger = {
+	colony = {
+		OR = {
+			has_zone = {
+				zone = zone_quasark_damage_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_damage_focus
+			}
+			has_zone = {
+				zone = zone_sysark_damage_focus
+			}
+			has_zone = {
+				zone = zone_planark_damage_focus
+			}
+			has_zone = {
+				zone = zone_lunark_damage_focus
+			}
+		}
+	}
+}
+carks_soldier_rounded_trigger = {
+	colony = {
+		OR = {
+			has_zone = {
+				zone = zone_quasark_rounded_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_rounded_focus
+			}
+			has_zone = {
+				zone = zone_sysark_rounded_focus
+			}
+			has_zone = {
+				zone = zone_planark_rounded_focus
+			}
+			has_zone = {
+				zone = zone_lunark_rounded_focus
+			}
+		}
 	}
 }

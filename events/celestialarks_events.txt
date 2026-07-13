@@ -233,26 +233,19 @@ country_event = {
                 star = {
                     save_event_target_as = quasark_origin_star
                 }
-                create_quasark_effect_origin = {
-                    TYPE = quasark
-                    OWNER = from
+                inline_script = {
+                    script = generic_parts/giga_toggled_code
+                    toggle = @has_quasarmod
+                    code = "create_quasark_effect_origin = { TYPE = quasark OWNER = from }"
                 }
-                create_sysark_o_effect_origin = {
-                    TYPE = sysark_o
-                    OWNER = from
+                inline_script = {
+                    script = generic_parts/giga_toggled_code
+                    toggle = @has_stellar_manip
+                    code = "create_sysark_o_effect_origin = { TYPE = sysark_o OWNER = from }"
                 }
-                create_sysark_effect_origin = {
-                    TYPE = sysark
-                    OWNER = from
-                }
-                create_planark_effect_origin = {
-                    TYPE = planark
-                    OWNER = from
-                }
-                create_lunark_effect_origin = {
-                    TYPE = lunark
-                    OWNER = from
-                }
+                create_sysark_effect_origin = { TYPE = sysark OWNER = from }
+                create_planark_effect_origin = { TYPE = planark OWNER = from }
+                create_lunark_effect_origin = { TYPE = lunark OWNER = from }
             }
             change_pc = pc_shattered
         }
