@@ -1,0 +1,8 @@
+opinion_stole_celestial_body = {
+	opinion = { base = -400 }
+	decay = { base = 2 }
+}
+opinion_stole_star = {
+	opinion = { base = -1000 }
+	decay = { base = 1 }
+}

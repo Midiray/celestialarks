@@ -152,14 +152,18 @@ lunark_kaiser_moon_mount = {
 
 	potential = {
 		giga_ship_uses_war_moon_components = yes
-		#has_technology = giga_tech_kaiser_moon
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_kaiser_moon_defeat"
+		OR = {
 			has_technology = giga_tech_kaiser_moon
+			has_starbase_flag = current_katzen_flagship
 		}
+		#
 	}
+	#possible = {
+	#	custom_tooltip = {
+	#		fail_text = "requires_kaiser_moon_defeat"
+	#		has_technology = giga_tech_kaiser_moon
+	#	}
+	#}
 
 
 
@@ -205,14 +209,14 @@ lunark_stellarite_kaiser_moon_mount = {
 
 	potential = {
 		giga_ship_uses_war_moon_components = yes
-		#has_technology = giga_tech_stellarite_kaiser_moon
+		has_technology = giga_tech_stellarite_kaiser_moon
 	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_stellar_kaiser_moon_defeat"
-			has_technology = giga_tech_stellarite_kaiser_moon
-		}
-	}
+	#possible = {
+	#	custom_tooltip = {
+	#		fail_text = "requires_stellar_kaiser_moon_defeat"
+	#		has_technology = giga_tech_stellarite_kaiser_moon
+	#	}
+	#}
 
 
 

@@ -4,8 +4,8 @@ ship_section_template = {
 	ship_size = carks_lunark
 	fits_on_slot = mid
 	should_draw_components = yes
-	entity = giga_moon_thrusters_frozen
-	#entity = "war_moon_hull_entity"
+	entity = giga_moon_thrusters_cold_barren
+	#entity = war_moon_hull_entity
 	icon = "GFX_ship_part_core_mid"
 
 	component_slot = {

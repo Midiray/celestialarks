@@ -69,6 +69,7 @@ carks_lunark = {
 	}
 	# 3D Art
 	#entity = giga_moon_thrusters_frozen
+	#entity = "war_moon_hull_entity"
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
 		"1"					=	{ locator = "module_01" }
@@ -227,7 +228,7 @@ carks_planark = {
 		
 	}
 	# 3D Art
-	entity = war_planet_complete_entity
+	#entity = war_planet_complete_entity
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
 		"1"					=	{ locator = "module_01" }
@@ -388,7 +389,7 @@ carks_sysark = {
 	scripted_action = {
 	}
 	# 3D Art
-	entity = war_system_complete_entity
+	#entity = war_system_complete_entity
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
 		"1"					=	{ locator = "module_01" }
@@ -564,7 +565,7 @@ carks_sysark_o = {
 	scripted_action = {
 	}
 	# 3D Art
-	entity = war_system_o_complete_entity
+	#entity = war_system_o_complete_entity
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
 		"1"					=	{ locator = "module_01" }

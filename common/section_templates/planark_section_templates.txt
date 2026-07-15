@@ -4,7 +4,7 @@ ship_section_template = {
 	ship_size = carks_planark
 	fits_on_slot = mid
 	should_draw_components = yes
-	#entity = war_planet_complete_entity
+	entity = war_planet_complete_entity
 	icon = "GFX_ship_part_core_mid"
 
 	component_slot = {

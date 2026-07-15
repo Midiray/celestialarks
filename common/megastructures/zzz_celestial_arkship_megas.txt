@@ -154,6 +154,10 @@ war_system_o_5 = {
 	}
 
 	on_build_complete = {
+		if = {
+			limit = { from = { is_nomadic = yes } }
+			fromfrom.planet.owner = { add_opinion_modifier = { modifier = opinion_stole_star who = from } }
+		}
 		save_event_target_as = giga_system
 		if = {
 			limit = {
@@ -664,6 +668,10 @@ war_moon_2 = {
 				giga_achievement_sound = yes
 			}
 		}
+		if = {
+			limit = { from = { is_nomadic = yes } }
+			fromfrom.planet.owner = { add_opinion_modifier = { modifier = opinion_stole_celestial_body who = from } }
+		}
 
 		if = {	
 			limit = { 
@@ -770,6 +778,10 @@ war_planet_3 = {
 
 	ai_weight = { factor = value:giga_ai_base_continue } # If we can build it, we will build it
 	on_build_complete = {
+		if = {
+			limit = { from = { is_nomadic = yes } }
+			fromfrom.planet.owner = { add_opinion_modifier = { modifier = opinion_stole_celestial_body who = from } }
+		}
 		save_event_target_as = giga_system
 		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
 		from = {
@@ -903,6 +915,10 @@ war_system_5 = {
 	}
 
 	on_build_complete = {
+		if = {
+			limit = { from = { is_nomadic = yes } }
+			fromfrom.planet.owner = { add_opinion_modifier = { modifier = opinion_stole_star who = from } }
+		}
 		save_event_target_as = giga_system
 		if = {
 			limit = {

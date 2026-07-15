@@ -93,6 +93,23 @@ create_lunark_effect = {
 		}
 	}
 }
+create_cark_generic_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = $NAME$
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = $NAME$
+				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
 create_quasark_effect_origin = {
 	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
 	# $OWNER$    = the owning country

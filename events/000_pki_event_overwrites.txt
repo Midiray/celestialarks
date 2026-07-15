@@ -1,0 +1,59 @@
+namespace = kmoon
+country_event = {
+	id = kmoon.21
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		delete_fleet = {
+			target = event_target:kaiser_moon_pls
+			kill_leader = no
+		}
+		clear_global_event_target = kaiser_moon_pls
+		set_country_flag = do_you_wanna_build_a_moon_man
+		set_country_flag = kaiser_moon_tech_possible
+		add_modifier = {
+			modifier = stop_eating_naval_cap_you_hecker
+			days = -1
+		}
+		add_modifier = {
+			modifier = pki_attack_moon_upkeep
+			days = 3600
+		}
+		give_technology = {
+			tech = giga_tech_kaiser_moon message = no }
+		#create_fleet = {
+		#	name = "Kaiservorherrschaft"
+		#	settings = {
+		#		spawn_debris = no
+		#	}
+		#	effect = {
+		#		set_owner = event_target:katzenartig
+		#		create_ship = {
+		#			name = "Kaiservorherrschaft"
+		#			design = "NAME_PKI_ATTACK_MOON"
+		#			upgradable = yes
+		#			effect = {
+		#				set_ship_flag = current_katzen_flagship
+		#			}
+		#		}
+		#		set_location = event_target:playerflusion
+		#	}
+		#}
+		create_fleet = {
+			name = "Kaiservorherrschaft"
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					name = "Kaiservorherrschaft"
+					random_existing_design = carks_lunark
+					graphical_culture = none
+					effect = {
+						set_ship_flag = current_katzen_flagship
+						starbase = { set_starbase_flag = current_katzen_flagship }
+					}
+				}
+				set_location = event_target:playerflusion
+			}
+		}
+	}
+ }
