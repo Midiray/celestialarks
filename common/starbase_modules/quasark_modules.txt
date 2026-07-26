@@ -1,8 +1,8 @@
 
 quasark_endsinger_1_mount = {
-	icon = "GFX_quasark_endsinger_1_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "quasark_ENDSINGER_1"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_spinal_slow_build_time
 	starbase_type = arkship
 	category = 0_quasark_heavy_cat
 
@@ -31,18 +31,18 @@ quasark_endsinger_1_mount = {
 		}
 	}
 
-	component_set = QSC_ENDSINGER
+	#component_set = QSC_ENDSINGER
 	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+	custom_tooltip = sm_endsinger_1_mount_tt
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
 quasark_endsinger_2_mount = {
-	icon = "GFX_quasark_endsinger_2_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "quasark_ENDSINGER_2"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_spinal_build_time
 	starbase_type = arkship
 	category = 0_quasark_heavy_cat
 
@@ -79,51 +79,10 @@ quasark_endsinger_2_mount = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-quasark_endsinger_3_mount = {
-	icon = "GFX_quasark_endsinger_3_mount"
-	section = "quasark_ENDSINGER_3"
-	construction_days = @arkship_spinal_mount_build_time
-	starbase_type = arkship
-	category = 0_quasark_heavy_cat
-
-	potential = {
-		#is_quasark = yes
-		always = no
-	}
-
-
-
-	fits_on_slots = { spinal_mount_1 }
-
-	resources = {
-		category = starbase_arkship_upgrades
-		cost = {
-			alloys = @quasark_cost_alloys_spinal
-			rare_crystals = @quasark_cost_strategic_spinal
-			exotic_gases = @quasark_cost_strategic_spinal
-			volatile_motes = @quasark_cost_strategic_spinal
-		}
-
-		upkeep = {
-			energy = @quasark_upkeep_energy_spinal
-			rare_crystals = @quasark_upkeep_strategic_spinal
-			exotic_gases = @quasark_upkeep_strategic_spinal
-			volatile_motes = @quasark_upkeep_strategic_spinal
-		}
-	}
-
-	component_set = QSC_TITANIC_GUN
-	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
 quasark_shipyard_mount = {
-	icon = "GFX_quasark_shipyard_mount"
+	icon = "GFX_arkship_capital_shipyard"
 	#section = "quasark_SHIPYARD"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_spinal_build_time
 	starbase_type = arkship
 	category = 2_quasark_support_cat
 
@@ -174,51 +133,10 @@ quasark_shipyard_mount = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-quasark_additional_eye_mount = {
-	icon = "GFX_quasark_additional_eye_mount"
-	section = "quasark_T_1"
-	construction_days = @arkship_spinal_mount_build_time
-	starbase_type = arkship
-	category = 0_quasark_heavy_cat
-
-	potential = {
-		#is_quasark = yes
-		always = no
-	}
-
-
-
-	cannot_fit_on_slots = { spinal_mount_1 }
-
-	resources = {
-		category = starbase_arkship_upgrades
-		cost = {
-			alloys = @quasark_cost_alloys_spinal
-			rare_crystals = @quasark_cost_strategic_spinal
-			exotic_gases = @quasark_cost_strategic_spinal
-			volatile_motes = @quasark_cost_strategic_spinal
-		}
-
-		upkeep = {
-			energy = @quasark_upkeep_energy_spinal
-			rare_crystals = @quasark_upkeep_strategic_spinal
-			exotic_gases = @quasark_upkeep_strategic_spinal
-			volatile_motes = @quasark_upkeep_strategic_spinal
-		}
-	}
-
-	component_set = QSC_PLANET_LANCE
-	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
 quasark_obliterator_mount = {
-	icon = "GFX_quasark_obliterator_mount"
-	section = "quasark_T_4"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "quasark_TITANIC_3"
+	construction_days = @quasark_module_slow_build_time
 	starbase_type = arkship
 	category = 0_quasark_heavy_cat
 
@@ -256,9 +174,9 @@ quasark_obliterator_mount = {
 	}
 }
 quasark_disruptor_mount = {
-	icon = "GFX_quasark_disruptor_mount"
+	icon = "GFX_arkship_arc_emitter_battery"
 	section = "quasark_S_80"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 1_quasark_gun_cat
 
@@ -296,9 +214,9 @@ quasark_disruptor_mount = {
 	}
 }
 quasark_lance_mount = {
-	icon = "GFX_quasark_lance_mount"
+	icon = "GFX_arkship_lance_battery"
 	section = "quasark_X_7"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 1_quasark_gun_cat
 
@@ -336,9 +254,9 @@ quasark_lance_mount = {
 	}
 }
 quasark_laser_mount = {
-	icon = "GFX_quasark_laser_mount"
+	icon = "GFX_arkship_laser_battery"
 	section = "quasark_L_20"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 1_quasark_gun_cat
 
@@ -375,92 +293,10 @@ quasark_laser_mount = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-quasark_pseudo_erasure_mount = {
-	icon = "GFX_quasark_pseudo_erasure_mount"
-	section = "quasark_T_3"
-	construction_days = @arkship_spinal_mount_build_time
-	starbase_type = arkship
-	category = 1_quasark_gun_cat
-
-	potential = {
-		#is_quasark = yes
-		always = no
-	}
-
-
-
-	cannot_fit_on_slots = { spinal_mount_1 }
-
-	resources = {
-		category = starbase_arkship_upgrades
-		cost = {
-			alloys = @quasark_cost_alloys_module
-			rare_crystals = @quasark_cost_strategic_module
-			exotic_gases = @quasark_cost_strategic_module
-			volatile_motes = @quasark_cost_strategic_module
-		}
-
-		upkeep = {
-			energy = @quasark_upkeep_energy_module
-			rare_crystals = @quasark_upkeep_strategic_module
-			exotic_gases = @quasark_upkeep_strategic_module
-			volatile_motes = @quasark_upkeep_strategic_module
-		}
-	}
-
-	component_set = QUASARK_SYSTEM_BEAM_SET
-	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
-quasark_hypercannon_mount = {
-	icon = "GFX_quasark_hypercannon_mount"
-	section = "quasark_TITANIC_3"
-	construction_days = @arkship_spinal_mount_build_time
-	starbase_type = arkship
-	category = 1_quasark_gun_cat
-
-	potential = {
-		#is_quasark = yes
-		always = no
-	}
-
-
-
-	cannot_fit_on_slots = { spinal_mount_1 }
-
-	resources = {
-		category = starbase_arkship_upgrades
-		cost = {
-			alloys = @quasark_cost_alloys_module
-			rare_crystals = @quasark_cost_strategic_module
-			exotic_gases = @quasark_cost_strategic_module
-			volatile_motes = @quasark_cost_strategic_module
-		}
-
-		upkeep = {
-			energy = @quasark_upkeep_energy_module
-			rare_crystals = @quasark_upkeep_strategic_module
-			exotic_gases = @quasark_upkeep_strategic_module
-			volatile_motes = @quasark_upkeep_strategic_module
-		}
-	}
-
-	component_set = quasark_SYSTEM_CANNON_SET
-	show_component_tooltips = yes
-	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
 quasark_hangar_mount = {
-	icon = "GFX_quasark_hangar_mount"
-	section = "quasark_H_4"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_hangar_bay"
+	section = "quasark_HANGAR_4"
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 1_quasark_gun_cat
 
@@ -499,7 +335,7 @@ quasark_hangar_mount = {
 }
 quasark_mini_shipyard_mount = {
 	icon = "GFX_arkship_engineering_bay"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 2_quasark_support_cat
 
@@ -552,7 +388,7 @@ quasark_mini_shipyard_mount = {
 }
 quasark_habitation_mount = {
 	icon = "GFX_arkship_habitation_module"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @quasark_module_build_time
 	starbase_type = arkship
 	category = 2_quasark_support_cat
 

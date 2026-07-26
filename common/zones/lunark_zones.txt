@@ -512,6 +512,7 @@ zone_lunark_energy_damage_focus = {
 	planet_modifier = {
 		zone_building_slots_add = 3
 		weapon_energy_from_technicians = 0.02
+		reactor_power_from_technicians = 0.005
 	}
 
 	zone_sets = {
@@ -750,9 +751,13 @@ zone_lunark_forge_armor_focus = {
 			alloys = @carks_construction_cost
 		}
 	}
-
 	triggered_district_planet_modifier = {
+		potential = { owner = { is_catalytic_empire = no } }
 		planet_metallurgists_minerals_upkeep_add = 0.1
+	}
+	triggered_district_planet_modifier = {
+		potential = { owner = { is_catalytic_empire = yes } }
+		planet_metallurgists_food_upkeep_add = 0.1
 	}
 	inline_script = {
 		script = jobs/zone_foundry_add

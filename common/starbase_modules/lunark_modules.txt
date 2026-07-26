@@ -1,8 +1,8 @@
 
 lunark_annihilation_lance_mount = {
-	icon = "GFX_lunark_annihilation_lance_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_ANNIHILATION_LANCE"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -36,9 +36,9 @@ lunark_annihilation_lance_mount = {
 	}
 }
 lunark_mega_artillery_mount = {
-	icon = "GFX_lunark_mega_artillery_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_MEGA_ARTILLERY"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -72,9 +72,9 @@ lunark_mega_artillery_mount = {
 	}
 }
 lunark_annihilation_lance_missile_mount = {
-	icon = "GFX_lunark_annihilation_lance_missile_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_ANNIHILATION_LANCE_MISSILE"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -108,9 +108,9 @@ lunark_annihilation_lance_missile_mount = {
 	}
 }
 lunark_mega_artillery_missile_mount = {
-	icon = "GFX_lunark_mega_artillery_missile_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_MEGA_ARTILLERY_MISSILE"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -144,16 +144,16 @@ lunark_mega_artillery_missile_mount = {
 	}
 }
 lunark_kaiser_moon_mount = {
-	icon = "GFX_lunark_kaiser_moon_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_KAISER_MOON_SECTION"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_slow_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
 	potential = {
 		giga_ship_uses_war_moon_components = yes
 		OR = {
-			has_technology = giga_tech_kaiser_moon
+			from = { has_technology = giga_tech_kaiser_moon }
 			has_starbase_flag = current_katzen_flagship
 		}
 		#
@@ -201,15 +201,15 @@ lunark_kaiser_moon_mount = {
 	}
 }
 lunark_stellarite_kaiser_moon_mount = {
-	icon = "GFX_lunark_stellarite_kaiser_moon_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_STELLARITE_KAISER_MOON_SECTION"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_spinal_slow_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
 	potential = {
 		giga_ship_uses_war_moon_components = yes
-		has_technology = giga_tech_stellarite_kaiser_moon
+		from = { has_technology = giga_tech_stellarite_kaiser_moon }
 	}
 	#possible = {
 	#	custom_tooltip = {
@@ -254,9 +254,9 @@ lunark_stellarite_kaiser_moon_mount = {
 	}
 }
 lunark_moon_missile_mount = {
-	icon = "GFX_lunark_moon_missile_mount"
+	icon = "GFX_arkship_swamer_missile_battery"
 	section = "lunark_X_2"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_module_slow_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -290,9 +290,9 @@ lunark_moon_missile_mount = {
 	}
 }
 lunark_devastator_cannon_mount = {
-	icon = "GFX_lunark_devastator_cannon_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "lunark_T_2"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -326,9 +326,9 @@ lunark_devastator_cannon_mount = {
 	}
 }
 lunark_particle_launcher_mount = {
-	icon = "GFX_lunark_particle_launcher_mount"
+	icon = "GFX_arkship_particle_launcher"
 	section = "lunark_G_1"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -362,9 +362,9 @@ lunark_particle_launcher_mount = {
 	}
 }
 lunark_strike_craft_mount = {
-	icon = "GFX_lunark_strike_craft_mount"
+	icon = "GFX_arkship_hangar_bay"
 	section = "lunark_H_1"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -398,9 +398,9 @@ lunark_strike_craft_mount = {
 	}
 }
 lunark_kinetic_battery_mount = {
-	icon = "GFX_lunark_kinetic_battery_mount"
+	icon = "GFX_arkship_mass_accelerator"
 	section = "lunark_X_1"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -436,7 +436,7 @@ lunark_kinetic_battery_mount = {
 lunark_build_cap_mount = {
 	icon = "GFX_arkship_engineering_bay"
 	section = "lunark_SUPPORT_PD"
-	construction_days = 180
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -478,7 +478,7 @@ lunark_build_cap_mount = {
 lunark_habitation_mount = {
 	icon = "GFX_arkship_habitation_module"
 	section = "lunark_SUPPORT_PD"
-	construction_days = 180
+	construction_days = @lunark_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 

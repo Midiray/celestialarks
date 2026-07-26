@@ -7,4 +7,5 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = { energy_is_quasark_upkeep_trigger = yes }
 	planet_jobs_upkeep_mult = -0.001
+	ship_reactor_power_mult = 0.005
 }

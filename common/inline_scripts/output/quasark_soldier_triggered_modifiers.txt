@@ -2,7 +2,7 @@
 
 triggered_planet_modifier = {
 	potential = { carks_soldier_fire_rate_trigger = yes }
-	ship_fire_rate_mult = 0.05
+	ship_fire_rate_mult = 0.05 #Ignore this error, it works fine
 }
 triggered_planet_modifier = {
 	potential = { carks_soldier_damage_trigger = yes }
@@ -11,5 +11,5 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = { carks_soldier_rounded_trigger = yes }
 	ship_weapon_damage = 0.015
-	ship_fire_rate_mult = 0.015
+	ship_fire_rate_mult = 0.015 #Ignore this error, it works fine
 }

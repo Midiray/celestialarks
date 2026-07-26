@@ -1,4 +1,4 @@
-@war_moon_scale = 0.12
+@war_moon_scale = 0.21
 @war_moon_scale_construction = 0.177
 
 entity = {

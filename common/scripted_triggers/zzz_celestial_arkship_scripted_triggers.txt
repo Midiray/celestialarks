@@ -42,12 +42,32 @@ is_carks_ship = {
 		is_ship_size = carks_lunark
 	}
 }
+quasark_celestial_construction = {
+	custom_tooltip = {
+		fail_text = quasark_shipyard_trigger
+		has_starbase_module = quasark_shipyard_mount
+	}
+}
 
 
 energy_is_quasark_energy_damage_trigger = {
 	planet = {
-		has_zone = {
-			zone = zone_quasark_energy_damage_focus
+		OR = {
+			has_zone = {
+				zone = zone_quasark_energy_damage_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_energy_damage_focus
+			}
+			has_zone = {
+				zone = zone_sysark_energy_damage_focus
+			}
+			has_zone = {
+				zone = zone_planark_energy_damage_focus
+			}
+			has_zone = {
+				zone = zone_lunark_energy_damage_focus
+			}
 		}
 	}
 }
@@ -75,42 +95,71 @@ energy_is_quasark_upkeep_trigger = {
 minerals_is_quasark_damage_debuff_trigger = {
 	planet = {
 		has_zone = {
-			zone = zone_quasark_mineral_generation_focus
+			zone = zone_quasark_mineral_generation_focus #Quasark is the only one that gets this effect
 		}
 	}
 }
 minerals_is_quasark_forge_support_trigger = {
 	planet = {
-		has_zone = {
-			zone = zone_quasark_mineral_forge_support_focus
+		OR = {
+			has_zone = {
+				zone = zone_quasark_mineral_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_mineral_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_sysark_mineral_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_planark_mineral_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_lunark_mineral_forge_support_focus
+			}
 		}
 	}
 }
-food_is_quasark_forge_support_trigger = {
+food_is_quasark_catalytic_forge_support_trigger = {
 	planet = {
-		has_zone = {
-			zone = zone_quasark_food_forge_support_focus
+		OR = {
+			has_zone = {
+				zone = zone_quasark_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_sysark_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_planark_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_lunark_food_forge_support_focus
+			}
 		}
 	}
 }
 metallurgist_is_quasark_armor_trigger = {
 	planet = {
-		has_zone = {
-			zone = zone_quasark_forge_armor_focus
+		OR = {
+			has_zone = {
+				zone = zone_quasark_forge_armor_focus
+			}
+			has_zone = {
+				zone = zone_sysark_o_forge_armor_focus
+			}
+			has_zone = {
+				zone = zone_sysark_forge_armor_focus
+			}
+			has_zone = {
+				zone = zone_planark_forge_armor_focus
+			}
+			has_zone = {
+				zone = zone_lunark_forge_armor_focus
+			}
 		}
-	}
-}
-quasark_unity_zone_trigger = {
-	planet = {
-		has_zone = {
-			zone = zone_quasark_research_unity_focus
-		}
-	}
-}
-quasark_celestial_construction = {
-	custom_tooltip = {
-		fail_text = quasark_shipyard_trigger
-		has_starbase_module = quasark_shipyard_mount
 	}
 }
 carks_soldier_fire_rate_trigger = {

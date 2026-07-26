@@ -1,7 +1,7 @@
 
 sysark_o_aura_gravity_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_subspace_snare"
+	construction_days = @sysark_o_module_slow_build_time
 	starbase_type = arkship
 	category = 3_celestial_aura_cat
 
@@ -31,8 +31,8 @@ sysark_o_aura_gravity_mount = {
 	}
 }
 sysark_o_aura_shipyard_mount = {
-	icon = "GFX_sysark_o_aura_shipyard_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_capital_shipyard"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 3_celestial_aura_cat
 
@@ -62,8 +62,8 @@ sysark_o_aura_shipyard_mount = {
 	}
 }
 sysark_o_support_energy_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_energy_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -97,8 +97,8 @@ sysark_o_support_energy_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_minerals_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_mineral_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -132,8 +132,8 @@ sysark_o_support_minerals_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_food_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_food_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -167,8 +167,8 @@ sysark_o_support_food_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_unity_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_bureaucracy_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -202,8 +202,8 @@ sysark_o_support_unity_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_goods_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_consumer_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -237,8 +237,8 @@ sysark_o_support_goods_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_alloys_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_alloy_hub"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -272,8 +272,8 @@ sysark_o_support_alloys_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_soldier_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_starbase_deep_space_black_site"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -307,8 +307,8 @@ sysark_o_support_soldier_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_support_research_mount = {
-	icon = "GFX_sysark_o_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_orbitalring_noble_estates"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -342,8 +342,8 @@ sysark_o_support_research_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_shield_mount = {
-	icon = "GFX_lunark_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_shield"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_defense_cat
 
@@ -394,8 +394,8 @@ sysark_o_shield_mount = {
 	starbase_limit = { base = -1 }
 }
 sysark_o_armor_mount = {
-	icon = "GFX_lunark_aura_gravity_mount"
-	construction_days = @arkship_spinal_mount_build_time
+	icon = "GFX_arkship_armor"
+	construction_days = @sysark_o_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_defense_cat
 

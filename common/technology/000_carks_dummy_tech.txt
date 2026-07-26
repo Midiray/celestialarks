@@ -1,0 +1,26 @@
+
+tech_impossible = { #To banish the overwritten ships
+	cost = 69420
+	area = physics
+	tier = 5
+	category = { computing }
+	is_rare = yes
+	weight = 0
+
+	potential = {
+		always = no
+	}
+}
+#Dummy tech for O-class
+tech_o_class_war_system = { 
+	cost = 69420
+	area = physics
+	tier = 5
+	category = { computing }
+	is_rare = yes
+	weight = 0
+
+	potential = {
+		always = no
+	}
+}

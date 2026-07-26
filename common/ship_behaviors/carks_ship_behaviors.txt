@@ -34,7 +34,7 @@ ship_behavior = {
 	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
 	attack_move_pattern = stay_at_range
 	passive_move_pattern = charge
-	combat_movement = player_override
+	#combat_movement = player_override
 }
 ship_behavior = {
 	name = "giga_planet"
@@ -49,7 +49,7 @@ ship_behavior = {
 	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
 	attack_move_pattern = stay_at_range
 	passive_move_pattern = stay_at_range
-	combat_movement = player_override
+	#combat_movement = player_override
 }
 
 ship_behavior = {
@@ -65,5 +65,5 @@ ship_behavior = {
 	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
 	attack_move_pattern = stay_at_range
 	passive_move_pattern = stay_at_range
-	combat_movement = player_override
+	#combat_movement = player_override
 }

@@ -93,3 +93,24 @@
 @quasark_cost_strategic_spinal = 500000
 @quasark_upkeep_energy_spinal = 50000
 @quasark_upkeep_strategic_spinal = 5000
+#build times below - all variants
+@lunark_module_build_time = 180
+@lunark_module_slow_build_time = 360
+@lunark_spinal_build_time = 720
+@lunark_spinal_slow_build_time = 1440
+@planark_module_build_time = 180
+@planark_module_slow_build_time = 360
+@planark_spinal_build_time = 720
+@planark_spinal_slow_build_time = 1440
+@sysark_module_build_time = 180
+@sysark_module_slow_build_time = 360
+@sysark_spinal_build_time = 720
+@sysark_spinal_slow_build_time = 1440
+@sysark_o_module_build_time = 180
+@sysark_o_module_slow_build_time = 360
+@sysark_o_spinal_build_time = 720
+@sysark_o_spinal_slow_build_time = 1440
+@quasark_module_build_time = 180
+@quasark_module_slow_build_time = 360
+@quasark_spinal_build_time = 720
+@quasark_spinal_slow_build_time = 1440

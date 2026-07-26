@@ -768,7 +768,7 @@ guiTypes = {
 			# Arkship Fleet UI
 			containerWindowType = {
 				name = "fleet_status_container"
-				position = { x = 30 y = 593 }
+				position = { x = 30 y = 573 }
 				size = { width = 220 height = 38 }
 				background = {
 					name = "fleet_status_bg"
@@ -791,7 +791,7 @@ guiTypes = {
 				name = "arkship_orders_text"
 				font = "font_text_14"
 				text = "ORDERS"
-				position = { x = 35 y = 635 }
+				position = { x = 35 y = 615 }
 				maxWidth = 210
 				maxHeight = 32
 				fixedSize = yes
@@ -802,9 +802,9 @@ guiTypes = {
 				name = "arkship_activity_text"
 				font = "font_text_14"
 				text = "ACTIVITY"
-				position = { x = 35 y = 667 }
+				position = { x = 35 y = 647 }
 				maxWidth = 210
-				maxHeight = 64
+				maxHeight = 34
 				fixedSize = yes
 				format = left
 			}

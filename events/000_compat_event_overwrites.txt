@@ -1,0 +1,127 @@
+namespace = kmoon
+country_event = {
+	id = kmoon.21
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		delete_fleet = {
+			target = event_target:kaiser_moon_pls
+			kill_leader = no
+		}
+		clear_global_event_target = kaiser_moon_pls
+		set_country_flag = do_you_wanna_build_a_moon_man
+		set_country_flag = kaiser_moon_tech_possible
+		add_modifier = {
+			modifier = stop_eating_naval_cap_you_hecker
+			days = -1
+		}
+		add_modifier = {
+			modifier = pki_attack_moon_upkeep
+			days = 3600
+		}
+		give_technology = {
+			tech = giga_tech_kaiser_moon message = no }
+		#create_fleet = {
+		#	name = "Kaiservorherrschaft"
+		#	settings = {
+		#		spawn_debris = no
+		#	}
+		#	effect = {
+		#		set_owner = event_target:katzenartig
+		#		create_ship = {
+		#			name = "Kaiservorherrschaft"
+		#			design = "NAME_PKI_ATTACK_MOON"
+		#			upgradable = yes
+		#			effect = {
+		#				set_ship_flag = current_katzen_flagship
+		#			}
+		#		}
+		#		set_location = event_target:playerflusion
+		#	}
+		#}
+		create_fleet = {
+			name = "Kaiservorherrschaft"
+			effect = {
+				set_owner = event_target:katzenartig
+				create_ship = {
+					name = "Kaiservorherrschaft"
+					random_existing_design = carks_lunark
+					graphical_culture = none
+					effect = {
+						set_ship_flag = current_katzen_flagship
+						starbase = { set_starbase_flag = current_katzen_flagship }
+					}
+				}
+				set_location = event_target:playerflusion
+			}
+		}
+	}
+ }
+namespace = stellar_manip_dialogue
+# Systemcraft Assembled
+country_event = { #print regular
+	id = stellar_manip_dialogue.17
+	title = "stellar_manip_dialogue.17.name"
+	desc = "stellar_manip_dialogue.17.desc"
+	hide_window = no
+	is_triggered_only = yes
+	show_sound = event_ringworld_build_complete
+	location = event_target:star_printer_location
+	picture = GFX_evt_binary_stars
+
+	immediate = {
+		random_owned_megastructure = {
+			limit = { is_megastructure_type = systemcraft_assembler_make_system NOT = { has_megastructure_flag = already_printed_a_star } }
+			set_megastructure_flag = already_printed_a_star
+			save_global_event_target_as = latest_star_printer
+			planet = { save_global_event_target_as = star_printer_location }
+			solar_system = {
+				spawn_megastructure = {
+					type = "systemcraft_assembler_5"
+					planet = PREV.planet
+					owner = root
+				}
+			}
+			print_sysark_effect = { LOCATION = event_target:latest_star_printer }
+			remove_megastructure = this
+		}
+	}
+
+	option = { #Good, good.
+		name = "giga_printer.1000.a"
+	}
+}
+
+# O Class Systemcraft Assembled
+country_event = {
+	id = stellar_manip_dialogue.18
+	title = "stellar_manip_dialogue.17.name"
+	desc = "stellar_manip_dialogue.17.desc"
+	hide_window = no
+	is_triggered_only = yes
+	show_sound = event_ringworld_build_complete
+	location = event_target:star_printer_location
+	picture = GFX_evt_binary_stars
+
+	immediate = {
+		random_owned_megastructure = {
+			limit = { is_megastructure_type = systemcraft_assembler_make_o_system NOT = { has_megastructure_flag = already_printed_a_star } }
+			set_megastructure_flag = already_printed_a_star
+			save_global_event_target_as = latest_star_printer
+			planet = { save_global_event_target_as = star_printer_location }
+			solar_system = {
+				spawn_megastructure = {
+					type = "systemcraft_assembler_5"
+					planet = PREV.planet
+					owner = root
+				}
+			}
+			print_sysark_o_effect = { LOCATION = event_target:latest_star_printer }
+			remove_megastructure = this
+		}
+	}
+
+	option = { #Good, good.
+		name = "giga_printer.1000.a"
+	}
+}

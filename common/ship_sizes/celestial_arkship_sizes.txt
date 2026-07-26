@@ -105,12 +105,16 @@ carks_lunark = {
 		ship_speed_mult = 2
 		ship_armor_hardening_add = -1
 		ship_shield_hardening_add = -1
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
 	}
 	size_multiplier = 250
 	fleet_slot_size = 50
 	
 
 	is_designable = no
+	can_disable = no
 	num_target_locators = 0
 	is_space_station = no
 	can_have_federation_design = no
@@ -278,11 +282,15 @@ carks_planark = {
 		starbase_building_capacity_add = 12
 		ship_armor_hardening_add = -3
 		ship_shield_hardening_add = -3
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
 	}
 	size_multiplier = 750 #@arkship_size_80
 	fleet_slot_size = 250 #@arkship_slot_size_8
 	
 	is_designable = no
+	can_disable = no
 	num_target_locators = 0
 	is_space_station = no
 	can_have_federation_design = no
@@ -453,11 +461,15 @@ carks_sysark = {
 		starbase_building_capacity_add = 18
 		ship_armor_hardening_add = -14
 		ship_shield_hardening_add = -14
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
 	}
 	size_multiplier = 1250 #@arkship_size_80
 	fleet_slot_size = 512 #@arkship_slot_size_8
 	
 	is_designable = no
+	can_disable = no
 	num_target_locators = 0
 	is_space_station = no
 	can_have_federation_design = no
@@ -629,11 +641,15 @@ carks_sysark_o = {
 		starbase_building_capacity_add = 18
 		ship_armor_hardening_add = -20
 		ship_shield_hardening_add = -20
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
 	}
 	size_multiplier = 1250 #@arkship_size_80
 	fleet_slot_size = 512 #@arkship_slot_size_8
 	
 	is_designable = no
+	can_disable = no
 	num_target_locators = 0
 	is_space_station = no
 	can_have_federation_design = no
@@ -701,7 +717,7 @@ carks_quasark = {
 	automation_icon = GFX_fleet_order_auto_explore_arkship
 	arkship_picture = "carks_quasark"
 	auto_upgrade = yes					# Arkships automatically upgrade their components.
-	#can_disable = yes					# Arkships can be disabled.
+	can_disable = no 				# Arkships can be disabled.
 	#stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
 	#never_lost = yes
 	#collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
@@ -807,14 +823,14 @@ carks_quasark = {
 	rotation_speed = 0.1
 	combat_disengage_chance = 0
 	collision_radius = 256
-	max_hitpoints = 200000000
+	max_hitpoints = 40000000000
 	modifier = {
-		ship_hull_regen_add_static = 22500000
-		ship_armor_regen_add_static = 22500000
-		ship_shield_regen_add_static = 22500000
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
 		ship_evasion_mult = -999
-		ship_armor_add = 200000000
-		ship_shield_add = 200000000
+		ship_armor_add = 40000000000
+		ship_shield_add = 40000000000
 		ship_target_weight_mult = 1000
 		ship_starting_experience_add = 5000
 		ship_speed_mult = 2
@@ -841,7 +857,7 @@ carks_quasark = {
 
 	available_to_everyone = yes
 
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 
 	prerequisites = { "tech_lasers_1" }
 

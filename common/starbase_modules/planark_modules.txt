@@ -1,8 +1,8 @@
 
 planark_annihilation_lance_mount = {
-	icon = "GFX_planark_annihilation_lance_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "planark_ANNIHILATION_LANCE"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -36,9 +36,9 @@ planark_annihilation_lance_mount = {
 	}
 }
 planark_mega_artillery_mount = {
-	icon = "GFX_planark_mega_artillery_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "planark_MEGA_ARTILLERY"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_spinal_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -72,9 +72,9 @@ planark_mega_artillery_mount = {
 	}
 }
 planark_planet_missile_mount = {
-	icon = "GFX_planark_planet_missile_mount"
+	icon = "GFX_arkship_swamer_missile_battery"
 	section = "planark_X_2"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_module_slow_build_time
 	starbase_type = arkship
 	category = 0_celestial_heavy_cat
 
@@ -108,9 +108,9 @@ planark_planet_missile_mount = {
 	}
 }
 planark_devastator_cannon_mount = {
-	icon = "GFX_planark_devastator_cannon_mount"
+	icon = "GFX_arkship_spinal_devastator_mount"
 	section = "planark_T_6"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -144,9 +144,9 @@ planark_devastator_cannon_mount = {
 	}
 }
 planark_particle_launcher_mount = {
-	icon = "GFX_planark_particle_launcher_mount"
+	icon = "GFX_arkship_particle_launcher"
 	section = "planark_G_3"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -180,9 +180,9 @@ planark_particle_launcher_mount = {
 	}
 }
 planark_strike_craft_mount = {
-	icon = "GFX_planark_strike_craft_mount"
+	icon = "GFX_arkship_hangar_bay"
 	section = "planark_H_3"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -216,9 +216,9 @@ planark_strike_craft_mount = {
 	}
 }
 planark_kinetic_battery_mount = {
-	icon = "GFX_planark_kinetic_battery_mount"
+	icon = "GFX_arkship_mass_accelerator"
 	section = "planark_X_3"
-	construction_days = @arkship_spinal_mount_build_time
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 1_celestial_gun_cat
 
@@ -254,7 +254,7 @@ planark_kinetic_battery_mount = {
 planark_build_cap_mount = {
 	icon = "GFX_arkship_engineering_bay"
 	section = "planark_SUPPORT_PD"
-	construction_days = 180
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
@@ -296,7 +296,7 @@ planark_build_cap_mount = {
 planark_habitation_mount = {
 	icon = "GFX_arkship_habitation_module"
 	section = "planark_SUPPORT_PD"
-	construction_days = 180
+	construction_days = @planark_module_build_time
 	starbase_type = arkship
 	category = 2_celestial_support_cat
 
