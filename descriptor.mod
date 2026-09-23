@@ -3,5 +3,5 @@ tags={
 	"Gameplay"
 }
 name="Celestial Arkships"
-supported_version="v4.4.6"
+supported_version="v4.5.*"
 remote_file_id="3754789428"
