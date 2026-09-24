@@ -27,6 +27,18 @@ giga_ship_uses_war_moon_components = {
 		is_ship_size = giga_war_moon
 	}
 }
+giga_ship_uses_nomad_war_planet_components = {
+	OR = {
+		is_ship_size = carks_planark_nomad
+		is_ship_size = giga_nomad_war_planet
+	}
+}
+giga_ship_uses_nomad_war_moon_components = {
+	OR = {
+		is_ship_size = carks_lunark_nomad
+		is_ship_size = giga_nomad_war_moon
+	}
+}
 carks_is_g_system = {
 	OR = {
 		is_ship_size = carks_sysark
@@ -40,6 +52,8 @@ is_carks_ship = {
 		is_ship_size = carks_sysark
 		is_ship_size = carks_planark
 		is_ship_size = carks_lunark
+		is_ship_size = carks_planark_nomad
+		is_ship_size = carks_lunark_nomad
 	}
 }
 quasark_celestial_construction = {
@@ -68,6 +82,12 @@ energy_is_quasark_energy_damage_trigger = {
 			has_zone = {
 				zone = zone_lunark_energy_damage_focus
 			}
+			has_zone = {
+				zone = zone_planark_nomad_energy_damage_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_energy_damage_focus
+			}
 		}
 	}
 }
@@ -88,6 +108,12 @@ energy_is_quasark_upkeep_trigger = {
 			}
 			has_zone = {
 				zone = zone_lunark_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_planark_nomad_energy_generation_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_energy_generation_focus
 			}
 		}
 	}
@@ -117,6 +143,12 @@ minerals_is_quasark_forge_support_trigger = {
 			has_zone = {
 				zone = zone_lunark_mineral_forge_support_focus
 			}
+			has_zone = {
+				zone = zone_planark_nomad_mineral_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_mineral_forge_support_focus
+			}
 		}
 	}
 }
@@ -137,6 +169,12 @@ food_is_quasark_catalytic_forge_support_trigger = {
 			}
 			has_zone = {
 				zone = zone_lunark_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_planark_nomad_food_forge_support_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_food_forge_support_focus
 			}
 		}
 	}
@@ -159,6 +197,12 @@ metallurgist_is_quasark_armor_trigger = {
 			has_zone = {
 				zone = zone_lunark_forge_armor_focus
 			}
+			has_zone = {
+				zone = zone_planark_nomad_forge_armor_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_forge_armor_focus
+			}
 		}
 	}
 }
@@ -179,6 +223,12 @@ carks_soldier_fire_rate_trigger = {
 			}
 			has_zone = {
 				zone = zone_lunark_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_planark_nomad_fire_rate_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_fire_rate_focus
 			}
 		}
 	}
@@ -201,6 +251,12 @@ carks_soldier_damage_trigger = {
 			has_zone = {
 				zone = zone_lunark_damage_focus
 			}
+			has_zone = {
+				zone = zone_planark_nomad_damage_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_damage_focus
+			}
 		}
 	}
 }
@@ -221,6 +277,12 @@ carks_soldier_rounded_trigger = {
 			}
 			has_zone = {
 				zone = zone_lunark_rounded_focus
+			}
+			has_zone = {
+				zone = zone_planark_nomad_rounded_focus
+			}
+			has_zone = {
+				zone = zone_lunark_nomad_rounded_focus
 			}
 		}
 	}

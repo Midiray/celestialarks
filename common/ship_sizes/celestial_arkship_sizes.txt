@@ -895,3 +895,220 @@ carks_quasark = {
     #additional code to attempt to make it buildable at starbase is below
     #base_buildtime = 180
 }
+carks_lunark_nomad = {
+	is_starting_arkship = no
+	entity = "giga_nomad_war_moon_ship_entity"
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_lunark_nomad				# Enables Arkship custom UI.
+	arkship_picture = "carks_sysark"
+
+	# slightly faster
+	max_speed = 55
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 32
+	formation_priority = 32
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_civilian"
+		custom_class_text_color = H
+	}
+	# 2D Art
+	icon = ship_size_civilian_arkship_tier_3
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+	base_buildtime = 2400
+	modifier = {
+		ship_evasion_mult = -0.5
+		ship_armor_add = 150000
+		starbase_module_capacity_add = 15
+		starbase_building_capacity_add = 6
+		ship_shield_add = 100000
+		ship_speed_mult = 2
+		ship_evasion_add = 4
+		ship_armor_hardening_add = -1
+		ship_shield_hardening_add = -1
+	}
+	cloaking_forbidden = yes
+
+	# less hp
+	max_hitpoints = 150000
+	size_multiplier = 250
+	fleet_slot_size = 50
+	section_slots = {
+		"mid"				=	{ locator = "part1" }
+		"1"					=	{ locator = "module_01" }
+		"2"					=	{ locator = "module_02" }
+		"3"					=	{ locator = "module_03" }
+		"4"					=	{ locator = "module_04" }
+		"5"					=	{ locator = "module_05" }
+		"6"					=	{ locator = "module_06" }
+		"7"					=	{ locator = "module_06" }
+		"8"					=	{ locator = "module_06" }
+		"9"					=	{ locator = "module_06" }
+		"10"					=	{ locator = "module_06" }
+		"11"					=	{ locator = "module_06" }
+		"12"					=	{ locator = "module_06" }
+		"13"					=	{ locator = "module_06" }
+		"14"					=	{ locator = "module_06" }
+		"spinal_mount_1"	=	{ locator = "spinal_mount" }
+	}
+
+	num_target_locators = 0
+	is_space_station = no
+	auto_upgrade = yes
+	enable_default_design = no
+	is_designable = no
+	preserve_movement_animation_progress = yes
+	combat_disengage_chance = 0.5
+	prerequisites = { "tech_lasers_1" }
+	possible_construction = { quasark_celestial_construction = yes }
+	potential_construction = { quasark_celestial_construction = yes }
+	construction_type = starbase_shipyard
+
+	ship_roles = { artillery explosive }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	use_shipnames_from = titan
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 250
+			alloys = 100
+		}
+		logistics = {
+			trade = 75
+		}
+	}
+
+	available_to_everyone = yes
+}
+
+carks_planark_nomad = {
+	is_starting_arkship = no
+	entity = "giga_nomad_war_planet_ship_entity"
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_planark_nomad				# Enables Arkship custom UI.
+	arkship_picture = "carks_sysark"
+	max_speed = 45
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	base_buildtime = 3600
+	# 2D Art
+	icon = ship_size_civilian_arkship_tier_3
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+	modifier = {
+		ship_evasion_mult = -0.5
+		ship_armor_add = 1250000
+		starbase_module_capacity_add = 29
+		starbase_building_capacity_add = 12
+		ship_shield_add = 1250000
+		ship_speed_mult = 2
+		ship_evasion_add = 2
+		ship_armor_hardening_add = -3
+		ship_shield_hardening_add = -3
+	}
+	cloaking_forbidden = yes
+	max_hitpoints = 2000000 # 20% less hp
+	size_multiplier = 500
+	fleet_slot_size = 250
+	section_slots = {
+		"mid"				=	{ locator = "part1" }
+		"1"					=	{ locator = "module_01" }
+		"2"					=	{ locator = "module_02" }
+		"3"					=	{ locator = "module_03" }
+		"4"					=	{ locator = "module_04" }
+		"5"					=	{ locator = "module_05" }
+		"6"					=	{ locator = "module_06" }
+		"7"					=	{ locator = "module_06" }
+		"8"					=	{ locator = "module_06" }
+		"9"					=	{ locator = "module_06" }
+		"10"					=	{ locator = "module_06" }
+		"11"					=	{ locator = "module_06" }
+		"12"					=	{ locator = "module_06" }
+		"13"					=	{ locator = "module_06" }
+		"14"					=	{ locator = "module_06" }
+		"15"					=	{ locator = "module_06" }
+		"16"					=	{ locator = "module_06" }
+		"17"					=	{ locator = "module_06" }
+		"18"					=	{ locator = "module_06" }
+		"19"					=	{ locator = "module_06" }
+		"20"					=	{ locator = "module_06" }
+		"21"					=	{ locator = "module_06" }
+		"22"					=	{ locator = "module_06" }
+		"23"					=	{ locator = "module_06" }
+		"24"					=	{ locator = "module_06" }
+		"25"					=	{ locator = "module_06" }
+		"26"					=	{ locator = "module_06" }
+		"27"					=	{ locator = "module_06" }
+		"28"					=	{ locator = "module_06" }
+		"spinal_mount_1"	=	{ locator = "spinal_mount" }
+	}
+
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_civilian"
+		custom_class_text_color = H
+	}
+	scripted_action = {
+
+	}
+	automation_icon = GFX_fleet_order_auto_construct
+
+	num_target_locators = 0
+	is_space_station = no
+	auto_upgrade = yes
+	enable_default_design = no
+	is_designable = no
+	preserve_movement_animation_progress = yes
+	combat_disengage_chance = 0
+	prerequisites = { "tech_lasers_1" }
+	possible_construction = { quasark_celestial_construction = yes }
+	potential_construction = { quasark_celestial_construction = yes }
+	construction_type = starbase_shipyard
+	ship_roles = { gunship artillery }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	#required_component_set = "ship_aura_components"
+
+	use_shipnames_from = juggernaut
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 500
+			alloys = 125
+		}
+		logistics = {
+			trade = 125
+		}
+	}
+
+	available_to_everyone = yes
+}

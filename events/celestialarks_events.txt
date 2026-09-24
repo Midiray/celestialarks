@@ -236,16 +236,48 @@ country_event = {
                 inline_script = {
                     script = generic_parts/giga_toggled_code
                     toggle = @has_quasarmod
-                    code = "create_quasark_effect_origin = { TYPE = quasark OWNER = from }"
+                    code = "create_quasark_effect_origin = { TYPE = quasark OWNER = root }"
                 }
                 inline_script = {
                     script = generic_parts/giga_toggled_code
                     toggle = @has_stellar_manip
-                    code = "create_sysark_o_effect_origin = { TYPE = sysark_o OWNER = from }"
+                    code = "create_sysark_o_effect_origin = { TYPE = sysark_o OWNER = root }"
                 }
-                create_sysark_effect_origin = { TYPE = sysark OWNER = from }
-                create_planark_effect_origin = { TYPE = planark OWNER = from }
-                create_lunark_effect_origin = { TYPE = lunark OWNER = from }
+                create_sysark_effect_origin = { TYPE = sysark OWNER = root }
+                create_planark_effect_origin = { TYPE = planark OWNER = root }
+                create_lunark_effect_origin = { TYPE = lunark OWNER = root }
+                create_nomad_planark_effect_origin = { OWNER = root }
+                create_nomad_lunark_effect_origin = { OWNER = root }
+            }
+            change_pc = pc_shattered
+        }
+    }
+}
+country_event = { #duplicate that can be fired without the origin. crashes, but not because of the nomad spawns, not sure why
+    id = quasark.1001
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        capital_scope = {
+           solar_system = {
+                star = {
+                    save_event_target_as = quasark_origin_star
+                }
+                inline_script = {
+                    script = generic_parts/giga_toggled_code
+                    toggle = @has_quasarmod
+                    code = "create_quasark_effect_origin = { TYPE = quasark OWNER = root }"
+                }
+                inline_script = {
+                    script = generic_parts/giga_toggled_code
+                    toggle = @has_stellar_manip
+                    code = "create_sysark_o_effect_origin = { TYPE = sysark_o OWNER = root }"
+                }
+                create_sysark_effect_origin = { TYPE = sysark OWNER = root }
+                create_planark_effect_origin = { TYPE = planark OWNER = root }
+                create_lunark_effect_origin = { TYPE = lunark OWNER = root }
+                create_nomad_planark_effect_origin = { OWNER = root }
+                create_nomad_lunark_effect_origin = { OWNER = root }
             }
             change_pc = pc_shattered
         }

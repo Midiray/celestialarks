@@ -1,0 +1,259 @@
+
+lunark_nomad_anti_celestial_mount = {
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "lunark_nomad_ANNIHILATION_LANCE"
+	construction_days = @lunark_spinal_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_spinal
+			rare_crystals = @lunark_cost_strategic_spinal
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_spinal
+			rare_crystals = @lunark_upkeep_strategic_spinal
+		}
+	}
+
+	component_set = CARKS_GIGA_NOMAD_WAR_MOON_ANTI_CELESTIAL_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+lunark_nomad_devastator_cannon_mount = {
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "lunark_nomad_T_2"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			rare_crystals = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			rare_crystals = @lunark_upkeep_strategic_module
+		}
+	}
+
+	component_set = ARKSHIP_DEVASTATOR_WEAPON
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+lunark_nomad_particle_launcher_mount = {
+	icon = "GFX_arkship_particle_launcher"
+	section = "lunark_nomad_G_1"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			exotic_gases = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			exotic_gases = @lunark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_LAUNCHER_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+lunark_nomad_strike_craft_mount = {
+	icon = "GFX_arkship_hangar_bay"
+	section = "lunark_nomad_H_1"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			exotic_gases = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			exotic_gases = @lunark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_HANGAR_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+lunark_nomad_kinetic_battery_mount = {
+	icon = "GFX_arkship_mass_accelerator"
+	section = "lunark_nomad_X_1"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			volatile_motes = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			volatile_motes = @lunark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_ARTILLERY_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+lunark_nomad_build_cap_mount = {
+	icon = "GFX_arkship_engineering_bay"
+	section = "lunark_nomad_SUPPORT_PD"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			volatile_motes = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			volatile_motes = @lunark_upkeep_strategic_module
+		}
+	}
+	planet_modifier = {
+		planet_building_capacity_add = 1
+		planet_building_build_speed_mult = 0.2
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 1
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	on_finished = {
+		set_ship_construction_type = starbase_shipyard
+	}
+	on_destroyed = {
+	}
+}
+
+lunark_nomad_habitation_mount = {
+	icon = "GFX_arkship_habitation_module"
+	section = "lunark_nomad_SUPPORT_PD"
+	construction_days = @lunark_module_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_moon_components = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @lunark_cost_alloys_module
+			rare_crystals = @lunark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @lunark_upkeep_energy_module
+			rare_crystals = @lunark_upkeep_strategic_module
+		}
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

@@ -1,0 +1,434 @@
+
+ship_section_template = {
+	key = "carks_planark_nomad_section"
+	ship_size = carks_planark_nomad
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = giga_nomad_war_planet_frame_entity
+	icon = "GFX_ship_part_core_mid"
+}
+
+ship_section_template = {
+	key = "planark_nomad_BOWGUN"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "spinal_mount_1"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_TITAN_GUN_01"
+		template = "invisible_titanic_turret"
+		locatorname = "titanic_gun_01"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_02"
+		template = "invisible_titanic_turret"
+		locatorname = "titanic_gun_02"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_03"
+		template = "invisible_titanic_turret"
+		locatorname = "titanic_gun_03"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_04"
+		template = "invisible_titanic_turret"
+		locatorname = "titanic_gun_04"
+	}
+}
+
+ship_section_template = {
+	key = "planark_nomad_SUPPORT_PD"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_PD_GUN_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "planark_PD_GUN_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "planark_PD_GUN_03"
+		template = "invisible_point_defence_turret"
+		locatorname = "large_gun_08"
+	}
+	component_slot = {
+		name = "planark_PD_GUN_04"
+		template = "invisible_point_defence_turret"
+		locatorname = "large_gun_09"
+	}
+}
+
+ship_section_template = {
+	key = "planark_nomad_X_2"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_TITAN_GUN_01"
+		template = "invisible_extra_large_turret"
+		locatorname = "missile_gun_02"
+	}
+	component_slot = {
+		name = "planark_TITAN_GUN_02"
+		template = "invisible_extra_large_turret"
+		locatorname = "missile_gun_05"
+	}
+}
+
+ship_section_template = {
+	key = "planark_nomad_T_6"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_TITAN_GUN_01"
+		template = "invisible_titanic_turret"
+		locatorname = "missile_gun_01"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_02"
+		template = "invisible_titanic_turret"
+		locatorname = "missile_gun_03"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_03"
+		template = "invisible_titanic_turret"
+		locatorname = "missile_gun_04"
+	}
+
+	component_slot = {
+		name = "planark_TITAN_GUN_04"
+		template = "invisible_titanic_turret"
+		locatorname = "missile_gun_06"
+	}
+	#
+	# component_slot = {
+	# 	name = "planark_TITAN_GUN_05"
+	# 	template = "invisible_titanic_turret"
+	# 	locatorname = "xl_gun_01"
+	# }
+	#
+	# component_slot = {
+	# 	name = "planark_TITAN_GUN_06"
+	# 	template = "invisible_titanic_turret"
+	# 	locatorname = "xl_gun_01"
+	# }
+}
+
+ship_section_template = {
+	key = "planark_nomad_G_3"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_LAUNCHER_GUN_01"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun_17"
+	}
+
+	component_slot = {
+		name = "planark_LAUNCHER_GUN_02"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun_18"
+	}
+
+	component_slot = {
+		name = "planark_LAUNCHER_GUN_03"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun_19"
+	}
+
+	component_slot = {
+		name = "planark_LAUNCHER_GUN_04"
+		template = "invisible_missile_turret"
+		locatorname = "xl_gun_20"
+	}
+}
+
+ship_section_template = {
+	key = "planark_nomad_H_3"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_HANGAR_01"
+		template = "large_strike_craft"
+		locatorname = "strike_craft_01"
+	}
+
+	component_slot = {
+		name = "planark_HANGAR_02"
+		template = "large_strike_craft"
+		locatorname = "strike_craft_01"
+	}
+
+	component_slot = {
+		name = "planark_HANGAR_03"
+		template = "large_strike_craft"
+		locatorname = "strike_craft_02"
+	}
+
+	component_slot = {
+		name = "planark_HANGAR_04"
+		template = "large_strike_craft"
+		locatorname = "strike_craft_02"
+	}
+}
+
+ship_section_template = {
+	key = "planark_nomad_X_3"
+	entity = "war_planet_locators_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = carks_planark_nomad
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+	fits_on_slot = "7"
+	fits_on_slot = "8"
+	fits_on_slot = "9"
+	fits_on_slot = "10"
+	fits_on_slot = "11"
+	fits_on_slot = "12"
+	fits_on_slot = "13"
+	fits_on_slot = "14"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+	fits_on_slot = "15"
+	fits_on_slot = "16"
+	fits_on_slot = "17"
+	fits_on_slot = "18"
+	fits_on_slot = "19"
+	fits_on_slot = "20"
+	fits_on_slot = "21"
+	fits_on_slot = "22"
+	fits_on_slot = "23"
+	fits_on_slot = "24"
+	fits_on_slot = "25"
+	fits_on_slot = "26"
+	fits_on_slot = "27"
+	fits_on_slot = "28"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "planark_LARGE_GUN_01"
+		template = "invisible_extra_large_turret"
+		locatorname = "large_gun_04"
+	}
+
+	component_slot = {
+		name = "planark_LARGE_GUN_02"
+		template = "invisible_extra_large_turret"
+		locatorname = "large_gun_05"
+	}
+
+	component_slot = {
+		name = "planark_LARGE_GUN_03"
+		template = "invisible_extra_large_turret"
+		locatorname = "large_gun_11"
+	}
+
+	component_slot = {
+		name = "planark_LARGE_GUN_04"
+		template = "invisible_extra_large_turret"
+		locatorname = "large_gun_12"
+	}
+}

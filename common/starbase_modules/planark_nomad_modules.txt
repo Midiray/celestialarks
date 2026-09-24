@@ -1,0 +1,295 @@
+
+planark_nomad_annihilation_lance_mount = {
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "planark_nomad_BOWGUN"
+	construction_days = @planark_spinal_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_spinal
+			rare_crystals = @planark_cost_strategic_spinal
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_spinal
+			rare_crystals = @planark_upkeep_strategic_spinal
+		}
+	}
+
+	component_set = CARKS_PLANET_BEAM_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_mega_artillery_mount = {
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "planark_nomad_BOWGUN"
+	construction_days = @planark_spinal_build_time
+	starbase_type = arkship
+	category = 0_celestial_heavy_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_spinal
+			volatile_motes = @planark_cost_strategic_spinal
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_spinal
+			volatile_motes = @planark_upkeep_strategic_spinal
+		}
+	}
+
+	component_set = CARKS_PLANET_GUN_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_devastator_cannon_mount = {
+	icon = "GFX_arkship_spinal_devastator_mount"
+	section = "planark_nomad_T_6"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			rare_crystals = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			rare_crystals = @planark_upkeep_strategic_module
+		}
+	}
+
+	component_set = ARKSHIP_DEVASTATOR_WEAPON
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_particle_launcher_mount = {
+	icon = "GFX_arkship_particle_launcher"
+	section = "planark_nomad_G_3"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			exotic_gases = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			exotic_gases = @planark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_LAUNCHER_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_strike_craft_mount = {
+	icon = "GFX_arkship_hangar_bay"
+	section = "planark_nomad_H_3"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			exotic_gases = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			exotic_gases = @planark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_HANGAR_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_kinetic_battery_mount = {
+	icon = "GFX_arkship_mass_accelerator"
+	section = "planark_nomad_X_3"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 1_celestial_gun_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+
+	component_set = CARKS_ARTILLERY_MACRO_SET
+	show_component_tooltips = yes
+	#custom_tooltip = sm_arkship_spinal_devastator_mount_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+planark_nomad_build_cap_mount = {
+	icon = "GFX_arkship_engineering_bay"
+	section = "planark_nomad_SUPPORT_PD"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			volatile_motes = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			volatile_motes = @planark_upkeep_strategic_module
+		}
+	}
+	planet_modifier = {
+		planet_building_capacity_add = 1
+		planet_building_build_speed_mult = 0.2
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 2
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	on_finished = {
+		set_ship_construction_type = starbase_shipyard
+	}
+	on_destroyed = {
+	}
+}
+
+planark_nomad_habitation_mount = {
+	icon = "GFX_arkship_habitation_module"
+	section = "planark_nomad_SUPPORT_PD"
+	construction_days = @planark_module_build_time
+	starbase_type = arkship
+	category = 2_celestial_support_cat
+
+	potential = {
+		giga_ship_uses_nomad_war_planet_components = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @planark_cost_alloys_module
+			rare_crystals = @planark_cost_strategic_module
+		}
+
+		upkeep = {
+			energy = @planark_upkeep_energy_module
+			rare_crystals = @planark_upkeep_strategic_module
+		}
+	}
+	component_set = FLAK_BATTERY_1
+	show_component_tooltips = yes
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

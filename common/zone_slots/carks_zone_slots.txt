@@ -339,3 +339,137 @@ slot_lunark_research_zones = {
 		lunark_research_zones
 	}
 }
+#Nomad Planark
+slot_planark_nomad_city_government = {
+	start = zone_planark_nomad_default
+
+	included_zone_sets = {
+		planark_nomad_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_planark_nomad_city_01 = {
+	included_zone_sets = {
+		planark_nomad_urban
+	}
+}
+
+slot_planark_nomad_city_02 = {
+	included_zone_sets = {
+		planark_nomad_urban
+	}
+}
+
+slot_planark_nomad_soldier_zones = {
+	included_zone_sets = {
+		planark_nomad_soldier_zones
+	}
+}
+
+slot_planark_nomad_energy_zones = {
+	included_zone_sets = {
+		planark_nomad_energy_zones
+	}
+}
+
+slot_planark_nomad_minerals_zones = {
+	included_zone_sets = {
+		planark_nomad_minerals_zones
+	}
+}
+
+slot_planark_nomad_food_zones = {
+	included_zone_sets = {
+		planark_nomad_food_zones
+	}
+}
+
+slot_planark_nomad_forge_zones = {
+	included_zone_sets = {
+		planark_nomad_forge_zones
+	}
+}
+
+slot_planark_nomad_research_zones = {
+	included_zone_sets = {
+		planark_nomad_research_zones
+	}
+}
+#Nomad Lunark
+slot_lunark_nomad_city_government = {
+	start = zone_lunark_nomad_default
+
+	included_zone_sets = {
+		lunark_nomad_default
+	}
+
+	exclude = {
+	}
+
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_lunark_nomad_city_01 = {
+	included_zone_sets = {
+		lunark_nomad_urban
+	}
+}
+
+slot_lunark_nomad_city_02 = {
+	included_zone_sets = {
+		lunark_nomad_urban
+	}
+}
+
+slot_lunark_nomad_soldier_zones = {
+	included_zone_sets = {
+		lunark_nomad_soldier_zones
+	}
+}
+
+slot_lunark_nomad_energy_zones = {
+	included_zone_sets = {
+		lunark_nomad_energy_zones
+	}
+}
+
+slot_lunark_nomad_minerals_zones = {
+	included_zone_sets = {
+		lunark_nomad_minerals_zones
+	}
+}
+
+slot_lunark_nomad_food_zones = {
+	included_zone_sets = {
+		lunark_nomad_food_zones
+	}
+}
+
+slot_lunark_nomad_forge_zones = {
+	included_zone_sets = {
+		lunark_nomad_forge_zones
+	}
+}
+
+slot_lunark_nomad_research_zones = {
+	included_zone_sets = {
+		lunark_nomad_research_zones
+	}
+}

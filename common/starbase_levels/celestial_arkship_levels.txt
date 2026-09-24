@@ -15,10 +15,44 @@ starbase_level_carks_lunark = {
 	}
 	building_slots = { 1 2 3 4 5 6 }
 }
+starbase_level_carks_lunark_nomad = {
+	ship_size = carks_lunark_nomad
+	starbase_capacity_used = 1
+	picture = "GFX_arkship_blueprint_carks_lunark_nomad"
+	show_in_outliner = yes
+	display_shipyard_button = no
+	ai_weight = { weight = 1 }
+	potential_home_base = yes
+	downgrade_potential = {
+		always = no
+	}
+	module_slots = {
+		1 2 3 4 5 6 7 8 9 10 11 12 13 14
+		spinal_mount_1
+	}
+	building_slots = { 1 2 3 4 5 6 }
+}
 starbase_level_carks_planark = {
 	ship_size = carks_planark
 	starbase_capacity_used = 1
 	picture = "GFX_arkship_blueprint_carks_planark"
+	show_in_outliner = yes
+	display_shipyard_button = no
+	ai_weight = { weight = 1 }
+	potential_home_base = yes
+	downgrade_potential = {
+		always = no
+	}
+	module_slots = {
+		1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+		spinal_mount_1
+	}
+	building_slots = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+}
+starbase_level_carks_planark_nomad = {
+	ship_size = carks_planark_nomad
+	starbase_capacity_used = 1
+	picture = "GFX_arkship_blueprint_carks_planark_nomad"
 	show_in_outliner = yes
 	display_shipyard_button = no
 	ai_weight = { weight = 1 }

@@ -214,6 +214,42 @@ create_lunark_effect = {
 		}
 	}
 }
+create_nomad_planark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Super-Heavy Siegecraft"
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Super-Heavy Siegecraft"
+				random_existing_design = carks_planark
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
+create_nomad_lunark_effect = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Heavy Artillery Platform"
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Heavy Artillery Platform"
+				random_existing_design = carks_lunark
+				graphical_culture = none
+			}
+			set_location = $LOCATION$
+		}
+	}
+}
 
 print_sysark_o_effect = {
 	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
@@ -390,6 +426,52 @@ create_lunark_effect_origin = {
 			create_ship = {
 				name = "Attack Moon"
 				random_existing_design = carks_$TYPE$
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}
+create_nomad_planark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Super-Heavy Siegecraft"
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Super-Heavy Siegecraft"
+				random_existing_design = carks_planark_nomad
+				graphical_culture = none
+			}
+			set_location = {
+				target = event_target:quasark_origin_star
+				distance = 100
+				angle = 90
+				direction = in_system
+			}
+		}
+	}
+}
+create_nomad_lunark_effect_origin = {
+	# $TYPE$     = civilian_arkship / science_arkship / military_arkship
+	# $OWNER$    = the owning country
+	# $LOCATION$ = the solar system to place the fleet in
+	create_fleet = {
+		name = "Heavy Artillery Platform"
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = $OWNER$
+			create_ship = {
+				name = "Heavy Artillery Platform"
+				random_existing_design = carks_lunark_nomad
 				graphical_culture = none
 			}
 			set_location = {

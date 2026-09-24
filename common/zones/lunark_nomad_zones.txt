@@ -1,0 +1,955 @@
+zone_lunark_nomad_default = {
+	icon = GFX_diplomatic_weight_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+	}
+
+	unlock = { # planet scope
+		NOT = {
+			has_designation = col_resort
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	max_buildings = 6
+
+	zone_sets = {
+		lunark_nomad_default
+	}
+
+	include = {
+		all
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+		fallen_empire_generator
+		fallen_empire_farming
+		fallen_empire_mining
+		urban_automation
+		urban_automation_arcology
+		generator_automation
+		mining_automation
+		farming_automation
+	}
+
+	ai_priority = 0
+}
+zone_lunark_nomad_robot_assembly = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+		OR = {
+			is_robot_empire = yes
+			owner = {
+				has_technology = tech_robotic_workers
+			}
+		}
+		
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	max_buildings = 3
+
+	zone_sets = {
+		lunark_nomad_urban
+	}
+
+	included_building_sets = {
+		urban
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+			is_gestalt = yes
+			}
+		}
+		job_replicator_per_pop = 0.025
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+			is_gestalt = no
+			}
+		}
+		job_roboticist_per_pop = 0.025
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+zone_lunark_nomad_bio_assembly = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+		is_robot_empire = no
+		has_technology = tech_cloning
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	max_buildings = 3
+
+	zone_sets = {
+		lunark_nomad_urban
+	}
+
+	included_building_sets = {
+		urban
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_spawning_drone_per_pop = 0.025
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+		job_carks_indiv_spawning_drone_per_pop = 0.025
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+zone_lunark_nomad_entertainment = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	max_buildings = 3
+
+	zone_sets = {
+		lunark_nomad_urban
+	}
+
+	included_building_sets = {
+		urban
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		job_entertainer_per_pop = 0.025
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+zone_lunark_nomad_crime = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	max_buildings = 3
+
+	zone_sets = {
+		lunark_nomad_urban
+	}
+
+	included_building_sets = {
+		urban
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		job_enforcer_per_pop = 0.025
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+
+zone_lunark_nomad_damage_focus = {
+	icon = GFX_district_specialization_laser
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_soldiers_upkeep_mult = 0.02
+	}
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		fortress
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		weapon_damage_from_soldiers = 0.05
+	}
+
+	zone_sets = {
+		lunark_nomad_soldier_zones
+	}
+
+	ai_priority = 5
+}
+
+zone_lunark_nomad_fire_rate_focus = {
+	icon = GFX_district_specialization_laser
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_soldiers_upkeep_mult = 0.02
+	}
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		fortress
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		weapon_fire_rate_from_soldiers = 0.05
+	}
+
+	zone_sets = {
+		lunark_nomad_soldier_zones
+	}
+
+	ai_priority = 5
+}
+
+zone_lunark_nomad_rounded_focus = {
+	icon = GFX_district_specialization_laser
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_soldiers_upkeep_mult = 0.02
+	}
+	inline_script = {
+		script = jobs/zone_soldiers_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		fortress
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		weapon_damage_from_soldiers = 0.015
+		weapon_fire_rate_from_soldiers = 0.015
+	}
+
+	zone_sets = {
+		lunark_nomad_soldier_zones
+	}
+
+	ai_priority = 5
+}
+
+
+zone_lunark_nomad_energy_generation_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		generator
+		generator_automation
+		fallen_empire_generator
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		job_upkeep_from_technicians = -0.001
+	}
+
+	zone_sets = {
+		lunark_nomad_energy_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_energy_speed_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_technician_exotic_gases_upkeep_add = 0.015
+	}
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		generator
+		generator_automation
+		fallen_empire_generator
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		ship_speed_from_technicians = 0.02
+	}
+
+	zone_sets = {
+		lunark_nomad_energy_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_energy_damage_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_technician_alloys_upkeep_add = 0.1
+	}
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		generator
+		generator_automation
+		fallen_empire_generator
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		weapon_energy_from_technicians = 0.02
+		reactor_power_from_technicians = 0.005
+	}
+
+	zone_sets = {
+		lunark_nomad_energy_zones
+	}
+
+	ai_priority = 5
+}
+
+zone_lunark_nomad_mineral_generation_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		mining
+		fallen_empire_mining
+		mining_automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		planet_miners_alloys_produces_add = 0.5
+		planet_miners_energy_produces_add = 0.5
+	}
+
+	zone_sets = {
+		lunark_nomad_minerals_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_mineral_forge_support_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+	potential = {
+		owner = { is_catalytic_empire = no }
+	}
+	unlock = {
+		owner = { is_catalytic_empire = no }
+	}
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		mining
+		fallen_empire_mining
+		mining_automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		forge_upkeep_from_miners = -0.002
+		planet_miners_minerals_produces_add = -3
+	}
+
+	zone_sets = {
+		lunark_nomad_minerals_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_food_generation_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		farming_automation
+		fallen_empire_farming
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_food_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_food_forge_support_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+	potential = {
+		owner = { is_catalytic_empire = yes }
+	}
+	unlock = {
+		owner = { is_catalytic_empire = yes }
+	}
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		farming_automation
+		fallen_empire_farming
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		forge_upkeep_from_farmers = -0.002
+		planet_farmers_food_produces_add = -3
+	}
+
+	zone_sets = {
+		lunark_nomad_food_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_forge_alloy_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_foundry_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		industrial
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_forge_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_forge_goods_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = 500
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.001
+	}
+	inline_script = {
+		script = jobs/zone_factory_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		industrial
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		planet_artisans_alloys_produces_add = 0.5
+		planet_metallurgists_consumer_goods_produces_add = 0.5
+	}
+
+	zone_sets = {
+		lunark_nomad_forge_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_forge_armor_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = { owner = { is_catalytic_empire = no } }
+		planet_metallurgists_minerals_upkeep_add = 0.1
+	}
+	triggered_district_planet_modifier = {
+		potential = { owner = { is_catalytic_empire = yes } }
+		planet_metallurgists_food_upkeep_add = 0.1
+	}
+	inline_script = {
+		script = jobs/zone_foundry_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		industrial
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		ship_armor_from_metallurgists = 0.02
+		ship_hardening_from_metallurgists = 0.01
+	}
+
+	zone_sets = {
+		lunark_nomad_forge_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_research_general_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @carks_small_job_amount
+	}
+	inline_script = {
+		script = jobs/zone_engineers_add
+		LARGE_AMOUNT = @carks_small_job_amount
+	}
+	inline_script = {
+		script = jobs/zone_biologists_add
+		LARGE_AMOUNT = @carks_small_job_amount
+	}
+	inline_script = {
+		script = jobs/zone_physicists_add
+		LARGE_AMOUNT = @carks_small_job_amount
+	}
+
+	included_building_sets = {
+		research
+		urban_automation
+		origin
+		unity
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_research_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_research_engineering_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_engineers_add
+		LARGE_AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		research
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_research_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_research_physics_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_physicists_add
+		LARGE_AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		research
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_research_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_research_society_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_biologists_add
+		LARGE_AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		research
+		urban_automation
+		origin
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_research_zones
+	}
+
+	ai_priority = 5
+}
+zone_lunark_nomad_research_unity_focus = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+
+
+	resources = {
+		category = planet_zones
+		cost = {
+			alloys = @carks_construction_cost
+		}
+	}
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @carks_job_amount
+	}
+
+	included_building_sets = {
+		unity
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	zone_sets = {
+		lunark_nomad_research_zones
+	}
+
+	ai_priority = 5
+}
